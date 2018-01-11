@@ -16,7 +16,7 @@ class OrderController extends Controller
     {
         //
         // return "cecae";
-        return view('Orderform');
+        return view('admin.Orderform');
     }
 
     /**
@@ -51,7 +51,7 @@ class OrderController extends Controller
     public function show($id)
     {
         //订单详情表
-        return view('order_detailed');
+        return view('admin.order_detailed');
     }
 
     /**
@@ -76,7 +76,7 @@ class OrderController extends Controller
     public function update(Request $request, $id)
     {
         //订单编辑执行
-        return view('order_handling');
+        return view('admin.order_handling');
     }
 
     /**

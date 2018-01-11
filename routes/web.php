@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin/index',function(){
-	return view('index');
+	return view('admin.index');
 });
 
 Route::resource('/admin/order',"Admin\OrderController");
 
 Route::get('/home',function(){
-	return view('home');
+	return view('admin.home');
 });
