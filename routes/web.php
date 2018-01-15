@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//前台
+//资源路由
+Route::resource('/good','Home\GoodController');
+//后台
+//首页
+Route::get('/admin/index',function(){
+	return view('admin.index');
+});
+//用户管理
+Route::resource('/admin/users','Admin\UsersController');
+
