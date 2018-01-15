@@ -25,4 +25,14 @@ Route::get('/code/captcha{tmp}','Admin\LoginController@captcha');
 Route::post('admin/dologin','Admin\LoginController@dologin');
 
 
+
+
 Route::get('index/login','Index\LoginController@login');
+
+Route::get('index/yzm','Index\LoginController@yzm');
+
+Route::get('/code/captcha{tmp}','Index\LoginController@captcha');
+
+Route::post('index/dologin','Index\LoginController@dologin');
+
+
