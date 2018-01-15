@@ -22,7 +22,7 @@
                         $(this).next("li").text('输入成功').removeClass('state1').addClass('state4');
                         ok1=true;
                     }else{
-                        $(this).next("li").text('账号5-18位').removeClass('state1').addClass('state3');
+                        $(this).next("li").html('<font color="#FF0000"> 账号5-18位</font>').removeClass('state1').addClass('state3');
                     }
                      
                 });
@@ -35,7 +35,7 @@
                         $(this).next().text('输入成功').removeClass('state1').addClass('state4');
                         ok2=true;
                     }else{
-                        $(this).next().text('密码5-18位').removeClass('state1').addClass('state3');
+                        $(this).next().html('<font color="#FF0000"> 账号5-18位</font>').removeClass('state1').addClass('state3');
                     }
                      
                 });
@@ -64,10 +64,11 @@
 			<div class="login_center">
 				
 
+
 				<div class="login_top">
 				{{ csrf_field() }}
 					<div class="left fl">会员登录</div>
-					<div class="right fr">您还不是我们的会员？<a href="{{asset('/admin/user/register.blade.php') }}" target="_self">立即注册</a></div>
+					<div class="right fr">您还不是我们的会员？<a href="{{ url('./index/user/register.blade.php') }}" target="_self">立即注册</a></div>
 					<div class="clear"></div>
 					<div class="xian center"></div>
 				</div>
@@ -86,9 +87,24 @@
 					<div class="username">
 						<div class="left fl">验证码:&nbsp;&nbsp;&nbsp;<input class="yanzhengma" type="text" name="code" placeholder="请输入验证码"/></div>
 						<div class="right fl"><img src="{{ url('index/yzm') }}" id="127ddf0de5a04167a9e427d883690ff6" onClick="this.src=this.src+'?'"></div>
+						@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<ul>
+								@if(is_object($errors))
+									@foreach ($errors->all() as $error)
+										<li style="color:red;font-family:Microsoft YaHei">{{ $error }}</li>
+										@endforeach
+									@else
+											<li style="color:red;font-family:Microsoft YaHei">{{ $errors }}</li>
+									@endif
+								</ul>
+							</div>
+						@endif
+
 						<div class="clear"></div>
 					</div>
 
+				
 
 				</div>
 				<div class="login_submit">
