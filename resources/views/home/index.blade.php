@@ -12,29 +12,29 @@
             <div class="banner_menu_content" style="width: 600px; top: -20px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -44,21 +44,21 @@
             <div class="banner_menu_content" style="width: 600px; top: -62px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -68,39 +68,39 @@
             <div class="banner_menu_content" style="width: 900px; top: -104px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><<span>选购</span>/li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><<span>选购</span>/li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -110,13 +110,13 @@
             <div class="banner_menu_content" style="width: 300px; top: -146px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg "></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg "></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -126,15 +126,15 @@
             <div class="banner_menu_content" style="width: 300px; top: -188px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -144,13 +144,13 @@
             <div class="banner_menu_content" style="width: 300px; top: -230px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -160,9 +160,9 @@
             <div class="banner_menu_content" style="width: 300px; top: -272px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -172,23 +172,23 @@
             <div class="banner_menu_content" style="width: 600px; top: -314px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -198,9 +198,9 @@
             <div class="banner_menu_content" style="width: 300px; top: -356px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
@@ -210,24 +210,24 @@
             <div class="banner_menu_content" style="width: 300px; top: -398px;">
                 <ul class="banner_menu_content_ul">
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                     <li>
-                        <a><img src="img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
+                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
                 </ul>
             </div>
         </li>
     </ul>
     <div id="big_banner_pic_wrap">
         <ul id="big_banner_pic">
-            <li><img src="img/T1hiDvBvVv1RXrhCrK.jpg"></li>
-            <li><img src="img/T1jrxjB_VT1RXrhCrK.jpg"></li>
-            <li><img src="img/T1oTJjBKKT1RXrhCrK.jpg"></li>
-            <li><img src="img/T1RICjB7DT1RXrhCrK.jpg"></li>
-            <li><img src="img/T1vWdTBKDv1RXrhCrK.jpg"></li>
+            <li><img src="/img/T1hiDvBvVv1RXrhCrK.jpg"></li>
+            <li><img src="/img/T1jrxjB_VT1RXrhCrK.jpg"></li>
+            <li><img src="/img/T1oTJjBKKT1RXrhCrK.jpg"></li>
+            <li><img src="/img/T1RICjB7DT1RXrhCrK.jpg"></li>
+            <li><img src="/img/T1vWdTBKDv1RXrhCrK.jpg"></li>
         </ul>
     </div>
     <div id="big_banner_change_wrap">
@@ -250,9 +250,9 @@
     </div>
     <div class="dy16">
         <ul>
-            <li><a href="#"><img src="img/jinghuaqi.jpg"/></a></li>
-            <li><a href="#"><img src="img/jinghuaqi1.jpg"/></a></li>
-            <li><a href="#"><img src="img/jinghuaqi2.jpg"/></a></li>
+            <li><a href="#"><img src="/img/jinghuaqi.jpg"/></a></li>
+            <li><a href="#"><img src="/img/jinghuaqi1.jpg"/></a></li>
+            <li><a href="#"><img src="/img/jinghuaqi2.jpg"/></a></li>
         </ul>
     </div>
 </div>
@@ -262,31 +262,31 @@
         <ul class="lunboimg">
             <li>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
@@ -294,31 +294,31 @@
             </li>
             <li>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
                 </a>
                 <a href="#">
-                    <b><img src="img/diannaozhuji.png"/></b>
+                    <b><img src="/img/diannaozhuji.png"/></b>
                     <h5>磐石DIY游戏主机</h5>
                     <p>坚如磐石，带给你极致游戏体验</p>
                     <span>5000元5</span>
@@ -350,7 +350,7 @@
         </div>
         <div class="dy21">
             <div class="dy22">
-                <div class="dy24"><a href="#"><img src="img/576c00e9N4c11aa86.jpg"/></a></div>
+                <div class="dy24"><a href="#"><img src="/img/576c00e9N4c11aa86.jpg"/></a></div>
                 <div class="dy25">
                     <ul>
                         <li><a href="#">空调</a></li>
@@ -372,7 +372,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -383,7 +383,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -394,7 +394,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -405,7 +405,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -416,7 +416,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -427,7 +427,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -438,7 +438,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -449,7 +449,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -464,7 +464,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -486,7 +486,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -508,7 +508,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -530,7 +530,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -552,7 +552,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -574,7 +574,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -596,7 +596,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -618,7 +618,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -656,7 +656,7 @@
         </div>
         <div class="dy21">
             <div class="dy22">
-                <div class="dy24"><a href="#"><img src="img/5768218bNb97302b8.jpg"/></a></div>
+                <div class="dy24"><a href="#"><img src="/img/5768218bNb97302b8.jpg"/></a></div>
                 <div class="dy25">
                     <ul>
                         <li><a href="#">空调</a></li>
@@ -678,7 +678,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -689,7 +689,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -700,7 +700,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -711,7 +711,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -722,7 +722,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -733,7 +733,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -744,7 +744,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -755,7 +755,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -770,7 +770,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -792,7 +792,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -814,7 +814,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -836,7 +836,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -858,7 +858,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -880,7 +880,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -902,7 +902,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -924,7 +924,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -962,7 +962,7 @@
         </div>
         <div class="dy21">
             <div class="dy22">
-                <div class="dy24"><a href="#"><img src="img/576cab8fN177984a7.jpg"/></a></div>
+                <div class="dy24"><a href="#"><img src="/img/576cab8fN177984a7.jpg"/></a></div>
                 <div class="dy25">
                     <ul>
                         <li><a href="#">空调</a></li>
@@ -984,7 +984,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -995,7 +995,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1006,7 +1006,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1017,7 +1017,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1028,7 +1028,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1039,7 +1039,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1050,7 +1050,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1061,7 +1061,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1076,7 +1076,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1098,7 +1098,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1120,7 +1120,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1142,7 +1142,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1164,7 +1164,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1186,7 +1186,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1208,7 +1208,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1247,7 +1247,7 @@
         </div>
         <div class="dy21">
             <div class="dy22">
-                <div class="dy24"><a href="#"><img src="img/576dd6feN49b56802.jpg"/></a></div>
+                <div class="dy24"><a href="#"><img src="/img/576dd6feN49b56802.jpg"/></a></div>
                 <div class="dy25">
                     <ul>
                         <li><a href="#">空调</a></li>
@@ -1269,7 +1269,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1291,7 +1291,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1313,7 +1313,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img c="/img/chose.png"sr/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1335,7 +1335,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1357,7 +1357,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1379,7 +1379,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1401,7 +1401,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1423,7 +1423,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1445,7 +1445,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1505,7 +1505,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1527,7 +1527,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1549,7 +1549,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1571,7 +1571,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1593,7 +1593,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1615,7 +1615,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1637,7 +1637,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1659,7 +1659,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1681,7 +1681,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1740,7 +1740,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1762,7 +1762,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1784,7 +1784,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1806,7 +1806,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1828,7 +1828,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1850,7 +1850,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1872,7 +1872,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1933,7 +1933,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1955,7 +1955,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1977,7 +1977,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -1999,7 +1999,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2021,7 +2021,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2043,7 +2043,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2065,7 +2065,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2087,7 +2087,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2148,7 +2148,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2170,7 +2170,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2192,7 +2192,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2214,7 +2214,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2236,7 +2236,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2258,7 +2258,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2280,7 +2280,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2302,7 +2302,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2324,7 +2324,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2384,7 +2384,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2406,7 +2406,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2428,7 +2428,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2450,7 +2450,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2472,7 +2472,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2494,7 +2494,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2516,7 +2516,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2538,7 +2538,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2560,7 +2560,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2620,7 +2620,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2642,7 +2642,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2664,7 +2664,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2686,7 +2686,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2708,7 +2708,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2730,7 +2730,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2752,7 +2752,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2774,7 +2774,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2796,7 +2796,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2856,7 +2856,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2878,7 +2878,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2900,7 +2900,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2922,7 +2922,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2944,7 +2944,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2966,7 +2966,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -2988,7 +2988,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -3010,7 +3010,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
@@ -3032,7 +3032,7 @@
                         <li>
                             <a href="#">
                                 <b>
-                                    <img src="img/chose.png"/>
+                                    <img src="/img/chose.png"/>
                                 </b>
                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>

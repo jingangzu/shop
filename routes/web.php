@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 //前台
 //资源路由
-Route::resource('/good','Home\GoodController');
+Route::resource('/home/good','Home\GoodController');
 //后台
 //首页
 Route::get('/admin/index',function(){
