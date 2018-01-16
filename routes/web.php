@@ -14,17 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/admin/index',function(){
-// 	return view('admin.index');
-// });
 
-// Route::resource('/admin/order',"Admin\OrderController");
 
-Route::get('/index',function(){
+//后台
+// 商品
+Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+	Route::resource('/goods','GoodsController');	
+});
+
+
+//后台
+//首页
+Route::get('/admin/index',function(){
 	return view('admin.index');
 });
+//用户管理
+Route::resource('/admin/users','Admin\UsersController');
 
-Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
-	Route::resource('/goods','GoodsController');
-	
-});
+
