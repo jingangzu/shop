@@ -20,7 +20,6 @@ Route::get('/', function () {
 // 后台
 Route::get('admin/login','Admin\LoginController@login');
 Route::get('admin/yzm','Admin\LoginController@yzm');
-Route::get('/code/captcha{tmp}','Admin\LoginController@captcha');
 Route::post('admin/dologin','Admin\LoginController@dologin');
 
 
@@ -28,7 +27,6 @@ Route::post('admin/dologin','Admin\LoginController@dologin');
 // 前台//登陆
 Route::get('index/login','Index\LoginController@login');
 Route::get('index/yzm','Index\LoginController@yzm');
-Route::get('/code/captcha{tmp}','Index\LoginController@captcha');
 Route::post('index/dologin','Index\LoginController@dologin');
 // 注册控制器
 Route::get('/index/user/register','Index\User\RegisterController@register');
