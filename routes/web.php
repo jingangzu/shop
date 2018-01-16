@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 
+
 // 后台
 Route::get('admin/login','Admin\LoginController@login');
 Route::get('admin/yzm','Admin\LoginController@yzm');
@@ -33,4 +34,11 @@ Route::get('/index/user/register','Index\User\RegisterController@register');
 
 
 
+//后台
+//首页
+Route::get('/admin/index',function(){
+	return view('admin.index');
+});
+//用户管理
+Route::resource('/admin/users','Admin\UsersController');
 
