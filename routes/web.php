@@ -14,12 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin/index',function(){
+// Route::get('/admin/index',function(){
+// 	return view('admin.index');
+// });
+
+// Route::resource('/admin/order',"Admin\OrderController");
+
+Route::get('/index',function(){
 	return view('admin.index');
 });
 
-Route::resource('/admin/order',"Admin\OrderController");
-
-Route::get('/home',function(){
-	return view('admin.home');
+Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+	Route::resource('/goods','GoodsController');
+	
 });
