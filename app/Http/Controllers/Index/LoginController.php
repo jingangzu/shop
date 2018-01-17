@@ -87,4 +87,11 @@ class LoginController extends Controller
         return redirect('index/index');
 
     }
+
+    public function resetpw()
+    {
+        return view('index.user.resetpw');
+    }
+    //send
+    
 }

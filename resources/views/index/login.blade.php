@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<title>会员登录</title>
 		<link rel="stylesheet" type="text/css" href="{{ asset('/index/css/login.css') }}">
-		<!-- <link rel="stylesheet" type="text/css" href="{{ asset('/index/js/jquery.min.js') }}"> -->
 		<script src="{{ asset('/index/js/jquery.min.js') }}"></script>
 
 		<script>
@@ -49,6 +48,7 @@
                 });
                  
             });
+				 
 		</script>
 	</head>
 	<body>
@@ -68,14 +68,14 @@
 				<div class="login_top">
 				{{ csrf_field() }}
 					<div class="left fl">会员登录</div>
-					<div class="right fr">您还不是我们的会员？<a href="{{ url('./index/user/register.blade.php') }}" target="_self">立即注册</a></div>
+					<div class="right fr">您还不是我们的会员？<a href="{{ url('/index/user/register') }}" target="_self">立即注册</a></div>
 					<div class="clear"></div>
 					<div class="xian center"></div>
 				</div>
 
 				<div class="login_main center">
 
-		
+	
 					<div  class="username">账&nbsp;&nbsp;&nbsp;&nbsp;号:&nbsp;&nbsp;&nbsp;<input class="shurukuang" type="text" name="username" placeholder="用户名/手机号/邮箱"/><li style="list-style:none;float:right;"></li>
 						
 					</div>
@@ -109,6 +109,7 @@
 				</div>
 				<div class="login_submit">
 					&nbsp;<input class="submit" type="submit" name="submit" value="立即登录" >
+					<a href="{{ url('/index/user/login') }}" target="_self">忘记密码？</a>
 				</div>
 				
 			</div>
