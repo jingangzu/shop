@@ -64,7 +64,7 @@ class LoginController extends Controller
             return back()->with('errors','验证码错误');
         }
 
-        $user = User::where('username',$input['username'])->first();
+        $user = User::where('name',$input['username'])->first();
         //用户验证
         // dd($user);
 

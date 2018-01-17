@@ -20,7 +20,7 @@ class UsersController extends Controller
         $data = \DB::table('user_admins')->where('name','like','%'.$name.'%')->paginate(10);
       foreach ($data as $k=>$v)
       {
-        $data  [$k]->password = substr($data [$k]->password,0,7).'...';
+        $data [$k]->password = substr($data [$k]->password,0,7).'...';
       } 
         return view ('admin/userindex',['data'=>$data,'where'=>['name'=>$name]]);
     }
@@ -53,7 +53,8 @@ class UsersController extends Controller
         're-password'=>'required|same:password',
         'phone'=>'required|size:11',
         'email'=>'required|email',
-        'avatar' => 'image',
+        'avatar' => 'required|image',
+        'auth'=>'required|numeric',
     ],[
       // 'name.required' => '用户名不能为空',
       'name.min' => '用户名不能小于6位',
@@ -68,7 +69,10 @@ class UsersController extends Controller
       'phone.size' => '手机号必须是11位',
       'email.email' =>' 邮箱不合法',
       'email.required' =>' 邮箱不能为空',
-      'avatar.image' =>'请上传一张正确的图片'
+      'avatar.required' =>'头像不能为空',
+      'avatar.image' =>'请上传一张正确的图片',
+      'auth.required'=>'请选择权限',
+      'auth.number'=>'闹呢',
      ]);
    //处理
     $data = $request->except('_token','re-password');
