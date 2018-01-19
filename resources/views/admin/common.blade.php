@@ -8,13 +8,16 @@
 <meta name="description" content="简洁实用的后台管理静态网页模板下载。" /> 
 <meta name="Copyright" content="Douco Design." />
 <link href="/css/public.css" rel="stylesheet" type="text/css">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/global.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/layer/layer.js"></script>
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
  <div id="head">
-  <div class="logo"><a href="index.html"><img src="images/dclogo.gif" alt="logo"></a></div>
+  <div class="logo"><a href="index.html"><img src="/images/dclogo.gif" alt="logo"></a></div>
   <div class="nav">
    <ul>
     <li class="M"><a href="JavaScript:void(0);" class="topAdd">添加</a>
