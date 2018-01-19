@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 
 
+
 // 后台
 Route::get('admin/login','Admin\LoginController@login');
 Route::get('admin/yzm','Admin\LoginController@yzm');
@@ -55,4 +56,19 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 	Route::resource('/goods','GoodsController');
 	
 });
+
+//资源路由
+Route::resource('/good','Home\GoodController');
+
+//幻灯广告
+Route::get('/admin/show/index','Admin\ShowController@index');
+// Route::get('/admin/show/add','Admin\ShowController@add');
+Route::post('/admin/show/insert','Admin\ShowController@insert');
+Route::get('/admin/show/edit/{id}','Admin\ShowController@edit');
+Route::post('/admin/show/update','Admin\ShowController@update');
+Route::get('/admin/show/delete/{id}','Admin\ShowController@delete');
+
+//修改排序的路由
+Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
+
 

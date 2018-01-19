@@ -8,12 +8,14 @@
 <meta name="description" content="简洁实用的后台管理静态网页模板下载。" /> 
 <meta name="Copyright" content="Douco Design." />
 
+
 <link href="/css/public.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/global.js"></script>
 
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript" src="/layer/layer.js"></script>
 </head>
@@ -55,10 +57,12 @@
  </ul>
    <ul>
   <li><a href="product_category.html"><i class="productCat"></i><em>商品分类</em></a></li>
-  <li><a href="product.html"><i class="product"></i><em>商品列表</em></a></li>
+
+  <li><a href="{{ url('/admin/goods') }}"><i class="product"></i><em>商品列表</em></a></li>
  </ul>
   <ul>
   <li><a href="{{url('/admin/users')}}"><i class="article"></i><em>用户管理</em></a></li>
+
  </ul>
    <ul class="bot">
   <li><a href="backup.html"><i class="backup"></i><em>数据备份</em></a></li>
