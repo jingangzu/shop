@@ -21,3 +21,4 @@ class Show extends Model
     public $guarded = [];
 
 }
+

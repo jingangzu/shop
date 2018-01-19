@@ -28,11 +28,11 @@ Route::get('/admin/show/delete/{id}','Admin\ShowController@delete');
 //修改排序的路由
 Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
 
-//商品页
-// Route::get('/admin/index','Admin\index');
-Route::get('/admin/goods/index','Admin\GoodsController@index');
-Route::get('/admin/goods/add','Admin\GoodsController@add');
-Route::post('/admin/goods/insert','Admin\GoodsController@insert');
-Route::get('/admin/goods/edit/{id}','Admin\GoodsController@edit');
-Route::post('/admin/goods/update','Admin\GoodsController@update');
-Route::get('/admin/goods/delete/{id}','Admin\GoodsController@delete');
+// //商品页
+// // Route::get('/admin/index','Admin\index');
+// Route::get('/admin/goods/index','Admin\GoodsController@index');
+// Route::get('/admin/goods/add','Admin\GoodsController@add');
+// Route::post('/admin/goods/insert','Admin\GoodsController@insert');
+// Route::get('/admin/goods/edit/{id}','Admin\GoodsController@edit');
+// Route::post('/admin/goods/update','Admin\GoodsController@update');
+// Route::get('/admin/goods/delete/{id}','Admin\GoodsController@delete');
