@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 
 
+
 // 后台
 Route::get('admin/login','Admin\LoginController@login');
 Route::get('admin/yzm','Admin\LoginController@yzm');
@@ -41,4 +42,17 @@ Route::get('/admin/index',function(){
 });
 //用户管理
 Route::resource('/admin/users','Admin\UsersController');
+
+
+//后台商品管理
+Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+	
+	Route::get('/goods/picture/{id}','GoodsController@picture');
+	Route::get('/goods/up/{id}','GoodsController@up');
+	Route::get('/goods/down/{id}','GoodsController@down');
+	Route::post('/goods/addpic','GoodsController@addpic');
+
+	Route::resource('/goods','GoodsController');
+	
+});
 
