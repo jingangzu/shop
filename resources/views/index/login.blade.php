@@ -5,7 +5,7 @@
 		<title>会员登录</title>
 		<link rel="stylesheet" type="text/css" href="{{ asset('/index/css/login.css') }}">
 		<script src="{{ asset('/index/js/jquery.min.js') }}"></script>
-
+		<script src="{{ asset('/index/layer/layer.js') }}"></script>
 		<script>
 			  $(function(){
  
@@ -14,7 +14,7 @@
                 var ok3=false;
                 var ok4=false;
                 // 验证用户名
-                $('input[name="username"]').focus(function(){
+                $('input[name="name"]').focus(function(){
                     $(this).next().text('账号5-18位').removeClass('state1').addClass('state2');
                 }).blur(function(){
                     if($(this).val().length >= 5 && $(this).val().length <=18 && $(this).val()!=''){
@@ -41,7 +41,9 @@
                 //提交按钮,所有验证通过方可提交
                 $('.submit').click(function(){
                     if(ok1 && ok2){
+
                         $('form').submit();
+                       
                     }else{
                         return false;
                     }
@@ -49,7 +51,8 @@
                  
             });
 				 
-		</script>
+
+	</script>
 	</head>
 	<body>
 		<!-- login -->
@@ -62,7 +65,7 @@
 
 		<div class="login">
 			<div class="login_center">
-				
+		
 
 
 				<div class="login_top">
@@ -74,9 +77,17 @@
 				</div>
 
 				<div class="login_main center">
-
+					
+					{{--激活成功的提示--}}
+						@if (!empty(session('msg')))
+							<div class="alert alert-danger">
+								<ul>
+									<li style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ session('msg') }}</li>
+								</ul>
+							</div>
+						@endif
 	
-					<div  class="username">账&nbsp;&nbsp;&nbsp;&nbsp;号:&nbsp;&nbsp;&nbsp;<input class="shurukuang" type="text" name="username" placeholder="用户名/手机号/邮箱"/><li style="list-style:none;float:right;"></li>
+					<div  class="username">账&nbsp;&nbsp;&nbsp;&nbsp;号:&nbsp;&nbsp;&nbsp;<input class="shurukuang" type="text" name="name" placeholder="用户名/手机号/邮箱" autocomplete="off"/><li style="list-style:none;float:right;"></li>
 						
 					</div>
 					
@@ -101,6 +112,8 @@
 							</div>
 						@endif
 
+
+
 						<div class="clear"></div>
 					</div>
 
@@ -109,7 +122,7 @@
 				</div>
 				<div class="login_submit">
 					&nbsp;<input class="submit" type="submit" name="submit" value="立即登录" >
-					<a href="{{ url('/index/user/login') }}" target="_self">忘记密码？</a>
+					<a href="{{ url('/index/user/resetpw') }}" target="_self">忘记密码？</a>
 				</div>
 				
 			</div>

@@ -10,4 +10,9 @@ class User extends Model
     public $table = 'user_home';
 
     public $primaryKey = 'id';
+
+    
+
+    protected $fillable = ['username', 'password'];
+
 }

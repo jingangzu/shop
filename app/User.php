@@ -9,6 +9,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $table = 'user_home';
+
+//    定义关联表的主键
+    public $primaryKey = 'id';
+
     /**
      * The attributes that are mass assignable.
      *

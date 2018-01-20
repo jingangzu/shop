@@ -33,9 +33,17 @@ Route::post('index/dologin','Index\LoginController@dologin');
 Route::get('/index/user/register','Index\User\RegisterController@register');
 Route::get('/index/user/yzm','Index\User\RegisterController@yzm');
 Route::post('/index/user/doregister','Index\User\RegisterController@doregister');
+// 邮箱激活
+Route::get('index/user/active/{email}','Index\User\RegisterController@active');
+// Route::get('/index/user/pwactive','Index\LoginController@pwactive');
 
 //重置密码
-Route::get('/index/login/resetpw','Index\LoginController@resetpw');
+Route::get('/index/user/resetpw','Index\User\RegisterController@resetpw');
+Route::post('/index/user/doresetpw','Index\User\RegisterController@doresetpw');
+// Route::get('/index/user/remails/{email}','Index\User\RegisterController@remails');
+Route::get('/index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
+Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
+
 
 
 
