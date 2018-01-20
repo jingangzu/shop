@@ -23,7 +23,6 @@
       <th width="80" align="center">密码</th>
       <th width="80" align="center">电话</th>
       <th width="100" align="center">头像</th>
-      <th width="80" align="center">权限</th>
       <th width="80" align="center">添加时间</th>
       <th width="80" align="center">修改时间</th>
       <th width="80" align="center">操作</th>
@@ -36,11 +35,11 @@
       <td align="center">{{$item->password}}</td>
       <td align="center">{{$item->phone}}</td>
       <td align="center"><img width="60" src="/uploads/{{$item->avatar}}"></td>
-      <td align="center">@if($item->auth==1) 普通用户 @elseif($item->auth==2) 普通管理员 @else($item->auth==3) 超级管理员 @endif</td>
       <td align="center">{{$item->created_at}}</td>
       <td align="center">{{$item->updated_at}}</td>
       <td align="center">
         <a href="{{ url('/admin/users/'.$item->id.'/edit')}}">编辑</a> 
+      <a href="{{ url('admin/user/auth/'.$item->id) }}">授权</a>
       <a href="javascript:;" onclick="delUser({{ $item->id }})">删除</a>
           </td>
      </tr>

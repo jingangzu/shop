@@ -22,7 +22,7 @@
             {{ session('info') }}
 
       @endif    
-     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="table">
       <tr>
        <td width="80" align="right">用户名</td>
        <td>

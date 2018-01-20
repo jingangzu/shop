@@ -12,15 +12,16 @@
 
 
 <link href="/css/public.css" rel="stylesheet" type="text/css">
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript" src="/layer/layer.js"></script>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
  <div id="head">
-  <div class="logo"><a href="index.html"><img src="images/dclogo.gif" alt="logo"></a></div>
+  <div class="logo"><a href="index.html"><img src="/images/dclogo.gif" alt="logo"></a></div>
   <div class="nav">
    <ul>
     <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
@@ -64,7 +65,10 @@
   <li><a href="backup.html"><i class="backup"></i><em>数据备份</em></a></li>
   <li><a href="mobile.html"><i class="mobile"></i><em>手机版</em></a></li>
   <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
-  <li><a href="manager.html"><i class="manager"></i><em>网站管理员</em></a></li>
+  <li><a href="{{url('/admin/role/create')}}"><i class="manager"></i><em>添加角色</em></a></li>
+  <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>
+  <li><a href="{{url('/admin/permission/create')}}"><i class="manager"></i><em>添加权限</em></a></li>
+  <li><a href="{{url('/admin/permission')}}"><i class="manager"></i><em>权限列表</em></a></li>
   <li><a href="manager.php?rec=manager_log"><i class="managerLog"></i><em>操作记录</em></a></li>
  </ul>
 </div></div>
