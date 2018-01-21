@@ -1,6 +1,6 @@
 @extends('admin.common')
 
-@section('title','添加商品')
+@section('title','添加图片')
 
 @section('content')
 

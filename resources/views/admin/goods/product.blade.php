@@ -8,8 +8,8 @@
 <div id="urHere">DouPHP 管理中心<b>></b><strong>商品列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="{{ url('/admin/goods/create') }}" class="actionBtn add">添加商品</a>商品列表</h3>
     <div class="filter">
-    <form action="product.php" method="post">
-     <select name="cat_id">
+    <form action="{{ url('/admin/goods') }}" method="get">
+     <select name="cid">
       <option value="0">未分类</option>
                   <option value="1"> 电子数码</option>
                         <option value="4">- 智能手机</option>
@@ -17,7 +17,7 @@
                         <option value="2"> 家居百货</option>
                         <option value="3"> 母婴用品</option>
                  </select>
-     <input name="keyword" type="text" class="inpMain" value="" size="20" />
+     <input name="keyword" type="text" class="inpMain" value="{{ $where['keyword'] }}" size="20" />
      <input name="submit" class="btnGray" type="submit" value="筛选" />
     </form>
     <span>
@@ -95,7 +95,7 @@
          
 
             </script>
-    {!!  $data->render()  !!}
+    {!!  $data->appends($where)->render()  !!}
                  </div>
  </div>
  <div class="clear"></div>

@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
+//前台
+//首页
 
-
-
-
-// 后台
-Route::get('admin/login','Admin\LoginController@login');
-Route::get('admin/yzm','Admin\LoginController@yzm');
-Route::post('admin/dologin','Admin\LoginController@dologin');
-
-
-
+Route::get('/','Home\IndexController@index');
 // 前台//登陆
 Route::get('index/login','Index\LoginController@login');
 Route::get('index/yzm','Index\LoginController@yzm');
@@ -57,8 +47,11 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 	
 });
 
-//资源路由
-Route::resource('/good','Home\GoodController');
+// 后台登录
+Route::get('admin/login','Admin\LoginController@login');
+Route::get('admin/yzm','Admin\LoginController@yzm');
+Route::post('admin/dologin','Admin\LoginController@dologin');
+
 
 //幻灯广告
 Route::get('/admin/show/index','Admin\ShowController@index');
@@ -71,4 +64,6 @@ Route::get('/admin/show/delete/{id}','Admin\ShowController@delete');
 //修改排序的路由
 Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
 
+//友情链接
+Route::resource('/admin/friendlink','Admin\FriendlinkController');
 

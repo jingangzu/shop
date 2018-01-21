@@ -55,7 +55,7 @@
         <img src="/img/logo.png"/>
     </div>
     <div class="dy13">
-        <embed src="/img/honehone_clock_wh.swf" style=" height:45px; width:120px"></embed>
+        <embed src="/img/abcd.png" style=" height:45px; width:50px"></embed>
 
     </div>
     <div class="dy12">
@@ -69,12 +69,12 @@
         全部商品分类
     </div>
     <div class="morelist">
-        <a href="#">标题一</a>
-        <a href="#">标题一</a>
-        <a href="#">标题一</a>
-        <a href="#">标题一</a>
-        <a href="#">标题一</a>
-        <a href="#">标题一</a>
+        <a href="#A"> 手机 </a>
+        <a href="#B"> 电脑 </a>
+        <a href="#C"> 热门 </a>
+        <a href="#D"> 活动 </a>
+        <a href="#E"> 好好 </a>
+        <a href="#F">友情链接</a>
     </div>
 </div>
 @section('content')

@@ -15,15 +15,23 @@ class GoodsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->input('keyword','');
+        $cid = $request->input('cid','');
+        $where = $request->only('keyword','cid');
+        if($cid){
+            $data = Goods::where('cid',$cid)->where('goods_name','like','%'.$keyword.'%')->paginate(2);
+        }else{
+            $data = Goods::where('goods_name','like','%'.$keyword.'%')->paginate(2);
+        }
 
-        $data = \DB::table('goods')->paginate(2);
+        
         // dd(24);
         
         //商品列表页
         // dd($data);
-        return view('admin.goods.product',compact('data'));
+        return view('admin.goods.product',compact('data','where'));
 
     }
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class GoodController extends Controller
+class FriendlinkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class GoodController extends Controller
      */
     public function index()
     {
-        //显示主页
-        return view('home/index');
+        //
     }
 
     /**
@@ -25,7 +24,9 @@ class GoodController extends Controller
      */
     public function create()
     {
-        //
+        //添加友情链接
+        return view('admin.friendlink.add');
+
     }
 
     /**
