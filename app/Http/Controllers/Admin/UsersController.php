@@ -4,14 +4,103 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use DB;
+use App\Model\Role;
+use App\Model\User;
+use App\Model\UserInfo;
+use App\Http\Requests;
+use Illuminate\Support\Facades\Crypt;
 class UsersController extends Controller
 {
+
+   public function auth($id)
+    {
+     //        根据id找到相关的用户U
+        $user = User::find($id);
+
+//        获取角色列表
+
+        $roles = Role::get();
+
+        //获取当前用户已经拥有的角色列表
+
+        $own_roles = $user->roles;
+        //存放当前用户拥有的角色的id
+        $own = [];
+        foreach ($own_roles as $v){
+            $own[] = $v->id;
+        }
+
+        return view('admin/auth',compact('user','roles','own'));
+    }
+
+     public function doauth(Request $request)
+    {
+      //dd('1111');
+//        1. 获取传过来的参数（要授权的用户的ID，要授予的角色的ID）
+         $input = $request->except('_token');
+         //dd($input);
+
+//        2. 提交到user_role这个关联表中
+
+        //开启事务
+        DB::beginTransaction();
+        try{
+            //删除当前用户的所有权限
+            DB::table('user_role')->where('id', $input['id'])->delete();
+            if(!empty($input['role_id'])){
+                //关联表中记录（给用户授权）前，应该检查一下，当前用户是否已经拥有了此角色，如果没有再添加
+                foreach ($input['role_id'] as $v){
+
+                    DB::table('user_role')->insert(
+                        ['id' => $input['id'], 'role_id' => $v]
+                    );
+                }
+            }
+
+            DB::commit();
+            return redirect('admin/users');
+        }catch(Exception $e){
+            DB::rollBack();
+            return redirect()->back()
+                ->withErrors(['error' => $e->getMessage()]);
+        }
+
+//        3. 判断是否添加成功
+    }
+      public function test()
+    {
+        // dd (1111);
+//        //找到ID为1的用户
+      // $user = User::with('userInfo')->find(3);
+         //      dd($user);
+////        通过用户模型的动态属性，找到对应的关联模型
+//        $uinfo = $user->userInfo->nickname;
+//        dd($uinfo);
+
+
+//        通过用户详情模型找用户模型
+//
+//        $userinfo = UserInfo::find(1);
+//
+//        return $userinfo->user->user_name;
+    }
+
+ //获取admin用户的所有收货地址，便利到前台选择收货地址的页面
+    public function address()
+    {
+        $user = User::find(2);
+//        通过模型的动态属性找到关联的地址模型
+        $address = $user->address;
+        dd($address);
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index(Request $request)
     {
 
@@ -229,7 +318,7 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
-        $res = \DB::table('user_admins')->delete($id);
+        $res = Role::delete($id);
 
        //如果删除成功
         if($res){
