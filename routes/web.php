@@ -78,12 +78,7 @@ Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
 Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
 Route::post('admin/cate','Admin\cateController@store');
 
-
-
-
-Route::get('admin/product','Admin\cateController@product');
-Route::get('admin/addproduct','Admin\cateController@addproduct');
-
+//分类
 Route::get('admin/cate/list','Admin\cateController@index');
 
 //网站配置模块
