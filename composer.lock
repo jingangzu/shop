@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+
     "content-hash": "fd86671a9c64df739ebf0ad5de24733f",
+
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -908,6 +910,7 @@
         },
         {
             "name": "ramsey/uuid",
+
             "version": "3.7.2",
             "source": {
                 "type": "git",
@@ -918,6 +921,7 @@
                 "type": "zip",
                 "url": "https://files.phpcomposer.com/files/ramsey/uuid/bba83ad77bb9deb6d3c352a7361b818e415b221d.zip",
                 "reference": "bba83ad77bb9deb6d3c352a7361b818e415b221d",
+
                 "shasum": ""
             },
             "require": {

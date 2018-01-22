@@ -9,7 +9,7 @@
         "laravel/framework": "5.4.*",
 
         "laravel/tinker": "~1.0",
-        "twbs/bootstrap": "^3.3"
+
 
     },
     "require-dev": {
@@ -24,10 +24,14 @@
         "psr-4": {
             "App\\": "app/",
             "Tests\\": "tests/"
+<<<<<<< HEAD
         },
         "files":[
             "App/Common/function.php"
         ]
+=======
+        }
+>>>>>>> shop.git/ctx
     },
     "scripts": {
         "post-root-package-install": [
