@@ -70,6 +70,7 @@ Route::resource('/admin/friendlink','Admin\FriendlinkController');
 
 Route::get('admin/index','Admin\indexController@index');
 
+//分类
 Route::get('admin/cate/add','Admin\cateController@add');
 Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
 Route::delete('admin/cate/del/{id}','Admin\cateController@del');
@@ -78,7 +79,7 @@ Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
 Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
 Route::post('admin/cate','Admin\cateController@store');
 
-//分类
+
 Route::get('admin/cate/list','Admin\cateController@index');
 
 //网站配置模块
