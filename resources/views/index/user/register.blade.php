@@ -4,49 +4,168 @@
 		<meta charset="UTF-8">
 		<title>用户注册</title>
 		<link rel="stylesheet" type="text/css" href="{{ asset('/index/css/login.css') }}">
+		<script src="{{ asset('/index/js/jquery.min.js') }}"></script>
+		<script src="{{ asset('/index/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('/index/layer/layer.js') }}"></script>
 
+		
+		<script>
+			  $(function(){
+ 
+                var ok1=false;
+                var ok2=false;
+                var ok3=false;
+                var ok4=false;
+                // 验证用户名
+                $('input[name="name"]').focus(function(){
+                    $(this).next().text('账号5-18位').removeClass('state1').addClass('state2');
+                }).blur(function(){
+                    if($(this).val().length >= 5 && $(this).val().length <=18 && $(this).val()!=''){
+                        $(this).next("li").text('输入成功').removeClass('state1').addClass('state4');
+                        ok1=true;
+                    }else{
+                        $(this).next("li").html('<font color="#FF0000">账号不合理</font>').removeClass('state1').addClass('state3');
+                    }
+                     
+                });
 
+                // 邮箱验证
+                 $('input[name="email"]').focus(function(){
+                 	  $(this).next().text('邮箱3-18位').removeClass('state1').addClass('state2');
+                 }).blur(function(){
+                      if(!$("input[name='email']").val().match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+					      $(this).next().html('<font color="#FF0000">邮箱不合理</font>').removeClass('state1').addClass('state3');
+					        return false;
+					    } else {
+					              $(this).next("li").text('输入成功').removeClass('state1').addClass('state4');
+                                  ok1=true;
+					 }  
+                });
+ 
+                //验证密码
+                $('input[name="password"]').focus(function(){
+                    $(this).next().text('密码5-18位').removeClass('state1').addClass('state2');
+                }).blur(function(){
+                    if($(this).val().length >= 5 && $(this).val().length <=18 && $(this).val()!=''){
+                        $(this).next().text('输入成功').removeClass('state1').addClass('state4');
+                        ok2=true;
+                    }else{
+                        $(this).next().html('<font color="#FF0000">密码不合理</font>').removeClass('state1').addClass('state3');
+                    }
+                     
+                });
+
+                $('input[name="re-password"]').focus(function(){
+                    $(this).next().text('密码5-18位').removeClass('state1').addClass('state2');
+                }).blur(function(){
+
+                    if($(this).val().length >= 5 && $(this).val().length <=18 && $(this).val()!=''){
+                        $(this).next().text('输入成功').removeClass('state1').addClass('state4');
+                        ok2=true;
+                    }else{
+
+                        $(this).next().html('<font color="#FF0000">密码不合理</font>').removeClass('state1').addClass('state3');   
+                    }
+                     
+                });
+                //提交按钮,所有验证通过方可提交
+                $('.submit').click(function(){
+                    if(ok1 && ok2){
+
+                    	layer.alert('该账号需要进入邮箱激活才能使用', {
+							  skin: 'layui-layer-molv' //样式类名
+							  ,closeBtn: 0
+								
+							});
+                        $('form').submit();
+                    }else{
+                        return false;
+                    }
+                });
+            });
+
+                 
+		</script>
 	</head>
 	<body>
-		<form  method="post" action="./regist.php">
+		<form  method="post" action="{{ url('index/user/doregister') }}">
+
+		{{ csrf_field() }}
 		<div class="regist">
-			<div class="regist_center">
-				<div class="regist_top">
-					<div class="left fl">会员注册</div>
-					<div class="right fr"><a href="./index.html" target="_self">小米商城</a></div>
+			<div class="regist_top">
+					<div class="left fl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 会员注册</div>
+					<div class="right fr"><a href="./index.html" target="_self">小米商城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 					<div class="clear"></div>
 					<div class="xian center"></div>
-				</div>
+			</div>
+			<div class="regist_center">
+				
 
 				<div class="regist_main center">
 
-					<div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" name="username" placeholder="请输入你的用户名"/><span>请不要输入汉字</span>
+					<div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" name="name" placeholder="用户名注册后不可更改" autocomplete="off"/>
+					<li style="list-style:none;float:right;"></li>
 					</div>
 
-					<div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="password" placeholder="请输入你的密码"/><span>请输入6位以上字符</span>
+					<div class="username">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:&nbsp;&nbsp;<input class="shurukuang" type="text" name="email" placeholder="请输入你的用户名" autocomplete="off"/>
+					<li style="list-style:none;float:right;"></li>
+					</div>
+
+					<div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="password"  placeholder="请输入你的密码" autocomplete="off"/>
+					<li style="list-style:none;float:right;"></li>
 					</div>
 					
-					<div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="repassword" placeholder="请确认你的密码"/><span>两次密码要输入一致哦</span></div>
+					<div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="re-password" placeholder="请确认你的密码"/><li style="list-style:none;float:right;"></li>
 
-					<div class="username">手&nbsp;&nbsp;机&nbsp;&nbsp;号:&nbsp;&nbsp;<input class="shurukuang" type="text" name="tel" placeholder="请填写正确的手机号"/><span>填写下手机号吧，方便我们联系您！</span>
 					</div>
-
+					
 					<div class="username">
-						<div class="left fl">验&nbsp;&nbsp;证&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="yanzhengma" type="text" name="username" placeholder="请输入验证码"/></div>
-						<div class="right fl"><img src="./image/yanzhengma.jpg"></div>
+						<div class="left fl">验&nbsp;&nbsp;证&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="yanzhengma" type="text" name="code" placeholder="请输入验证码"/>
+
+							@if (count($errors) > 0)
+							<div class="alert alert-danger">
+								<ul>
+									@if(is_object($errors))
+										@foreach ($errors->all() as $error)
+											<li style="color:red;font-family:Microsoft YaHei">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $error }}</li>
+											@endforeach
+										@else
+												<li style="color:red;font-family:Microsoft YaHei">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $errors }}</li>
+										@endif
+									</ul>
+								</div>
+							@endif		
+						</div>
+
+
+						<div class="right fl">
+							<img src="{{ url('index/yzm') }}" id="127ddf0de5a04167a9e427d883690ff6" onClick="this.src=this.src+'?'">
+						</div>
 						<div class="clear"></div>
 					</div>
-
 				</div>
 
+
 				<div class="regist_submit">
-					<input class="submit" type="submit" name="submit" value="立即注册" >
+					<input class="submit" type="submit" name="submit" value="立即激活" >
 				</div>
 				
 			</div>
 		</div>
 		</form>
 
-		<!-- // <script src="{{ asset('/index/js/jquery.validate.min.js') }}"></script> -->
+		<script>
+			 $(document).ready(function(){
+		         $("#submit").click(function(){
+		            
+		            layer.open({
+		            type: 1,
+		            area: ['350px', '250px'],
+		            shadeClose: true, //点击遮罩关闭
+		            content: '\<div style="padding:20px;margin-top:65px;margin-left:80px;">\<a href="https://mail.qq.com">前去激活\<\/a\>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    \<a\ href="../login">前去登陆\<\/a\>\<\/div>'
+		          });
+		         });
+		      });
+		</script>
 	</body>
 </html>

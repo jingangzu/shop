@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>简洁实用的后台管理静态网页模板下载_网站模板_js代码</title>
+<title>@yield('title')</title>
 <meta name="keywords" content="简洁,实用,后台管理,静态网页,模板下载" /> 
 <meta name="description" content="简洁实用的后台管理静态网页模板下载。" /> 
 <meta name="Copyright" content="Douco Design." />
@@ -64,13 +64,13 @@
 
  </ul>
    <ul class="bot">
-  <li><a href="backup.html"><i class="backup"></i><em>数据备份</em></a></li>
   <li><a href="mobile.html"><i class="mobile"></i><em>手机版</em></a></li>
   <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
   <li><a href="{{url('/admin/role/create')}}"><i class="manager"></i><em>添加角色</em></a></li>
   <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>
   <li><a href="{{url('/admin/permission/create')}}"><i class="manager"></i><em>添加权限</em></a></li>
   <li><a href="{{url('/admin/permission')}}"><i class="manager"></i><em>权限列表</em></a></li>
+  <li><a href="{{ url('/admin/friendlink') }}"><i class="backup"></i><em>友情链接</em></a></li>
   <li><a href="manager.php?rec=manager_log"><i class="managerLog"></i><em>操作记录</em></a></li>
  </ul>
 </div></div>

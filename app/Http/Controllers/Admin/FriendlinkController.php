@@ -15,6 +15,7 @@ class FriendlinkController extends Controller
     public function index()
     {
         //
+        return view('admin.friendlink.index');
     }
 
     /**
@@ -38,6 +39,27 @@ class FriendlinkController extends Controller
     public function store(Request $request)
     {
         //
+         $data = $request->except('_token','submit');
+
+        $this->validate($request,[
+                'name'=>'required',
+                'url'=>'required|re',
+              
+
+            ],[
+               
+        
+            ]);
+
+        $res = Goods::create($data);
+        if($res){
+            return redirect('/admin/goods');
+
+        }else{
+            return back();
+        }
+
+
     }
 
     /**

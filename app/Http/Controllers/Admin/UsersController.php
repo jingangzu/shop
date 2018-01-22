@@ -168,8 +168,6 @@ class UsersController extends Controller
     //对密码加密
    $data['password'] = encrypt($data['password']);
    //dd($data);
-    //对密码进行解密
-   $res=decrypt($data['password']);
 
    //处理上传
     if($request->hasFile('avatar'))

@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
-use App\Model\User;
+use App\Model\Home\User;
+use Session;
 
 class LoginController extends Controller
 {
@@ -37,16 +38,18 @@ class LoginController extends Controller
 
 
 
+
+
 		//验证数据的有效性
         $rule = [
-            'username'=>'required|between:5,18',
+            'name'=>'required|between:5,18',
             'password'=>'required|between:5,18|alpha_dash',
         ];
 
         //提示信息
         $mess = [
-            'username.required'=>'用户名不能为空',
-            'username.between'=>'用户名的长度必须在5-18位',
+            'name.required'=>'用户名不能为空',
+            'name.between'=>'用户名的长度必须在5-18位',
             'password.required'=>'密码不能为空',
             'password.between'=>'密码的长度必须在5-18位',
             'password.alpha_dash'=>'密码必须是数字字母下划线',
@@ -67,13 +70,23 @@ class LoginController extends Controller
             return back()->with('errors','验证码错误');
         }
 
-        $user = User::where('username',$input['username'])->first();
+        $user = User::where('name',$input['name'])->first();
+
+
+
+        $status = $user->status;
+
+        if ($status == 0) {
+            return back()->with('errors','账号没激活');
+        }
+
         //用户验证
         // dd($user);
 
         if (! $user) {
             return back()->with('errors','无此用户');
         } 
+        // dd($user->password);
 
 		//密码验证
         if(Crypt::decrypt($user->password) != $input['password']){
@@ -82,9 +95,11 @@ class LoginController extends Controller
 
 
 		//将用户的登录状态保存到session
-        Session::put('user',$user);
+        // Session::put('user',$user);
 
+        return '111';
         return redirect('index/index');
 
     }
+    
 }

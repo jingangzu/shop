@@ -21,8 +21,23 @@ Route::get('/','Home\IndexController@index');
 Route::get('index/login','Index\LoginController@login');
 Route::get('index/yzm','Index\LoginController@yzm');
 Route::post('index/dologin','Index\LoginController@dologin');
+
 // 注册控制器
 Route::get('/index/user/register','Index\User\RegisterController@register');
+Route::get('/index/user/yzm','Index\User\RegisterController@yzm');
+Route::post('/index/user/doregister','Index\User\RegisterController@doregister');
+// 邮箱激活
+Route::get('index/user/active/{email}','Index\User\RegisterController@active');
+// Route::get('/index/user/pwactive','Index\LoginController@pwactive');
+
+//重置密码
+Route::get('/index/user/resetpw','Index\User\RegisterController@resetpw');
+Route::post('/index/user/doresetpw','Index\User\RegisterController@doresetpw');
+Route::get('/index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
+Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
+
+
+
 
 
 
@@ -89,7 +104,7 @@ Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
 //友情链接
 Route::resource('/admin/friendlink','Admin\FriendlinkController');
 
-
+//后台首页
 Route::get('admin/index','Admin\indexController@index');
 
 //分类
