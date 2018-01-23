@@ -56,25 +56,15 @@
                                 }
                    
                                 //判断上传文件的后缀名
-                               
                                       var strExtension = imgPath.substr(imgPath.lastIndexOf('.') + 1);
                                       if (strExtension != 'jpg' && strExtension != 'gif'
                                           && strExtension != 'png' && strExtension != 'bmp') {
                                           layer.alert("请选择图片文件");
                                           return;
                                       }
-
-                                
-
                            // var myform = document.getElementById('art_from');
-
-
                                 //将整个form打包进formData对象中传到服务器。
 //                                var formData = new FormData($('#art_form')[0]);
-
-
-
-
                                 //只将文件上传表单项的内容放入formData对象
                                 var formData = new FormData();
                                 formData.append($(this).attr('name'), $(this)[0].files[0]);
@@ -100,7 +90,7 @@
                                         
                                         // $('#art_thumb').val(data);
                                         }else{
-                                            $('#'+id).attr('src','{{ env('QINIU_YUMING') }}'+data);
+                                            $('#'+id).attr('src','/uploads/'+data);
 
                                             // console.log(data);
                                             layer.alert('上传成功');
@@ -121,5 +111,5 @@
     </form>
            </div>
  </div>
- <div class="clear"></div>
+ <div class="clear"></div>z
 @stop

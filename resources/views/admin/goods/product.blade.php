@@ -21,7 +21,6 @@
      <input name="submit" class="btnGray" type="submit" value="筛选" />
     </form>
     <span>
-    <a class="btnGray" href="product.php?rec=re_thumb">更新商品缩略图</a>
         <a class="btnGray" href="product.php?rec=sort">开始筛选首页商品</a>
         </span>
     </div>

@@ -18,7 +18,7 @@
     </div>
 @endif
     <form id='art_form' action="{{ url('/admin/friendlink') }}" method="post" enctype="multipart/form-data">
-    {{ csrf_field() }}
+       {{ csrf_field() }}
 
      <table width="100%"  class='table'>
       <tr>
@@ -55,6 +55,7 @@
       </tr>
        <script type="text/javascript">
         $(function(){
+
               $('#url').on('blur',function(){
               var gn = $(this).val();
               var res = gn.match(/^(http|ftp|https):\/\/.*?/);
@@ -67,19 +68,19 @@
                  $('#msg2').attr('style','color:green');
               }
             });
-        });
-
+          
+       });
       </script>
       <tr>
        <td align="right">图片</td>
        <td>
-        <input type="file" name="image" value="{{ old('image') }}" />
+        <input type="file" name="image"/>
        </td>
       </tr>
       <tr>
        <td></td>
        <td>
-        <input name="submit" class="btn" type="submit" value="提交" />
+        <input id="sub" name="submit" class="btn" type="submit" value="提交" />
        </td>
       </tr>
      </table>

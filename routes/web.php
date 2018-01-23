@@ -43,9 +43,9 @@ Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextres
 
 //后台
 //首页
-Route::get('/admin/index',function(){
-	return view('admin.index');
-});
+// Route::get('/admin/index',function(){
+// 	return view('admin.index');
+// });
 //用户管理
 Route::get('/admin/user/test','Admin\UsersController@test');
 Route::get('/admin/user/address','Admin\UsersController@address');
@@ -102,6 +102,8 @@ Route::get('/admin/show/delete/{id}','Admin\ShowController@delete');
 Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
 
 //友情链接
+Route::get('admin/frindlink/show/{id}','Admin\FriendlinkController@up');
+Route::get('admin/frindlink/hide/{id}','Admin\FriendlinkController@down');
 Route::resource('/admin/friendlink','Admin\FriendlinkController');
 
 //后台首页

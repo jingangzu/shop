@@ -11,12 +11,14 @@
 
 <link href="/css/public.css" rel="stylesheet" type="text/css">
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+@section('style')
 
+@show
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/layer/layer.js"></script>
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">

@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use App\Model\Friend_link;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //共享变量
+        $link=Friend_link::where('status','1')->take(6)->get();
+        view()->share('link',$link);
+
     }
 
     /**

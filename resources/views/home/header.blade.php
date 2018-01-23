@@ -81,6 +81,17 @@
 
 @show
 
+//友情链接
+<div style="height:100px;">
+    @foreach($link as $v)
+    <div style="float:left;width:5px;height:100px"></div>
+        <div style="float:left;width:200px;height:100px"><a href="{{ $v->url }}"><img src="/linkpic/{{$v->image}}" width="100%" height="100%"></a></div>
+        <div style="float:left;width:5px;height:100px"></div>
+
+    @endforeach
+    
+</div>
+
 <!--页脚-->
 <!--footer-->
 <div class="footer">

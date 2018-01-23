@@ -137,16 +137,12 @@ class GoodsController extends Controller
 
                 $res=Goodspic::create($data);
                 if($res){
+                    //  返回上传的文件在服务器上的保存路径，给浏览器显示上传图片
+
                     return $newName;
                 }else{
                     return 000;
                 }
-
-//              
-
-//                返回上传的文件在服务器上的保存路径，给浏览器显示上传图片
-                
-               
             
 
             }
@@ -198,7 +194,7 @@ class GoodsController extends Controller
         $this->validate($request,[
                 'goods_name'=>'required',
                 'cid'=>'required',
-                'goods_price'=>'required|numeric|size:10',
+                'goods_price'=>'required|numeric|max:10',
                 'goods_description'=>'required|min:10|max:80',
                 'goods_stock'=>'required|numeric',
               
@@ -251,7 +247,7 @@ class GoodsController extends Controller
         return redirect('/admin/goods');
 
     }
-
+    //下架
     public function down($id)
     {
        Goods::where('id',$id)->update(['goods_status'=>0]);
