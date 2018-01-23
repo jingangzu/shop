@@ -1,9 +1,15 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','商城后台系统')
+
+@section('style')
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/global.js"></script>
+@stop
+
 @section('content')
  <!-- 当前位置 -->
+<div id="dcMain"> <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
-      
     
    <div id="douApi"></div>
       <div class="indexBox">
@@ -146,6 +152,7 @@
     
   </div>
  </div>
+ <div class="clear"></div>
  
 
  @endsection

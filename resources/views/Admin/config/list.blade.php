@@ -1,6 +1,7 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','商城后台网站配置页面')
 @section('content')
+<div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>网站配置</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         
@@ -83,6 +84,7 @@
     </div>
  </div> 
 
+
    <script>
         function delConfig(id){
             //询问框
@@ -138,5 +140,6 @@
             })
         }
     </script>
-
+  
+ <div class="clear"></div>
  @endsection

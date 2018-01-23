@@ -1,10 +1,11 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','商品添加页')
 @section('content')
+<div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <h3><a href="{{ url('/admin/cate/add') }}" class="actionBtn">商品分类</a>添加分类</h3>
-    <form action="{{ url('admin/cate') }}" method="post">
+    <form action="{{ url('admin/cate') }}" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       
@@ -27,6 +28,11 @@
        <td>
         <input type="text" name="cate_name" value="" size="40" class="inpMain" />
        </td>
+      </tr>
+      <tr>
+   <td align="right">分类图片</td>
+       <td>
+        <input type="file" name="cate_pic" placeholder="" size="40" class="inpMain" />       </td>
       </tr>
       <tr>
        <td align="right">标题</td>

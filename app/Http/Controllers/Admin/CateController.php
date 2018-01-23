@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use DB;
 use App\Http\Requests;
 use App\Model\Cate;
 use Illuminate\Http\Request;
@@ -65,6 +65,31 @@ class CateController extends Controller
     	//1.获取请求参数数据
     	$input = $request->except('_token');
     	// dd($input);
+        //处理上传
+    if($request->hasFile('cate_pic'))
+    {
+        $file = $request->file('cate_pic');
+        if($file->isValid())
+        {
+            //处理
+            $ext = $file->getClientOriginalExtension();
+            $filename=time().mt_rand(10000,99999).'.'.$ext;
+            $res= $file->move('./uploads',$filename);
+            if($res)
+            {
+                $input['cate_pic'] = $filename;
+            }else
+            {
+                $input['cate_pic'] = 'default.jpg';
+            }
+        }else
+        {
+            $input['cate_pic']='default.jpg';
+        }
+    }else
+    {
+        $input['cate_pic'] = 'default.jpg';
+    }
 
     	$res = Cate::create($input);
     	if($res){
@@ -90,10 +115,40 @@ class CateController extends Controller
 
         $cate = Cate::find($id);
        $cate->cate_name = $input['cate_name'];
+       $cate->cate_pic = $input['cate_pic'];
        $cate->cate_title = $input['cate_title'];
        $cate->cate_keywords = $input['cate_keywords'];
-       $res = $cate->save();
+       // $res = $cate->save();
 
+       //处理上传
+    if($request->hasFile('cate_pic'))
+    {
+        $file = $request->file('cate_pic');
+        if($file->isValid())
+        {
+            //处理
+            $ext = $file->getClientOriginalExtension();
+            $filename=time().mt_rand(10000,99999).'.'.$ext;
+            $res= $file->move('./uploads',$filename);
+            if($res)
+            {
+                  //删除原图片
+                $oldPic = \DB::table('category')->where('cate_id',$input['cate_id'])->first()->cate_pic;
+                if($oldPic != 'default.jpg')
+                {
+                    //dd($oldPic);
+                   //  unlink('./uploads/'.$oldPic);
+                }
+               
+                $input['cate_pic'] = $filename;
+              
+
+            }
+        }
+      }
+      $id = $input['cate_id'];
+      unset($input['cate_id']);
+       $res = \DB::table('category')->where('cate_id',$id)->update($input);
         if($res){
 
 
@@ -109,7 +164,7 @@ class CateController extends Controller
     public function del($id)
     {
     	$cate = Cate::find($id)->delete();
-    
+ // $fcate = Cate::where("pid",'=',$id)->first();
         //如果删除成功
         if($cate){
             $data = [
@@ -134,14 +189,14 @@ class CateController extends Controller
 
 
 
-    //商品列表页
-     public function product()
-    {
-    	return view('admin.product');
-    } 
-    //商品列表页
-     public function addproduct()
-    {
-    	return view('admin.addproduct');
-    }
+    // //商品列表页
+    //  public function product()
+    // {
+    // 	return view('admin.product');
+    // } 
+    // //商品列表页
+    //  public function addproduct()
+    // {
+    // 	return view('admin.addproduct');
+    // }
 }

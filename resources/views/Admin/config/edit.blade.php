@@ -1,6 +1,7 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','网站配置修改页')
 @section('content')
+<div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>修改网站配置</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
 
