@@ -15,7 +15,7 @@ class Cate extends Model
     {
     	//获取所有分类数据
     	$cates = $this::orderBy('cate_order','asc')->get();
-
+        
     	return $this->Cate($cates);
     }
 
@@ -30,6 +30,7 @@ class Cate extends Model
     		if($v->cate_pid == 0){
     			$v['catenames'] = $v['cate_name'];
     			$arr[]=$v;
+               
 
     			//获取二级类
     			foreach($category as $m=>$n)
@@ -37,6 +38,7 @@ class Cate extends Model
     				if($n->cate_pid == $v->cate_id){
     					$n['catenames'] = '|----'.$n['cate_name'];
     					$arr[]=$n;
+                        $v->flag=true;
     				}
     			}
     		}

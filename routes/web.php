@@ -43,9 +43,7 @@ Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextres
 
 //后台
 //首页
-// Route::get('/admin/index',function(){
-// 	return view('admin.index');
-// });
+
 //用户管理
 Route::get('/admin/user/test','Admin\UsersController@test');
 Route::get('/admin/user/address','Admin\UsersController@address');

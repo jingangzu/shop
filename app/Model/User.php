@@ -13,7 +13,6 @@ class User extends Model
 
 //    定义关联表的主键
     public $primaryKey = 'id';
-
     //是否自动维护crated_at,updated_at字段
 //    public $timestamps = false;
 

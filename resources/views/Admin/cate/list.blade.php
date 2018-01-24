@@ -1,6 +1,7 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','商城后台商品分类页面')
 @section('content')
+<div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>商品分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="{{ url('/admin/cate/add')}}" class="actionBtn add">添加分类</a>商品分类</h3>
@@ -8,11 +9,13 @@
       <tr>
         <th width="120" align="left">排序</th>
         <th align="left">ID</th>
-        <th align="left">分类名称</th>
-       <th width="60" align="center">标题</th>
-       <th width="60" align="center">关键字</th>
+        <th align="center">分类名称</th>
+        <th align="left" width="100">图片</th>
+       <th  align="left" >标题</th>
+       <th align="left"width="150" >关键字</th>
+       
       
-        <th width="80" align="center">操作</th>
+        <th align="left">操作</th>
      </tr>
 
     @foreach($cates as $k=>$v)
@@ -22,10 +25,18 @@
         </td>
         <td>{{ $v->cate_id }}</td>
         <td>{{ $v->catenames }}</td>
+        <td align="center"><img width="80" src="/uploads/{{ $v->cate_pic }}"></td>
         <td align="center">{{ $v->cate_title }}</td>
         <td align="center">{{ $v->cate_keywords }}</td>
         
-        <td align="center"><a href="{{ url('/admin/cate/edit/'.$v->cate_id) }}">编辑</a> | <a href="javascript:;" onclick="delCate({{ $v->cate_id}})">删除</a></td>
+        
+        <td align="center"><a href="{{ url('/admin/cate/edit/'.$v->cate_id) }}">编辑</a> 
+
+        @if(empty($v->flag))
+         <a href="javascript:;" onclick="delCate({{ $v->cate_id}})"> |删除</a>
+        
+      @endif
+        </td>
      </tr>
      @endforeach
   
@@ -34,6 +45,7 @@
 
     </div>
  </div>
+ <div class="clear"></div>
  <script>
         function delCate(id){
             //询问框

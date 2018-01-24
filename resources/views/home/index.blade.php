@@ -6,240 +6,39 @@
 
 <div id="big_banner_wrap" style="display:block">
 
-    <ul id="banner_menu_wrap">
+    <ul id="banner_menu_wrap"> @foreach($cates as $k=>$v)
+     @if($v->cate_pid == 0)
         <li class="active"img>
-            <a>手机&nbsp;平板</a>
-            <a class="banner_menu_i">&gt;</a>
+       
+           <a>{{ $v['cate_name'] }}</a>
+      
+            <a class="banner_menu_i">&gt;</a> 
             <div class="banner_menu_content" style="width: 600px; top: -20px;">
+             
+          @foreach($cates as $m=>$n)  
+    @if($n->cate_pid == $v->cate_id)        
                 <ul class="banner_menu_content_ul">
+                 
                     <li>
+        
+                        <a><img width="60" src="/uploads/{{$v->cate_pic}}"></a>
+  
+    <a>{{ $n['cate_name'] }}</a>
 
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
 
+                        <span>选购</span></li>
+          
                 </ul>
+         @endif
+    @endforeach                    
+              
             </div>
+            @endif
         </li>
-        <li>
-            <a>电视&nbsp;盒子</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 600px; top: -62px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>路由器&nbsp;智能配件</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 900px; top: -104px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><<span>选购</span>/li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>移动电源&nbsp;插线板</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -146px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg "></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>耳机&nbsp;音箱</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -188px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>电池&nbsp;存储卡</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -230px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>保护套&nbsp;后盖</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -272px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>贴膜&nbsp;其它配件</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 600px; top: -314px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>箱包&nbsp;服装</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -356px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a>食品&nbsp;其它周边</a>
-            <a class="banner_menu_i">&gt;</a>
-            <div class="banner_menu_content" style="width: 300px; top: -398px;">
-                <ul class="banner_menu_content_ul">
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-                    <li>
-                        <a><img src="/img/headphone.jpg"></a><a>乐乐耳机</a><span>选购</span></li>
-
-                </ul>
-            </div>
-        </li>
-    </ul>
+          @endforeach
+    </ul>   
+   
+        
     <div id="big_banner_pic_wrap">
         <ul id="big_banner_pic">
 

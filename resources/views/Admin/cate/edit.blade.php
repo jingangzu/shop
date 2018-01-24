@@ -1,12 +1,13 @@
-@extends('layouts.admin')
+@extends('admin.common')
 @section('title','商品分类修改页')
 @section('content')
+<div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
            @if(session('msg'))
             <h3>{{ session('msg') }}</h3>
             @endif
-    <form action="{{ url('/admin/cate/update/'.$cate->cate_id) }}" method="post">
+    <form action="{{ url('/admin/cate/update/'.$cate->cate_id) }}" method="post" enctype="multipart/form-data">
     
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      {{ csrf_field() }}
@@ -18,6 +19,17 @@
        <td>
         <input type="text" name="cate_name" value="{{ $cate->cate_name }}" size="40" class="inpMain" />
        </td>
+      </tr>
+      <tr>
+   <td align="right">原始头像</td>
+       <td>
+            <img width="80" src="/uploads/{{ $cate->cate_pic }}">         
+      </td>
+      </tr>
+       <tr>
+    <td align="right">新头像</td>
+       <td>
+        <input type="file" name="cate_pic" placeholder="" size="40" class="inpMain" />       </td>
       </tr>
       <tr>
        <td align="right">标题</td>

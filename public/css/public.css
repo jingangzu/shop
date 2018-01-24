@@ -236,17 +236,23 @@ select {
 }
 /*- tableBasic -*/
 .tableBasic {
- background-color: #F9F9F9;
- color: #666666;
- border-left: 1px dotted #CCCCCC;
- border-top: 1px dotted #CCCCCC;
+
+ border-left: 1px solid #CCCCCC;
+ border-top: 1px solid #CCCCCC;
+ border-bottom-width: 1px;
+
+border-bottom-color: rgb(230, 189, 189);
 }
 .tableBasic select {
  color: #8F8F8F;
 }
 .tableBasic td, .tableBasic th {
- border-right: 1px dotted #CCCCCC;
- border-bottom: 1px dotted #CCCCCC;
+ border-right: 1px solid #CCCCCC;
+ border-bottom: 1px solid #CCCCCC;
+ padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+color: rgb(177, 106, 104);
 }
 .tableBasic th {
  background-color: #EEEEEE;
