@@ -38,6 +38,13 @@ Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextres
 
 
 
+//加入购物车
+Route::post('/home/addcart','Home\ShopcarController@addCart');
+//购物车列表
+Route::get('/home/shopcar','Home\ShopcarController@cart');
+
+
+
 
 
 

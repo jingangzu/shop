@@ -18,7 +18,7 @@
             <li><a href="#">乐乐官网<br/>乐乐官网</a></li>
             <li><a href="#" id="diyunapp">商城APP<br/>商城APP</a></li>
         </ul>
-        <a href="#" class="dy5">购物车</a>
+        <a href="{{ url('/home/shopcar') }}" class="dy5">购物车</a>
         <ul class="dy4">
             <li><a href="#">登录<br/>登录</a></li>
             <li><a href="#">注册<br/>注册</a></li>
