@@ -176,9 +176,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::post('role/doauth','RoleController@doauth');
 	Route::post('role/doauth','RoleController@doauth');
 
-=======
-	
->>>>>>> shop.git/csss
 });
 
 
@@ -228,13 +225,10 @@ Route::get('admin/cate/list','Admin\cateController@index');
 //网站配置模块
 Route::resource('admin/config','Admin\ConfigController');
 Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
-<<<<<<< HEAD
-=======
 
 
 //推荐位
 Route::get('/admin/recommend/index','Admin\RecommendController@index');
-// Route::get('/admin/show/add','Admin\ShowController@add');
 Route::post('/admin/recommend/insert','Admin\RecommendController@insert');
 Route::get('/admin/recommend/edit/{id}','Admin\RecommendController@edit');
 Route::post('/admin/recommend/update','Admin\RecommendController@update');
@@ -258,11 +252,6 @@ Route::post('/admin/advertisement/changeorder','Admin\AdvertisementController@ch
 Route::get('admin/cate/list','Admin\cateController@index');
 
 
-//网站配置模块
-Route::resource('admin/config','Admin\ConfigController');
-Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
-
-
 
 
 // 前台个人中心 
@@ -279,4 +268,3 @@ Route::get('/index/address/add','Index\Address\AddressController@add');
 Route::get('/index/address/edit/{id}','Index\Address\AddressController@edit');
 Route::post('/index/address/update','Index\Address\AddressController@update');
 Route::get('/index/address/delete/{id}','Index\Address\AddressController@delete');
->>>>>>> shop.git/csss
