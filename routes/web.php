@@ -13,7 +13,23 @@
 
 
 
-//前台
+//前台订单
+
+//下订单
+Route::get('home/ordersub/{gid}/{aid}/{price}/{num}', 'Home\OrdersubController@index');	
+//Route::post('home/ordersub', 'Home\OrdersubController@end');	
+	
+//生成订单
+Route::post('home/ordersub', 'Home\OrdersubController@create');			
+//订单详情
+//Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
+//取消订单
+//Route::get('home/orderre', 'Home\UserorderController@create'); 		
+//确认收货
+//Route::get('home/ordersu', 'Home\UserorderController@store'); 		
+
+
+
 //首页
 
 Route::get('/','Home\IndexController@index');
@@ -86,6 +102,13 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 	Route::resource('/goods','GoodsController');
 	
 });
+
+
+//后台订单管理
+Route::get('admin/orders/up/{id}','Admin\OrdersController@up');
+Route::get('admin/orders/down/{id}','Admin\OrdersController@down');
+Route::resource('admin/orders','Admin\OrdersController');
+
 
 // 后台登录
 Route::get('admin/login','Admin\LoginController@login');

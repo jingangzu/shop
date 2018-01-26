@@ -35,7 +35,7 @@ class User extends Model
     //找到关联的用户地址模型  一对多
     public function address(){
 
-        return $this->hasMany('App\Model\Address', 'id', 'id');
+        return $this->hasMany('App\Model\Address', 'uid', 'id');
     }
 
 
@@ -44,4 +44,9 @@ class User extends Model
     {
         return $this->belongsToMany('App\Model\Role','user_role','id','role_id');
     }
+
+     // public function userinfo()
+     // {
+     //    return $this->hasOne('App\Model\UserInfo','id','id');
+     // }
 }

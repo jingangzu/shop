@@ -17,10 +17,15 @@ class Goods extends Model
     //是否自动添加created_at,update_at
     public $timestamps = false;
 
+    //与商品图片关联
     public function getpicture()
     {
         return $this->hasMany('App\Model\Goodspic','gid','id');
     }
-
+    //
+   public function goodstags()
+    {
+        return $this->hasOne('App\Model\goodstags', 'cateid', 'cid');
+    }
 
 }
