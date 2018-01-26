@@ -25,38 +25,56 @@
     <div class="title-item t_c">
       <h4 class="title_big30">重置密码</h4>
     </div>
-    <form action="" method="post" id="forgetpwd_form">
-    <input name="qs" type="hidden">
+
+
+
+    <form action="/index/user/doresetpw" method="post" id="forgetpwd_form">
+    <!-- <input name="qs" type="hidden"> -->
+
     {{ csrf_field() }}
     <!-- 记得在此添加标记语言uLocale -->
     <div class="regbox">
       <h5 class="n_tit_msg">请输入注册的邮箱地址、手机号码或帐号：</h5>      
       <div class="inputbg">
         <!-- 错误添加class为err_label -->
-
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+              <ul>
+                @if(is_object($errors))
+                  @foreach ($errors->all() as $error)
+                    <li style="color:red;font-family:Microsoft YaHei">{{ $error }}</li>
+                    @endforeach
+                  @else
+                      <li style="color:red;font-family:Microsoft YaHei">{{ $errors }}</li>
+                  @endif
+                </ul>
+              </div>
+            @endif
         <label class="labelbox labelbox-user" for="user" id="abc">
-          <input name="id" id="user" autocomplete="off" placeholder="邮箱/手机号码/帐号" value="" type="email" name="email">
+          <input name="email" id="user" autocomplete="off" placeholder="邮箱/手机号码/帐号" value="" type="email" name="email">
          </label>
 
+
+<!-- 
          <input name="passToken" id="passToken" value="" type="hidden">
-         <input name="passport_ph" id="passport_ph" value="" type="hidden">
+         <input name="passport_ph" id="passport_ph" value="" type="hidden"> -->
       </div>	
-      <div class="err_tip error-tip-1">
+   <!--    <div class="err_tip error-tip-1">
         <div class="dis_box">
           <em class="icon_error"></em>
           <span id="error-content"></span>
         </div>
-      </div> 
+      </div>  -->
 			
-			<div class="err_tip error-tip-2">
+			<!-- <div class="err_tip error-tip-2">
 				<div class="dis_box"><em class="icon_error"></em><span id="error-content-2"></span></div>
-			</div>
+			</div> -->
       <div class="country_tips c_b">
         用户输入手机号码时请正确选择区域前缀，如：台湾：+8869*******，香港：+8526*******
         <a class="fr underline" id="select_country_code" href="javascript:void(0)">帮助</a>
       </div>  
       <div class="fixed_bot">
-        <input class="btn332 btn_reg_1" id="submit_button" value="发送邮件" type="button">   
+        <input class="btn332 btn_reg_1" id="submit_button" value="发送邮件" type="submit">   
       </div>
     </div>
     </form>        
@@ -84,20 +102,8 @@
              alert("邮箱不能为空");
              return false;
             }
-            var email=$("#user").val();
-            if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
-            {
-             alert("格式不正确！请重新输入");
-             $("#user").focus();
-             return false;
-            }
+            layer.msg('邮箱已发送请前去激活');
 
-            layer.open({
-            type: 1,
-            area: ['350px', '250px'],
-            shadeClose: true, //点击遮罩关闭
-            content: '\<div style="padding:20px;margin-top:65px;margin-left:80px;">\<a href="https://mail.sina.com.cn/">前去激活\<\/a\>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    \<a\ href="../login">前去登陆\<\/a\>\<\/div>'
-          });
          });
       });
 </script>

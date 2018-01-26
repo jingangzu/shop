@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('/index/css/login.css') }}">
 		<script src="{{ asset('/index/js/jquery.min.js') }}"></script>
 		<script src="{{ asset('/index/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('/index/layer/layer.js') }}"></script>
+
 		
 		<script>
 			  $(function(){
@@ -69,6 +71,12 @@
                 //提交按钮,所有验证通过方可提交
                 $('.submit').click(function(){
                     if(ok1 && ok2){
+
+                    	layer.alert('该账号需要进入邮箱激活才能使用', {
+							  skin: 'layui-layer-molv' //样式类名
+							  ,closeBtn: 0
+								
+							});
                         $('form').submit();
                     }else{
                         return false;
@@ -95,7 +103,7 @@
 
 				<div class="regist_main center">
 
-					<div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" name="name" placeholder="请输入你的用户名" autocomplete="off"/>
+					<div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" name="name" placeholder="用户名注册后不可更改" autocomplete="off"/>
 					<li style="list-style:none;float:right;"></li>
 					</div>
 
@@ -139,13 +147,25 @@
 
 
 				<div class="regist_submit">
-					<input class="submit" type="submit" name="submit" value="完成注册" >
+					<input class="submit" type="submit" name="submit" value="立即激活" >
 				</div>
 				
 			</div>
 		</div>
 		</form>
 
-		
+		<script>
+			 $(document).ready(function(){
+		         $("#submit").click(function(){
+		            
+		            layer.open({
+		            type: 1,
+		            area: ['350px', '250px'],
+		            shadeClose: true, //点击遮罩关闭
+		            content: '\<div style="padding:20px;margin-top:65px;margin-left:80px;">\<a href="https://mail.qq.com">前去激活\<\/a\>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    \<a\ href="../login">前去登陆\<\/a\>\<\/div>'
+		          });
+		         });
+		      });
+		</script>
 	</body>
 </html>
