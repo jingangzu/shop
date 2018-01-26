@@ -42,13 +42,10 @@
         
     <div id="big_banner_pic_wrap">
         <ul id="big_banner_pic">
-
-            <li><img src="/img/T1hiDvBvVv1RXrhCrK.jpg"></li>
-            <li><img src="/img/T1jrxjB_VT1RXrhCrK.jpg"></li>
-            <li><img src="/img/T1oTJjBKKT1RXrhCrK.jpg"></li>
-            <li><img src="/img/T1RICjB7DT1RXrhCrK.jpg"></li>
-            <li><img src="/img/T1vWdTBKDv1RXrhCrK.jpg"></li>
-
+@foreach($show as $k)
+        
+            <li><img width="1226px" height="460px" src="/uploads/{{ $k }}"></li>
+@endforeach
         </ul>
     </div>
     <div id="big_banner_change_wrap">
@@ -71,11 +68,9 @@
     </div>
     <div class="dy16">
         <ul>
-
-            <li><a href="#"><img src="/img/jinghuaqi.jpg"/></a></li>
-            <li><a href="#"><img src="/img/jinghuaqi1.jpg"/></a></li>
-            <li><a href="#"><img src="/img/jinghuaqi2.jpg"/></a></li>
-
+@foreach($rec as $k)
+            <li><a href="#"><img src="/upload/{{ $k }}"/></a></li>
+            @endforeach
         </ul>
     </div>
 </div>
@@ -84,88 +79,19 @@
     <div class="lunbobanner">
         <ul class="lunboimg">
             <li>
+
+                  @foreach($adv as $k=>$v)
                 <a href="#">
 
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
+                  
+                    <b><img width="180px" height="200px" src="/uploa/{{ $v->img }}"/></b>
+                    
+                    <h5>{{ $v->name }}</h5>
+                    <p>{{ $v->summary }}</p>
+                    <span>{{ $v->price }}元</span>
+                   
                 </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
-                <a href="#">
-
-                    <b><img src="/img/diannaozhuji.png"/></b>
-
-                    <h5>磐石DIY游戏主机</h5>
-                    <p>坚如磐石，带给你极致游戏体验</p>
-                    <span>5000元5</span>
-                </a>
+                 @endforeach
             </li>
         </ul>
     </div>

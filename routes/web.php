@@ -142,7 +142,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 
 	Route::resource('/goods','GoodsController');
 
-
 });
 //后台路由组中间件
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'],function(){
@@ -177,6 +176,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::post('role/doauth','RoleController@doauth');
 	Route::post('role/doauth','RoleController@doauth');
 
+=======
+	
+>>>>>>> shop.git/csss
 });
 
 
@@ -226,3 +228,55 @@ Route::get('admin/cate/list','Admin\cateController@index');
 //网站配置模块
 Route::resource('admin/config','Admin\ConfigController');
 Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
+<<<<<<< HEAD
+=======
+
+
+//推荐位
+Route::get('/admin/recommend/index','Admin\RecommendController@index');
+// Route::get('/admin/show/add','Admin\ShowController@add');
+Route::post('/admin/recommend/insert','Admin\RecommendController@insert');
+Route::get('/admin/recommend/edit/{id}','Admin\RecommendController@edit');
+Route::post('/admin/recommend/update','Admin\RecommendController@update');
+Route::get('/admin/recommend/delete/{id}','Admin\RecommendController@delete');
+
+//修改排序的路由
+Route::post('/admin/recommend/changeorder','Admin\RecommendController@changeOrder');
+
+
+//广告位
+Route::get('/admin/advertisement/index','Admin\AdvertisementController@index');
+// Route::get('/admin/show/add','Admin\ShowController@add');
+Route::post('/admin/advertisement/insert','Admin\AdvertisementController@insert');
+Route::get('/admin/advertisement/edit/{id}','Admin\AdvertisementController@edit');
+Route::post('/admin/advertisement/update','Admin\AdvertisementController@update');
+Route::get('/admin/advertisement/delete/{id}','Admin\AdvertisementController@delete');
+
+//修改排序的路由
+Route::post('/admin/advertisement/changeorder','Admin\AdvertisementController@changeOrder');
+
+Route::get('admin/cate/list','Admin\cateController@index');
+
+
+//网站配置模块
+Route::resource('admin/config','Admin\ConfigController');
+Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
+
+
+
+
+// 前台个人中心 
+Route::get('/index/user/personage','Index\User\PersonageController@index');
+  
+//账户信息(个人资料)
+Route::get('/index/user/account','Index\User\PersonageController@account');
+Route::get('/index/user/redact','Index\User\PersonageController@redact');
+Route::post('/index/user/doredact','Index\User\PersonageController@doredact');
+ //地址
+Route::get('/index/address/index','Index\Address\AddressController@index');
+Route::get('/index/address/insert','Index\Address\AddressController@insert');
+Route::get('/index/address/add','Index\Address\AddressController@add');
+Route::get('/index/address/edit/{id}','Index\Address\AddressController@edit');
+Route::post('/index/address/update','Index\Address\AddressController@update');
+Route::get('/index/address/delete/{id}','Index\Address\AddressController@delete');
+>>>>>>> shop.git/csss

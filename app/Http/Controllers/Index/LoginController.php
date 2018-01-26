@@ -118,6 +118,5 @@ class LoginController extends Controller
        }
         
     }
->>>>>>> jqh
-    
+
 }
