@@ -13,7 +13,7 @@
                         <option value='0'></option>
                 @foreach($cates as $k=>$v)
                         <option value="{{$v->cate_id}}" 
-                @if(old(cid)==$v->id)
+                @if(old('cid')==$v->id)
                             selected 
                 @endif
                            >{{ $v->catenames }}</option>
