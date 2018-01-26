@@ -47,12 +47,9 @@ class Cate extends Model
     	return  $arr;
     }
 
-<<<<<<< HEAD
     public function goods()
     {
             return $this->hasMany('App\Model\Goods','cid','cate_id');
     }
 
-=======
->>>>>>> shop.git/jiqihang
 }
