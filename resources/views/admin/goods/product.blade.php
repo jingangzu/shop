@@ -10,13 +10,15 @@
     <div class="filter">
     <form action="{{ url('/admin/goods') }}" method="get">
      <select name="cid">
-      <option value="0">未分类</option>
-                  <option value="1"> 电子数码</option>
-                        <option value="4">- 智能手机</option>
-                        <option value="5">- 平板电脑</option>
-                        <option value="2"> 家居百货</option>
-                        <option value="3"> 母婴用品</option>
-                 </select>
+                        <option value='0'></option>
+                @foreach($cates as $k=>$v)
+                        <option value="{{$v->cate_id}}" 
+                @if(old(cid)==$v->id)
+                            selected 
+                @endif
+                           >{{ $v->catenames }}</option>
+                 @endforeach
+         </select>
      <input name="keyword" type="text" class="inpMain" value="{{ $where['keyword'] }}" size="20" />
      <input name="submit" class="btnGray" type="submit" value="筛选" />
     </form>

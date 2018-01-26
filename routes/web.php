@@ -17,6 +17,7 @@
 //首页
 
 Route::get('/','Home\IndexController@index');
+
 // 前台//登陆
 Route::get('index/login','Index\LoginController@login');
 Route::get('index/yzm','Index\LoginController@yzm');
@@ -36,6 +37,10 @@ Route::post('/index/user/doresetpw','Index\User\RegisterController@doresetpw');
 Route::get('/index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
 Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
 
+//前台商品列表
+Route::get('home/goods/cate/{cid}','Home\GoodsController@list');
+//详情
+Route::get('home/goods/{id}','Home\GoodsController@show');
 
 
 

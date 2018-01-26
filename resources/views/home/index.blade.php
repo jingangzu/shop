@@ -1,16 +1,18 @@
 @extends('home.header')
 
+@section('title','首页')
 @section('content')
 
 <!--banner轮播引入lunbo.css和daohang.js-->
 
 <div id="big_banner_wrap" style="display:block">
 
-    <ul id="banner_menu_wrap"> @foreach($cates as $k=>$v)
+    <ul id="banner_menu_wrap">
+     @foreach($cates as $k=>$v)
      @if($v->cate_pid == 0)
         <li class="active"img>
        
-           <a>{{ $v['cate_name'] }}</a>
+           <a href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">{{ $v['cate_name'] }}</a>
       
             <a class="banner_menu_i">&gt;</a> 
             <div class="banner_menu_content" style="width: 600px; top: -20px;">
@@ -23,10 +25,10 @@
         
                         <a><img width="60" src="/uploads/{{$v->cate_pic}}"></a>
   
-    <a>{{ $n['cate_name'] }}</a>
+    <a  href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">{{ $n['cate_name'] }}</a>
 
 
-                        <span>选购</span></li>
+                        <span><a  href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">选购</a></span></li>
           
                 </ul>
          @endif

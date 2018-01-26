@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>index</title>
+    <title>@yield('title')</title>
 
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/lunbo.css">
-    <script src="/js/jquery-1.8.3.min.js"></script>
+    @section('style')
 
+    @show
+    <script src="/js/jquery-1.8.3.min.js"></script>
     <script src="/js/public.js"></script>
 </head>
 <body>
@@ -81,11 +83,13 @@
 
 @show
 
-//友情链接
+<!-- //友情链接 -->
+<!-- //锚点 -->
+<a id="F"></a>
 <div style="height:100px;">
     @foreach($link as $v)
     <div style="float:left;width:5px;height:100px"></div>
-        <div style="float:left;width:200px;height:100px"><a href="{{ $v->url }}"><img src="/linkpic/{{$v->image}}" width="100%" height="100%"></a></div>
+        <div style="float:left;width:200px;height:100px"><a href="{{ $v->url }}" target='_blank'><img src="/linkpic/{{$v->image}}" width="100%" height="100%"></a></div>
         <div style="float:left;width:5px;height:100px"></div>
 
     @endforeach

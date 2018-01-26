@@ -39,46 +39,24 @@
               $('#msg1').attr('style','color:red');
               }
              
-
             });
         });
-           
-
-
       </script>
       <tr>
        <td align="right">商品分类</td>
        <td>
         <select name="cid">
-         
-                           <option value="1" 
-                              @if(old('cid')==1)
-                                          selected
-                              @endif
-                                       > 电子数码</option>
-                                    <option value="4"
-                              @if(old('cid')==4)
-                                          selected
-                              @endif
-                                    >- 智能手机</option>
-                                    <option value="5"
-                              @if(old('cid')==5)
-                                          selected
-                              @endif
-                                    >- 平板电脑</option>
-
-
-                                    <option value="2"
-                                    @if(old('cid')==2)
-                                          selected
-                              @endif
-                                    > 家居百货</option>
-                                    <option value="3"
-                                    @if(old('cid')==3)
-                                          selected
-                              @endif
-                                    > 母婴用品</option>
-                          </select>
+                @foreach($cates as $k=>$v)
+                        <option value="{{$v->cate_id}}" 
+                @if(old('cid')==$v->id)
+                            selected 
+                @endif
+                @if($v->cate_pid==0)
+                            disabled
+                @endif
+                           >{{ $v->catenames }}</option>
+                 @endforeach
+         </select>
        </td>
       </tr>
       <tr>
@@ -92,6 +70,12 @@
              <td align="right">库存</td>
        <td>
         <input type="text" name="goods_stock" value="{{ old('goods_stock') }}" size="50" class="inpMain" />
+       </td>
+      </tr> 
+       <tr> 
+             <td align="right">缩略图</td>
+       <td>
+        <input type="file" name="picture"/>
        </td>
       </tr>
       <tr>

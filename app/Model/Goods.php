@@ -17,6 +17,10 @@ class Goods extends Model
     //是否自动添加created_at,update_at
     public $timestamps = false;
 
+    public function getpicture()
+    {
+        return $this->hasMany('App\Model\Goodspic','gid','id');
+    }
 
 
 }
