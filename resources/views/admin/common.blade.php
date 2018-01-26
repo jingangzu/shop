@@ -64,7 +64,7 @@
 
  </ul>
    <ul class="bot">
-  <li><a href="mobile.html"><i class="mobile"></i><em>手机版</em></a></li>
+  <li><a href="{{url('/admin/orders')}}"><i class="mobile"></i><em>商品订单管理</em></a></li>
   <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
   <li><a href="{{url('/admin/role/create')}}"><i class="manager"></i><em>添加角色</em></a></li>
   <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>

@@ -17,6 +17,9 @@ class Goods extends Model
     //是否自动添加created_at,update_at
     public $timestamps = false;
 
-
+   public function goodstags()
+    {
+        return $this->hasOne('App\Model\goodstags', 'cateid', 'cid');
+    }
 
 }

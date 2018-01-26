@@ -198,7 +198,7 @@ class GoodsController extends Controller
         $this->validate($request,[
                 'goods_name'=>'required',
                 'cid'=>'required',
-                'goods_price'=>'required|numeric|size:10',
+                'goods_price'=>'required|numeric|max:10',
                 'goods_description'=>'required|min:10|max:80',
                 'goods_stock'=>'required|numeric',
               

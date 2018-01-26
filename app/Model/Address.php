@@ -21,6 +21,6 @@ class Address extends Model
 
     //通过此动态属性找关联的用户模型
     public function user(){
-        $this->belongsTo('App\Model\User','uid','id');
+        $this->belongsTo('App\Model\User','id','uid');
     }
 }
