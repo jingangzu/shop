@@ -21,7 +21,10 @@
         "psr-4": {
             "App\\": "app/",
             "Tests\\": "tests/"
-        }
+        },
+        "files":[
+            "App/Common/function.php"
+        ]
     },
     "scripts": {
         "post-root-package-install": [

@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
-use App\Model\User;
+use App\Model\Home\User;
+
+
 
 
 
@@ -126,7 +128,9 @@ class RegisterController extends Controller
 		}
 	}
 
-	public function resetpw()
+
+
+    public function resetpw()
     {
         return view('index.user.resetpw');
 
