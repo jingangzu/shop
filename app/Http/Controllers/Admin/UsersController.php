@@ -316,8 +316,8 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
-        $res = Role::delete($id);
-
+      
+         $res = User::where('id',$id)->delete();
        //如果删除成功
         if($res){
             $data = [

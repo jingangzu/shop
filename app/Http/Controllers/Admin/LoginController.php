@@ -66,8 +66,6 @@ class LoginController extends Controller
         }
 
         $user = User::where('name',$input['username'])->first();
-
-
         //用户验证
         // dd($user);
 
@@ -100,7 +98,5 @@ class LoginController extends Controller
        }
         
     }
-
-
 
 }

@@ -13,12 +13,6 @@ class User extends Model
 
 //    定义关联表的主键
     public $primaryKey = 'id';
-
-
-    
-
-    protected $fillable = ['username', 'password'];
-
     //是否自动维护crated_at,updated_at字段
 //    public $timestamps = false;
 
@@ -41,7 +35,7 @@ class User extends Model
     //找到关联的用户地址模型  一对多
     public function address(){
 
-        return $this->hasMany('App\Model\Address', 'id', 'id');
+        return $this->hasMany('App\Model\Address', 'uid', 'id');
     }
 
 
@@ -50,5 +44,4 @@ class User extends Model
     {
         return $this->belongsToMany('App\Model\Role','user_role','id','role_id');
     }
-
 }

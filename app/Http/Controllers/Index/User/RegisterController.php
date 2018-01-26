@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Model\Home\User;
 
 
-
-
-
 class RegisterController extends Controller
 {
     //注册
@@ -127,8 +124,6 @@ class RegisterController extends Controller
 			return back()->with('msg','激活失败');
 		}
 	}
-
-
 
     public function resetpw()
     {

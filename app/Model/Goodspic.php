@@ -17,4 +17,9 @@ class Goodspic extends Model
     //是否自动添加created_at,update_at
     public $timestamps = false;
 
+    public function goods()
+    {
+        return $this->belongsTo('App\Model\Goods','gid','id');
+    }
+
 }

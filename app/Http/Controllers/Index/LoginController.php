@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
-use App\Model\User;
 use App\Model\Home\User;
 use Session;
 
@@ -75,6 +74,11 @@ class LoginController extends Controller
         $user = User::where('name',$input['name'])->first();
 
 
+        // dd($user);
+
+        if (!$user) {
+            return back()->with('errors','无此用户');
+        }
 
         $status = $user->status;
 
@@ -85,9 +89,7 @@ class LoginController extends Controller
         //用户验证
         // dd($user);
 
-        if (! $user) {
-            return back()->with('errors','无此用户');
-        } 
+        
         // dd($user->password);
 
 		//密码验证
@@ -118,6 +120,5 @@ class LoginController extends Controller
        }
         
     }
->>>>>>> jqh
-    
+
 }
