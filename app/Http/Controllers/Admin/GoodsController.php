@@ -17,7 +17,7 @@ class GoodsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {   
         $keyword = $request->input('keyword','');
         $cid = $request->input('cid','');
         $where = $request->only('keyword','cid');
