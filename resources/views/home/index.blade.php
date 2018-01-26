@@ -24,7 +24,6 @@
                     <li>
         
                         <a><img width="60" src="/uploads/{{$v->cate_pic}}"></a>
-  
     <a  href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">{{ $n['cate_name'] }}</a>
 
 

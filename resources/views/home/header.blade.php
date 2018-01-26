@@ -20,10 +20,30 @@
             <li><a href="#">乐乐官网<br/>乐乐官网</a></li>
             <li><a href="#" id="diyunapp">商城APP<br/>商城APP</a></li>
         </ul>
-        <a href="{{ url('/home/shopcar') }}" class="dy5">购物车</a>
+        <a href="#" class="dy5">购物车</a>
         <ul class="dy4">
-            <li><a href="#">登录<br/>登录</a></li>
-            <li><a href="#">注册<br/>注册</a></li>
+        @if(empty(session('inuser')))
+            <li>
+            <a href="/index/login">
+            登录<br/>登录</a>
+            </li>
+            
+            <li><a href="/index/user/register">注册<br/>注册</a></li>
+            @else
+
+            <li>
+            <a href="#">{{ session('inuser')->name }}
+            <br/>{{ session('inuser')->name }}
+            </a>
+            </li>
+
+            <li>
+            <a href="index/user/loginout">退出<br>退出</a>
+            </li>
+
+    
+            @endif
+            
         </ul>
         <div class="dy6">
             <ul>

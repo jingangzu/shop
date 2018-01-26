@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
+
+use App\Model\User;
 use App\Model\Home\User;
 use Session;
 
@@ -95,11 +97,27 @@ class LoginController extends Controller
 
 
 		//将用户的登录状态保存到session
-        // Session::put('user',$user);
+        Session::put('inuser',$user);
 
-        return '111';
-        return redirect('index/index');
+
+        // return '111';
+        return redirect('/');
 
     }
+
+    public function loginout(Request $request)
+    {
+       
+       $res = $request->session()->flush();
+
+       // dd($res);
+
+
+       if(!$res){
+           return redirect('/'); 
+       }
+        
+    }
+>>>>>>> jqh
     
 }
