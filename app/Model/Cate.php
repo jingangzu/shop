@@ -9,7 +9,7 @@ class Cate extends Model
     public $table = 'category';
     public $primaryKey = 'cate_id';
     public $guarded = [];
-    public $timestaps = false;
+    public $timestamps = false;
 
     public function getCate()
     {

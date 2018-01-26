@@ -59,6 +59,13 @@ Route::get('home/goods/cate/{cid}','Home\GoodsController@list');
 Route::get('home/goods/{id}','Home\GoodsController@show');
 
 
+//加入购物车
+Route::post('/home/addcart','Home\ShopcarController@addCart');
+//购物车列表
+Route::get('/home/shopcar','Home\ShopcarController@cart');
+
+
+
 
 
 
