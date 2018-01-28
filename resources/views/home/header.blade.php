@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>index</title>
+    <title>@yield('title')</title>
 
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/lunbo.css">
-    <script src="/js/jquery-1.8.3.min.js"></script>
+    @section('style')
 
+    @show
+    <script src="/js/jquery-1.8.3.min.js"></script>
     <script src="/js/public.js"></script>
 </head>
 <body>
@@ -20,8 +22,28 @@
         </ul>
         <a href="{{ url('/home/shopcar') }}" class="dy5">购物车</a>
         <ul class="dy4">
-            <li><a href="#">登录<br/>登录</a></li>
-            <li><a href="#">注册<br/>注册</a></li>
+        @if(empty(session('inuser')))
+            <li>
+            <a href="/index/login">
+            登录<br/>登录</a>
+            </li>
+            
+            <li><a href="{{ url('/index/user/register') }}">注册<br/>注册</a></li>
+            @else
+
+            <li>
+            <a href="#">{{ session('inuser')->name }}
+            <br/>{{ session('inuser')->name }}
+            </a>
+            </li>
+
+            <li>
+            <a href="index/user/loginout">退出<br>退出</a>
+            </li>
+
+    
+            @endif
+            
         </ul>
         <div class="dy6">
             <ul>
@@ -80,6 +102,19 @@
 @section('content')
 
 @show
+
+<!-- //友情链接 -->
+<!-- //锚点 -->
+<a id="F"></a>
+<div style="height:100px;">
+    @foreach($link as $v)
+    <div style="float:left;width:5px;height:100px"></div>
+        <div style="float:left;width:200px;height:100px"><a href="{{ $v->url }}" target='_blank'><img src="/linkpic/{{$v->image}}" width="100%" height="100%"></a></div>
+        <div style="float:left;width:5px;height:100px"></div>
+
+    @endforeach
+    
+</div>
 
 <!--页脚-->
 <!--footer-->

@@ -144,7 +144,6 @@ p.cue {
  text-transform: capitalize;
  cursor: pointer;
  -webkit-appearance: none;
- 
 }
 .btnGray {
  display: inline-block;
@@ -218,7 +217,6 @@ select {
  font-size: 14px;
  height: 35px;
  overflow: hidden;
- 
 }
 .tab li {
  float: left;
@@ -255,13 +253,10 @@ border-bottom-color: rgb(230, 189, 189);
 font-size: 12px;
 font-family: Verdana;
 color: rgb(177, 106, 104);
-
-
 }
 .tableBasic th {
  background-color: #EEEEEE;
  height: 16px;
- 
 }
 .tableBasic .child {
  background-color: #FFFFFF;

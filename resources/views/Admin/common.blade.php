@@ -11,14 +11,12 @@
 
 <link href="/css/public.css" rel="stylesheet" type="text/css">
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-@section('style')
 
-@show
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/layer/layer.js"></script>
-
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="dcWrap"> <div id="dcHead">
@@ -35,13 +33,16 @@
     <li class="noRight"><a href="module.html">DouPHP+</a></li>
    </ul>
    <ul class="navRight">
-    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     @if(!empty(session('user')))
+        <li class="M noLeft"><a href="JavaScript:void(0);">您好: {{ session('user')->name }}</a>
+
+    @endif
      <div class="drop mUser">
       <a href="manager.php?rec=edit&id=1">编辑我的个人资料</a>
       <a href="manager.php?rec=cloud_account">设置云账户</a>
      </div>
     </li>
-    <li class="noRight"><a href="login.php?rec=logout">退出</a></li>
+    <li class="noRight"><a href="/admin/loginout">退出</a></li>
    </ul>
   </div>
  </div>
@@ -55,14 +56,10 @@
   <li><a href="nav.html"><i class="nav"></i><em>自定义导航栏</em></a></li>
   <li><a href="show.html"><i class="show"></i><em>首页幻灯广告</em></a></li>
   <li><a href="page.html"><i class="page"></i><em>单页面管理</em></a></li>
- </ul> 
- <ul>
-  <li><a href="{{ url('admin/config/create') }}"><i class="productCat"></i><em>添加网站配置</em></a></li>
-  <li><a href="{{ url('/admin/config') }}"><i class="product"></i><em>网站配置列表</em></a></li>
  </ul>
-  <ul>
-  
+   <ul>
   <li><a href="{{ url('/admin/cate/list') }}"><i class="productCat"></i><em>商品分类</em></a></li>
+
   <li><a href="{{ url('/admin/goods') }}"><i class="product"></i><em>商品列表</em></a></li>
  </ul>
   <ul>
@@ -70,7 +67,7 @@
 
  </ul>
    <ul class="bot">
-  <li><a href="mobile.html"><i class="mobile"></i><em>手机版</em></a></li>
+  <li><a href="{{url('/admin/orders')}}"><i class="mobile"></i><em>商品订单管理</em></a></li>
   <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
   <li><a href="{{url('/admin/role/create')}}"><i class="manager"></i><em>添加角色</em></a></li>
   <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>

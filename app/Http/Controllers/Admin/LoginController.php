@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use App\Model\User;
+use Session;
 
 class LoginController extends Controller
 {
@@ -81,7 +82,21 @@ class LoginController extends Controller
 		//将用户的登录状态保存到session
         Session::put('user',$user);
 
+
         return redirect('admin/index');
+    }
+
+
+    public function loginout(Request $request)
+    {
+       
+       $res = $request->session()->flush();
+
+
+       if(!$res){
+           return redirect('/admin/login'); 
+       }
+        
     }
 
 }

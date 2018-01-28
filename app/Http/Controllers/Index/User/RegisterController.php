@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Model\Home\User;
 
 
-
 class RegisterController extends Controller
 {
     //注册

@@ -100,7 +100,7 @@
                                         
                                         // $('#art_thumb').val(data);
                                         }else{
-                                            $('#'+id).attr('src','{{ env('QINIU_YUMING') }}'+data);
+                                            $('#'+id).attr('src','/uploads/'+data);
 
                                             // console.log(data);
                                             layer.alert('上传成功');

@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Model\Cate;
+use App\Model\Image;
 use App\Model\Goods;
 use App\Model\Goodspic;
 
@@ -42,8 +43,12 @@ class GoodsController extends Controller
      */
     public function create()
     {
+        //得到商品分类
+        $cate = new Cate();
+        $cates = $cate->getCate();
+
         //商品添加页
-        return view('admin.goods.addproduct');
+        return view('admin.goods.addproduct',compact('cates'));
     }
 
     /**
@@ -55,7 +60,7 @@ class GoodsController extends Controller
     public function store(Request $request)
     {
         //执行商品添加
-        $data = $request->except('_token','submit');
+        $data = $request->except('_token','submit','picture');
 
         $this->validate($request,[
                 'goods_name'=>'required',
@@ -63,7 +68,7 @@ class GoodsController extends Controller
                 'goods_price'=>'required|numeric',
                 'goods_description'=>'required|min:10|max:80',
                 'goods_stock'=>'required|numeric',
-              
+                'picture'=>'required|image',
 
             ],[
                 'goods_name.required'=>'商品名称不能为空',
@@ -75,9 +80,28 @@ class GoodsController extends Controller
                 'goods_description.max'=>'商品描述不能大于80个字符',
                 'goods_stock.required'=>'库存不能为空',
                 'goods_stock.numeric'=>'库存为数字',
-        
+                'picture.required'=>'必须上传图片',
+                'picture.image'=>'请上传图片格式',
             ]);
+        if($request->hasFile('picture')){
+//            获取上传文件
+            $file = $request->file('picture');
+            //判断上传文件的有效性
+            if($file->isValid()){
+                $entension = $file->getClientOriginalExtension();//上传文件的后缀名
 
+//              生成新的唯一上传文件名
+                $newName = md5(date('YmdHis').mt_rand(1000,9999).uniqid()).'.'.$entension;
+               // 将文件移动到指定的位置
+                $path = $file->move(public_path().'/uploads',$newName);
+
+            // 生成一个缩略图
+            $img = new Image('./uploads/');
+            $img->toSmImg($newName);
+
+                $data['picture']=$newName;
+            }
+        }
         $res = Goods::create($data);
         if($res){
             return redirect('/admin/goods');
@@ -137,16 +161,12 @@ class GoodsController extends Controller
 
                 $res=Goodspic::create($data);
                 if($res){
+                    //  返回上传的文件在服务器上的保存路径，给浏览器显示上传图片
+
                     return $newName;
                 }else{
                     return 000;
                 }
-
-//              
-
-//                返回上传的文件在服务器上的保存路径，给浏览器显示上传图片
-                
-               
             
 
             }
@@ -177,8 +197,11 @@ class GoodsController extends Controller
         //查询信息
         $data=Goods::find($id);
 
+        //得到商品分类
+        $cate = new Cate();
+        $cates = $cate->getCate();
         //编辑表单
-            return view('admin.goods.editproduct',compact('data'));
+            return view('admin.goods.editproduct',compact('data','cates'));
 
     }
 
@@ -198,7 +221,7 @@ class GoodsController extends Controller
         $this->validate($request,[
                 'goods_name'=>'required',
                 'cid'=>'required',
-                'goods_price'=>'required|numeric|size:10',
+                'goods_price'=>'required|numeric|max:10',
                 'goods_description'=>'required|min:10|max:80',
                 'goods_stock'=>'required|numeric',
               
@@ -216,6 +239,25 @@ class GoodsController extends Controller
                 'goods_stock.numeric'=>'库存为数字',
         
             ]);
+            if($request->hasFile('picture')){
+//            获取上传文件
+            $file = $request->file('picture');
+            //判断上传文件的有效性
+            if($file->isValid()){
+                $entension = $file->getClientOriginalExtension();//上传文件的后缀名
+
+//              生成新的唯一上传文件名
+                $newName = md5(date('YmdHis').mt_rand(1000,9999).uniqid()).'.'.$entension;
+               // 将文件移动到指定的位置
+                $path = $file->move(public_path().'/uploads',$newName);
+
+                // 生成一个缩略图
+                $img = new Image('./uploads/');
+                $img->toSmImg($newName);
+                //将图片名称存入数组
+                $data['picture']=$newName;
+            }
+        }
 
         $res = Goods::where('id',$id)->update($data);
 
@@ -251,7 +293,7 @@ class GoodsController extends Controller
         return redirect('/admin/goods');
 
     }
-
+    //下架
     public function down($id)
     {
        Goods::where('id',$id)->update(['goods_status'=>0]);
