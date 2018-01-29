@@ -32,7 +32,6 @@
 
 
 
-
     </div>
     <!--点击修改会出现这个选择框-->
     <div class="changepc">
@@ -52,6 +51,16 @@
         </div>
         <!--添加新地址-->
         <form action="/address/add" method="get">
+
+            <input type="radio" name="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+        @foreach($addr as $k1=>$v1)
+            <span>{{$v1->username}}</span>
+            <span>{{$v1->address}}</span>
+            <span><em>电话：</em><em>{{$v1->phone}}</em></span>
+        @endforeach
+            
+        </div>
+        <!--添加新地址-->
             <div class="dandudizhi">
                 <input type="radio" name="adressa" class="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
                 <span>添加</span>

@@ -9,78 +9,74 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/car/css/main.css" />
-    <script src="/js/jquery-1.8.3.min.js"></script>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/car/js/library/bootstrap.min.js"></script>
+    <script src="/car/js/function-check-viewport.js"></script>
+    <script src="/car/js/library/slick.min.js"></script>
+    <script src="/car/js/library/select2.full.min.js"></script>
+    <script src="/car/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="/car/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="/car/js/library/rellax.min.js"></script>
+    <script src="/car/js/library/isotope.pkgd.min.js"></script>
+    <script src="/car/js/library/bootstrap-notify.min.js"></script>
+    <script src="/car/js/library/bootstrap-slider.js"></script>
+    <script src="/car/js/library/in-view.min.js"></script>
+    <script src="/car/js/library/countUp.js"></script>
+    <script src="/car/js/library/animsition.min.js"></script>
+    <script src="/car/js/global.js"></script>
+    <script src="/car/js/config-mm-menu.js"></script>
+     
+
+    
   </head>
   <body class="animsition">
     <div class="shop-cart" id="page">
       <nav id="menu">
-        <ul>
-          <li><a href="">我的购物车</a></li>
-		  <li><a href="shop.html">Shop List</a></li>
-		  <li><a href="shop-detail.html">Shop Detail</a><li>
-		  <li><a href="wish-list.html">Wishlist</a></li>
-		  <li><a href="shop-cart.html">Shop Cart</a></li>
-		  <li><a href="check-out.html">Checkout</a></li>
-        </ul>
+
+        
       </nav>
       <header class="header-style-1 static">
-        <div class="container">
+        <div class="container" >
           <div class="row">
             <div class="header-1-inner">
               <a class="brand-logo animsition-link" href="index.html">
                 <img class="img-responsive" src="/car/images/logo.png" alt="" />
               </a>
               <nav>
-                <ul class="menu hidden-xs">
+
+                <ul class="menu hidden-xs" style="float:right">
                   <li><a href="{{ url('/') }}">主页</a></li>
-				  <li><a href="shop.html">Shop List</a></li>
-				  <li><a href="shop-detail.html">Shop Detail</a><li>
-				  <li><a href="wish-list.html">Wishlist</a></li>
-				  <li><a href="shop-cart.html">Shop Cart</a></li>
+				  <li><a href="shop.html">个人信息</a></li>
+				  <li><a href="shop-detail.html">店铺信息</a><li>
+				  <li><a href="wish-list.html">收藏</a></li>
+				  <!-- <li><a href="shop-cart.html">Shop Cart</a></li> -->
 				  <li><a href="check-out.html">Checkout</a></li>
+
+          @if(empty(session('inuser')))
+            <li>
+            <a href="/index/login">
+            <br/>登录</a>
+            </li>
+            
+            <li><a href="{{ url('/index/user/register') }}">注册</a></li>
+            @else
+
+            <li>
+            <a href="#">{{ session('inuser')->name }}</a>
+          
+            
+            </li>
+
+            <li>
+            <a href="index/user/loginout"><br>退出</a>
+            </li>
+
+    
+            @endif
                 </ul>
               </nav>
-              <aside class="right">
-                <div class="widget widget-control-header">
-                  <div class="select-custom-wrapper">
-                    <select class="no-border">
-                      <option>USD</option>
-                      <option>VND</option>
-                      <option>EUR</option>
-                      <option>JPY</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-search-header">
-                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
-                    <span class="lnr lnr-magnifier"></span>
-                  </a>
-                  <div class="form-outer">
-                    <button class="btn-close-form-search-header js-close-search-form-header">
-                      <span class="lnr lnr-cross"></span>
-                    </button>
-                    <form>
-                      <input placeholder="Search" />
-                      <button class="search">
-                        <span class="lnr lnr-magnifier"></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
-                  <a class="control" href="shop-cart.html">
-                    <p class="counter">0</p>
-                    <span class="lnr lnr-cart"></span>
-                  </a>
-                </div>
-                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
-                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </a>
-                </div>
-              </aside>
+              
             </div>
           </div>
         </div>
@@ -116,19 +112,20 @@
 
                   <tr>
                     <td class="product-thumbnail">
-                      <img src="/car/images/product/thumb-cart-01.jpg" alt="product-thumbnail">
+                     <!--  <img src="/car/images/product/thumb-cart-01.jpg" alt="product-thumbnail"> -->
+                     <img  width="80" src="/uploads/{{ $v['goods']['picture'] }}">
                     </td>
                     <td class="product-name" data-title="Product">
                       <a class="product-name" href="#">{{$v['goods']['goods_name']}}</a>
                     </td>
-                    <td class="product-weight" data-title="Weight">0.4 kg</td>
+                    <td class="product-weight" data-title="Weight"></td>
                     <td class="product-quantity" data-title="Quantity">
-                      <input class="qty" step="1" min="0" max="" name="product-name" value="{{ $v->count}}" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number">
+                     {{$v->count}}
                     </td>
                     <td class="product-price" data-title="Price">{{$v['goods']['goods_price']}}</td>
-                    <td id='zong' class="product-subtotal" data-title="Total">{{$v->count*$v['goods']['goods_price'] }}</td>
+                    <td class="product-subtotal" data-title="Total">{{ ($v->count)*($v['goods']['goods_price']) }}</td>
                     <td class="product-remove">
-                      <a class="remove"     aria-label="Remove this item" onclick="delcart({{$v->id}})">×</a>
+                      <a class="remove"  href="javascript:void(0);"   aria-label="Remove this item" onclick="delcart({{$v->gid}})">×</a>
                     </td>
                   </tr>
                   <script type="text/javascript">
@@ -174,8 +171,9 @@
             </form>
   <script>
     function delcart(id){
+
+
         if(id != ''){
-          console.log(id);
             if(!confirm('您确认要删除吗?')){return false;}
             $.ajax({
                 type:"POST",
@@ -450,22 +448,7 @@
         </div>
       </div>
     </div>
-    <script src="/car/js/library/jquery.min.js"></script>
-    <script src="/car/js/library/bootstrap.min.js"></script>
-    <script src="/car/js/function-check-viewport.js"></script>
-    <script src="/car/js/library/slick.min.js"></script>
-    <script src="/car/js/library/select2.full.min.js"></script>
-    <script src="/car/js/library/imagesloaded.pkgd.min.js"></script>
-    <script src="/car/js/library/jquery.mmenu.all.min.js"></script>
-    <script src="/car/js/library/rellax.min.js"></script>
-    <script src="/car/js/library/isotope.pkgd.min.js"></script>
-    <script src="/car/js/library/bootstrap-notify.min.js"></script>
-    <script src="/car/js/library/bootstrap-slider.js"></script>
-    <script src="/car/js/library/in-view.min.js"></script>
-    <script src="/car/js/library/countUp.js"></script>
-    <script src="/car/js/library/animsition.min.js"></script>
-    <script src="/car/js/global.js"></script>
-    <script src="/car/js/config-mm-menu.js"></script>
+
   </body>
 </html>
 

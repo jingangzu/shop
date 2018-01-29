@@ -71,6 +71,7 @@ $(function(){
         <div class="sxleibie">
         	<ul class="liebiaoyi_w">
             	<li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
+
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
@@ -117,6 +118,7 @@ $(function(){
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>               
+
             </ul>
         </div>
     </div>

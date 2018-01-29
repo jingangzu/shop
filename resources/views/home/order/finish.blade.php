@@ -120,8 +120,8 @@
 		<input type="hidden" id="skuIds" value="1832201"><!-- 商品id串  -->
 	<!-- 再次购买按钮 -->
     <div class="btn-area mb10">
-        <a class="btn-ordershow" href="http://order.jd.com/center/list.action" clstag="pageclick|keycount|trade_201602181|31">查看订单</a>
-                    <a class="btn-buyagain ml10" href="http://cart.jd.com/cart/dynamic/reBuyForOrderCenter.action?wids=1832201&amp;nums=1&amp;rid=1478856930554" clstag="pageclick|keycount|trade_201602181|32">
+        <a class="btn-ordershow" href="{{ url('') }}">查看订单</a>
+                    <a class="btn-buyagain ml10" href="{{ url('/') }}" clstag="pageclick|keycount|trade_201602181|32">
                 <i></i>
                             再次购买
 							</a>

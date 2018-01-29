@@ -28,7 +28,7 @@
             登录<br/>登录</a>
             </li>
             
-            <li><a href="/index/user/register">注册<br/>注册</a></li>
+            <li><a href="{{ url('/index/user/register') }}">注册<br/>注册</a></li>
             @else
 
             <li>

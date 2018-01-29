@@ -36,7 +36,7 @@ class ShopcarController extends Controller
 	        if($exist == false){
 	            $cart_item = new Cart();
 	            $cart_item ->gid = $gid;
-	            $cart_item ->count = 1;
+	            $cart_item ->count =$shop_count ;
 	            $cart_item ->uid = $user->id;
 	            $cart_item ->save();
 	        }
@@ -60,12 +60,8 @@ class ShopcarController extends Controller
 	    if($count == 1){
 	        array_push($shop_cart_arr,$gid.":".$count);
 	    }
-	    if(!$user){
-	    	$msg='请先登录';
-	    }else{
-	    	$msg = $shop_count != '' ? '添加成功！' : '添加失败！';
-
-	    }
+	    $msg = $shop_count != '' ? '添加成功！' : '添加成功！';
+	
 	    return response(json_encode($msg))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 	}
 
@@ -76,19 +72,21 @@ class ShopcarController extends Controller
 		    $shop_cart = $request ->cookie('shop_cart');
 		    $shop_cart_arr = $shop_cart !=null ? explode(',',$shop_cart) : array();
 		    // 判断用户是否登录
-		    $user = $request -> session() -> get('user','');
+		    $user = $request -> session() -> get('inuser','');
+
 		    if($user !=''){
 		        // 同步完成购物车 清空COOKIE
 		        $cart_items = $this -> syncCart($user->id,$shop_cart_arr);
-		        return response()->view('cart.cart_list',['cart_items' => $cart_items])->withCookie('shop_cart',null);
+		        return response()->view('home.shopcar',['cart_items' => $cart_items])->withCookie('shop_cart',null);
 		    }
 		    foreach($shop_cart_arr as $key =>$value){
 		        $index = strrpos($value,':');
 		        $cart_item = new Cart();
 		        $cart_item->id = $key;
-		        $cart_item -> goods_id = substr($value,0,$index);// 商品id
+		        $cart_item -> gid = substr($value,0,$index);// 商品id
 		        $cart_item ->count = ((int)substr($value,$index+1));// 商品数量
-		        $cart_item -> goods = Goods::find($cart_item -> goods_id);
+		        $cart_item -> goods = Goods::find($cart_item -> gid);
+		       
 		        if($cart_item != null){
 		            array_push($cart_items,$cart_item);
 		        }
@@ -104,12 +102,12 @@ class ShopcarController extends Controller
 		{
 		    $id = $request -> input('id','');
 		   // 用户登录的情况下
-		    $user = $request -> session()->get('user','');
+		    $user = $request -> session()->get('inuser','');
 		    if($id ==''){
 		        return json_encode(['status'=>0,'msg'=>'操作有误，请重试！']);
 		    }
 		    if($user !=''){
-		        $res = Cart::where(['user_id'=>$user->id,'goods_id'=>$id])->delete();
+		        $res = Cart::where(['uid'=>$user->id,'gid'=>$id])->delete();
 		        if($res){
 		            return json_encode(['status'=>1,'msg'=>'删除成功！']);
 		        }else{
@@ -121,9 +119,9 @@ class ShopcarController extends Controller
 		    $shop_cart_arr = ($shop_cart !=null ? explode(',',$shop_cart) : array());
 		    foreach($shop_cart_arr as $key =>$value){
 		        $index = strrpos($value, ':');
-		        $goods_id = substr($value, 0 ,$index);
+		        $gid = substr($value, 0 ,$index);
 		        // 存在删除
-		        if(in_array($goods_id,[$id])){
+		        if(in_array($gid,[$id])){
 		            array_splice($shop_cart_arr,$key,1);
 		            continue;
 		        }
@@ -133,20 +131,20 @@ class ShopcarController extends Controller
 		}
 
 		//实现购物车数据同步(登录后将session中的商品写入数据库)
-		private function syncCart($mid,$shop_cart_arr)
+		private function syncCart($uid,$shop_cart_arr)
 		{
-		    $cart_items = Cart::where('user_id',$mid)->get();
+		    $cart_items = Cart::where('uid',$uid)->get();
 		    $cart_items_arr = array();
 		    // 循环COOKIE中的商品数据
 		    foreach($shop_cart_arr as $val){
 		        $index = strpos($val,':');
-		        $goods_id = substr($val, 0, $index);
+		        $gid = substr($val, 0, $index);
 		        $count = (int) substr($val,$index + 1);
 		        $exist = false;// 用于标注COOKIE中数据是否存在数据库中
 		        // 循环查询出来的购物车商品数据
 		        foreach($cart_items as $temp){
 		            // 判断末登录时购物车中goods_id 是否存在 数据库中
-		            if($temp -> goods_id == $goods_id){
+		            if($temp -> gid == $gid){
 		                // 判断购物数量 如果小于COOKIE中的数量 就修改数据库中的数据
 		                if($temp->count < $count){
 		                    $temp -> count = $count;
@@ -159,17 +157,17 @@ class ShopcarController extends Controller
 		        // 不存在则存储进来
 		        if($exist == false){
 		            $cart_item = new Cart();
-		            $cart_item ->user_id = $mid;
-		            $cart_item ->goods_id = $goods_id;
+		            $cart_item ->uid = $uid;
+		            $cart_item ->gid = $gid;
 		            $cart_item ->count = $count;
 		            $cart_item -> save();
-		            $cart_item -> goods = Goods::find($cart_item ->goods_id);
+		            $cart_item -> goods = Goods::find($cart_item ->gid);
 		            array_push($cart_items_arr,$cart_item);
 		        }
 		    }
 		    // 为每个对像附加产品对像便于显示
 		    foreach($cart_items as $cart_item){
-		        $cart_item -> goods = Goods::find($cart_item ->goods_id);
+		        $cart_item -> goods = Goods::find($cart_item ->gid);
 		        array_push($cart_items_arr,$cart_item);
 		    }
 		    return $cart_items_arr;

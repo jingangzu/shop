@@ -21,6 +21,7 @@ Route::get('home/ordersub', 'Home\OrdersubController@end');
 	
 //生成订单
 Route::get('home/ordersub/create', 'Home\OrdersubController@create');			
+
 //订单详情
 //Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
 //取消订单
@@ -88,16 +89,12 @@ Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'
 
 });
 
-
 	//加入购物车
 	Route::post('/home/addcart','Home\ShopcarController@addCart');
-Route::group(['middleware'=>'index.login'],function(){
-
 	//购物车列表
 	Route::get('/home/shopcar','Home\ShopcarController@cart');
 	//删除商品
-	Route::post('//home/shopcar/delcart','Home\ShopcarController@delcart');
-});
+	Route::post('/home/shopcar/delcart','Home\ShopcarController@delcart');
 
 
 // 后台登录
@@ -168,20 +165,20 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::resource('/friendlink','FriendlinkController');
 
 	//分类
-	Route::get('admin/cate/add','Admin\cateController@add');
-	Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
-	Route::delete('admin/cate/del/{id}','Admin\cateController@del');
-	Route::put('admin/cate/update/{id}','Admin\cateController@update');
-	Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
-	Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
-	Route::post('admin/cate','Admin\cateController@store');
+	Route::get('cate/add','cateController@add');
+	Route::get('cate/edit/{id}','cateController@edit');
+	Route::delete('cate/del/{id}','cateController@del');
+	Route::put('cate/update/{id}','cateController@update');
+	Route::post('cate/changeOrder/{id}','cateController@changeOrder');
+	Route::post('config/changeOrder/{id}','ConfigController@changeOrder');
+	Route::post('cate','cateController@store');
 
 
-	Route::get('admin/cate/list','Admin\cateController@index');
+	Route::get('cate/list','cateController@index');
 
 	//网站配置模块
-	Route::resource('admin/config','Admin\ConfigController');
-	Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
+	Route::resource('/config','ConfigController');
+	Route::post('config/changeContent','ConfigController@changeContent');
 
 
 	//推荐位
