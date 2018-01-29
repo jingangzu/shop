@@ -87,6 +87,8 @@ Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'
 	Route::post('/address/update','Address\AddressController@update');
 	Route::get('/address/delete/{id}','Address\AddressController@delete');
 
+	Route::get('/user/addshou/{id}','Shou\ShouController@add');
+
 	
 });
 
