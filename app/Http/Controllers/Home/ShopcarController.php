@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers\Home;
 use App\Model\Cart;
 use App\Model\Goods;
@@ -7,8 +8,10 @@ use App\Model\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class ShopcarController extends Controller
 {
+
 
     //product = goods   member=user
     //添加购物车
@@ -65,7 +68,7 @@ class ShopcarController extends Controller
 	    return response(json_encode($msg))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 	}
 
-	//购物车列表
+//购物车列表
 	public function cart(Request $request)
 	{
 		    $cart_items = array();
@@ -93,8 +96,12 @@ class ShopcarController extends Controller
 		    }
 
 
+
+
 		    return view('home.shopcar')->with('cart_items',$cart_items);
 	}
+
+
 
 
 	//删除购物车的商品
@@ -129,6 +136,7 @@ class ShopcarController extends Controller
 		    // 修改后的数据重新写入COOKIE
 		    return response(json_encode(['status'=>1,'msg'=>'删除成功！']))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 		}
+
 
 		//实现购物车数据同步(登录后将session中的商品写入数据库)
 		private function syncCart($uid,$shop_cart_arr)

@@ -80,10 +80,7 @@
         <embed src="/img/abcd.png" style=" height:45px; width:50px"></embed>
 
     </div>
-    <div class="dy12">
-        <input type="text" value="搜索商品/店铺" onFocus="if(value=='搜索商品/店铺') {value=''}" onBlur="if (value=='') {value='搜索商品/店铺'}" style="width:500px; height:36px; text-indent:12px; font-size:12px; color:#666; float:left">
-        <input type="search" value="搜索" style=" cursor:pointer; width:70px; height:36px; float:right; text-align:center; background:#333;" class="shousuo">
-    </div>
+    
 </div>
 <!--全部商品分类-->
 <div class="qbspfl">

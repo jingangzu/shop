@@ -42,7 +42,8 @@
       <a href="manager.php?rec=cloud_account">设置云账户</a>
      </div>
     </li>
-    <li class="noRight"><a href="/admin/loginout">退出</a></li>
+    <li class="noRight"><a href="/admin/loginout">退出
+    </a></li>
    </ul>
   </div>
  </div>
@@ -52,10 +53,7 @@
   <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
  </ul>
  <ul>
-  <li><a href="system.html"><i class="system"></i><em>系统设置</em></a></li>
-  <li><a href="nav.html"><i class="nav"></i><em>自定义导航栏</em></a></li>
   <li><a href="show.html"><i class="show"></i><em>首页幻灯广告</em></a></li>
-  <li><a href="page.html"><i class="page"></i><em>单页面管理</em></a></li>
  </ul>
    <ul>
   <li><a href="{{ url('/admin/cate/list') }}"><i class="productCat"></i><em>商品分类</em></a></li>
@@ -68,13 +66,13 @@
  </ul>
    <ul class="bot">
   <li><a href="{{url('/admin/orders')}}"><i class="mobile"></i><em>商品订单管理</em></a></li>
-  <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
+
   <li><a href="{{url('/admin/role/create')}}"><i class="manager"></i><em>添加角色</em></a></li>
   <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>
   <li><a href="{{url('/admin/permission/create')}}"><i class="manager"></i><em>添加权限</em></a></li>
   <li><a href="{{url('/admin/permission')}}"><i class="manager"></i><em>权限列表</em></a></li>
   <li><a href="{{ url('/admin/friendlink') }}"><i class="backup"></i><em>友情链接</em></a></li>
-  <li><a href="manager.php?rec=manager_log"><i class="managerLog"></i><em>操作记录</em></a></li>
+  
  </ul>
 </div></div>
 @section('content')
@@ -85,7 +83,7 @@
  <div id="footer">
   <div class="line"></div>
   <ul>
-   版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+。
   </ul>
  </div>
 </div><!-- dcFooter 结束 -->

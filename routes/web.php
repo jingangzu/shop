@@ -14,7 +14,6 @@
 
 
 //前台订单
-
 //下订单
 Route::get('home/ordersub/{gid}/{num}', 'Home\OrdersubController@index');	
 Route::get('home/ordersub', 'Home\OrdersubController@end');	
@@ -27,7 +26,7 @@ Route::get('home/ordersub/create', 'Home\OrdersubController@create');
 //取消订单
 //Route::get('home/orderre', 'Home\UserorderController@create'); 		
 //确认收货
-//Route::get('home/ordersu', 'Home\UserorderController@store'); 		
+//Route::get('home/ordersu', 'Home\UserorderController@store'); 	
 
 
 //前台
@@ -54,6 +53,8 @@ Route::get('home/goods/{id}','Home\GoodsController@show');
 // 前台路由组中间件
 Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'],function(){
 
+	// 前台退出
+	Route::get('/index/user/loginout','Index\LoginController@loginout');
 
 
 	// 前台退出
@@ -86,8 +87,9 @@ Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'
 	Route::post('/address/update','Address\AddressController@update');
 	Route::get('/address/delete/{id}','Address\AddressController@delete');
 
-
+	
 });
+
 
 	//加入购物车
 	Route::post('/home/addcart','Home\ShopcarController@addCart');
@@ -106,11 +108,19 @@ Route::post('admin/dologin','Admin\LoginController@dologin');
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'],function(){
 
 	//后台首页
-	Route::get('index','indexController@index');
+Route::get('index','indexController@index');
+Route::group(['middleware'=>'hasRole'],function(){
 
 	// 后台退出
 	Route::get('loginout','LoginController@loginout');
 
+
+
+	//后台商品图片
+	Route::get('/goods/picture/{id}','GoodsController@picture');
+	Route::post('/goods/addpic','GoodsController@addpic');
+});
+         
 	//用户管理
 	Route::get('user/test','UsersController@test');
 	Route::get('user/address','UsersController@address');
@@ -118,10 +128,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::resource('users','UsersController');
 	//    用户授权页面
 	Route::get('user/auth/{id}','UsersController@auth');
-	//    添加用户授权逻辑
+	// 添加用户授权逻辑
 	Route::post('user/doauth','UsersController@doauth');
-
-
+            
 	//角色相关的路由
 	Route::resource('role','RoleController');
 
@@ -131,7 +140,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::get('role/auth/{id}','RoleController@auth');
 	//    添加用户授权逻辑
 	Route::post('role/doauth','RoleController@doauth');
-
 
 	//后台订单管理
 	Route::get('orders/up/{id}','OrdersController@up');

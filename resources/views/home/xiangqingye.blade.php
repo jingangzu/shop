@@ -265,7 +265,7 @@ $(function(){
                           // })
 
                   </script>
-                    <a href="#" style=" margin-left:6px">收藏该商品</a>
+                    <a href="#" style=" margin-left:6px"></a>
                  </div>
                  <!--商品编号-->
                  <div class="shopbh">
