@@ -71,52 +71,12 @@ $(function(){
         <div class="sxleibie">
         	<ul class="liebiaoyi_w">
             	<li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
+                
             </ul>
             <span class="zdguanbi">更多/关闭</span>
             <ul class="liebiaoer_w">
                 <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>
-                <li><a href="#"><img src="/img/adidas.jpg"/ width="88" height="35"><em>Adidas</em></a></li>               
+                              
             </ul>
         </div>
     </div>

@@ -33,17 +33,10 @@
     <div class="shop-cart" id="page">
       <nav id="menu">
 
-        <ul>
-          <li><a href="">我的购物车</a></li>
-		  <li><a href="shop.html">Shop List</a></li>
-		  <li><a href="shop-detail.html">Shop Detail</a><li>
-		  <li><a href="wish-list.html">Wishlist</a></li>
-		  <li><a href="shop-cart.html">Shop Cart</a></li>
-		  <li><a href="check-out.html">Checkout</a></li>
-        </ul>
+        
       </nav>
       <header class="header-style-1 static">
-        <div class="container">
+        <div class="container" >
           <div class="row">
             <div class="header-1-inner">
               <a class="brand-logo animsition-link" href="index.html">
@@ -51,18 +44,18 @@
               </a>
               <nav>
 
-                <ul class="menu hidden-xs">
+                <ul class="menu hidden-xs" style="float:right">
                   <li><a href="{{ url('/') }}">主页</a></li>
-				  <li><a href="shop.html">Shop List</a></li>
-				  <li><a href="shop-detail.html">Shop Detail</a><li>
-				  <li><a href="wish-list.html">Wishlist</a></li>
-				  <li><a href="shop-cart.html">Shop Cart</a></li>
+				  <li><a href="shop.html">个人信息</a></li>
+				  <li><a href="shop-detail.html">店铺信息</a><li>
+				  <li><a href="wish-list.html">收藏</a></li>
+				  <!-- <li><a href="shop-cart.html">Shop Cart</a></li> -->
 				  <li><a href="check-out.html">Checkout</a></li>
 
           @if(empty(session('inuser')))
             <li>
             <a href="/index/login">
-            登录<br/>登录</a>
+            <br/>登录</a>
             </li>
             
             <li><a href="{{ url('/index/user/register') }}">注册</a></li>
@@ -129,7 +122,7 @@
                      {{$v->count}}
                     </td>
                     <td class="product-price" data-title="Price">{{$v['goods']['goods_price']}}</td>
-                    <td class="product-subtotal" data-title="Total"></td>
+                    <td class="product-subtotal" data-title="Total">{{ ($v->count)*($v['goods']['goods_price']) }}</td>
                     <td class="product-remove">
                       <a class="remove"  href="javascript:void(0);"   aria-label="Remove this item" onclick="delcart({{$v->gid}})">×</a>
 

@@ -17,7 +17,9 @@ class ShopcarController extends Controller
 	    $gid = $request ->input('gid','');
 	    $shop_count = $request ->input('count','');
 	    // 如果当前用户已经登录
-	    $user = $request ->session()->get('user','');
+	    $user = $request ->session()->get('inuser','');
+
+
 	    if($user !=''){
 	        $cart_items = Cart::where('uid',$user->id)->get();
 	        $exist = false; // 用于标注COOKIE中的数据是否存在于数据库
@@ -35,7 +37,7 @@ class ShopcarController extends Controller
 	        if($exist == false){
 	            $cart_item = new Cart();
 	            $cart_item ->gid = $gid;
-	            $cart_item ->count = 1;
+	            $cart_item ->count =$shop_count ;
 	            $cart_item ->uid = $user->id;
 	            $cart_item ->save();
 	        }
@@ -60,6 +62,7 @@ class ShopcarController extends Controller
 	        array_push($shop_cart_arr,$gid.":".$count);
 	    }
 	    $msg = $shop_count != '' ? '添加成功！' : '添加成功！';
+	
 	    return response(json_encode($msg))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 	}
 
@@ -70,7 +73,8 @@ class ShopcarController extends Controller
 		    $shop_cart = $request ->cookie('shop_cart');
 		    $shop_cart_arr = $shop_cart !=null ? explode(',',$shop_cart) : array();
 		    // 判断用户是否登录
-		    $user = $request -> session() -> get('user','');
+		    $user = $request -> session() -> get('inuser','');
+
 		    if($user !=''){
 		        // 同步完成购物车 清空COOKIE
 		        $cart_items = $this -> syncCart($user->id,$shop_cart_arr);
@@ -99,7 +103,7 @@ class ShopcarController extends Controller
 		{
 		    $id = $request -> input('id','');
 		   // 用户登录的情况下
-		    $user = $request -> session()->get('user','');
+		    $user = $request -> session()->get('inuser','');
 		    if($id ==''){
 		        return json_encode(['status'=>0,'msg'=>'操作有误，请重试！']);
 		    }
