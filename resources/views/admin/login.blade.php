@@ -22,7 +22,14 @@
                 <div class="media media-y margin-big-bottom">
                 </div>
                 <form action="{{ url('admin/dologin') }}" method="post">
-
+                {{--激活成功的提示--}}
+                        @if (!empty(session('msg')))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ session('msg') }}</li>
+                                </ul>
+                            </div>
+                        @endif
 				@if (count($errors) > 0)
 				<div class="alert alert-danger">
 					<ul>

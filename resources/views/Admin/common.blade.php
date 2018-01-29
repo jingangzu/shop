@@ -38,8 +38,9 @@
 
     @endif
      <div class="drop mUser">
-      <a href="manager.php?rec=edit&id=1">编辑我的个人资料</a>
-      <a href="manager.php?rec=cloud_account">设置云账户</a>
+      <a href="/admin/personage/{{ session('user')->id }}">编辑我的个人资料</a>
+      
+      <a href="/admin/resetpw/{{ session('user')->id }}">修改密码</a>
      </div>
     </li>
     <li class="noRight"><a href="/admin/loginout">退出</a></li>

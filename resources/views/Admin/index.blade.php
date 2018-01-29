@@ -4,6 +4,8 @@
 @section('style')
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="/admin/layer/layer.js"></script>
+
 @stop
 
 @section('content')
@@ -16,7 +18,17 @@
     <div class="boxTitle">单页面快速管理</div>
     <ul class="ipage">
       
-     <a href="page.php?rec=edit&id=1">公司简介</a> 
+     <a href="#">
+    <script>
+          $('.ipage').on('click', function(){
+            layer.open({
+              type: 2,
+                area: ['1000px', '900px'],
+              content: 'http://www.dsb.cn/' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+          });
+    </script>
+     公司简介</a> 
       
      <a href="page.php?rec=edit&id=2" class="child1">企业荣誉</a> 
       
@@ -45,7 +57,7 @@
          </tr>
          <tr>
           <td>商品总数：</td>
-          <td><strong>15</strong></td>
+          <td><strong></strong></td>
           <td>系统语言：</td>
           <td><strong>zh_cn</strong></td>
          </tr>
@@ -65,8 +77,8 @@
          <tr>
           <td>DouPHP版本：</td>
           <td><strong>v1.3 Release 20160125</strong></td>
-          <td>安装日期：</td>
-          <td><strong>2016-02-25</strong></td>
+          <td>服务器日期：</td>
+          <td><strong></strong></td>
          </tr>
         </table>
        </ul>
@@ -74,31 +86,7 @@
      </td>
      <td valign="top" class="pl">
       <div class="indexBox">
-       <div class="boxTitle">管理员  登录记录</div>
-       <ul>
-        <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
-         <tr>
-          <th width="45%">IP地址</th>
-          <th width="55%">操作时间</th>
-         </tr>
-                  <tr>
-          <td align="center">127.0.0.1</td>
-          <td align="center">2016-02-25 23:29:08</td>
-         </tr>
-                  <tr>
-          <td align="center">127.0.0.1</td>
-          <td align="center">2016-02-25 13:48:48</td>
-         </tr>
-                  <tr>
-          <td align="center">127.0.0.1</td>
-          <td align="center">2013-10-16 09:43:01</td>
-         </tr>
-                  <tr>
-          <td align="center">127.0.0.1</td>
-          <td align="center">2013-10-16 09:42:58</td>
-         </tr>
-                 </table>
-       </ul>
+       <div class="boxTitle"></div>
       </div>
      </td>
     </tr>
@@ -109,43 +97,40 @@
      <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
       <tr>
        <td width="120" valign="top">PHP 版本：</td>
-       <td valign="top">5.3.29 </td>
+       <td valign="top"><?PHP echo PHP_VERSION; ?></td>
        <td width="100" valign="top">MySQL 版本：</td>
        <td valign="top">5.5.40</td>
-       <td width="100" valign="top">服务器操作系统：</td>
-       <td valign="top">WINNT(127.0.0.1)</td>
+      
+
       </tr>
       <tr>
        <td valign="top">文件上传限制：</td>
-       <td valign="top">2M</td>
+       <td valign="top">
+         
+
+         <?PHP
+echo get_cfg_var ("upload_max_filesize")?get_cfg_var ("upload_max_filesize"):"不允许上传附件";
+?>
+       </td>
        <td valign="top">GD 库支持：</td>
        <td valign="top">是</td>
-       <td valign="top">Web 服务器：</td>
-       <td valign="top">Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9</td>
+      
       </tr>
      </table>
     </ul>
    </div>
-   <div class="indexBox">
-    <div class="boxTitle">系统开发</div>
+  
+  <div class="indexBox">
+    <div class="boxTitle">网站用户信息</div>
     <ul>
      <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
       <tr>
-       <td width="120"> DouPHP官网： </td>
-       <td><a href="http://www.douco.com" target="_blank">http://www.douco.com</a></td>
+       <td width="120" valign="top">后台管理员人数：</td>
+       <td valign="top">{{ session('allusers') }}</td>
+       <td width="100" valign="top">前台总会员人数：</td>
+       <td valign="top">{{ session('all') }}</td>
       </tr>
-      <tr>
-       <td> 开发者社区： </td>
-       <td><a href="http://bbs.douco.cn" target="_blank">http://bbs.douco.cn </a><em>（安装使用 模板交流 BUG反馈 意见建议）</em></td>
-      </tr>
-      <tr>
-       <td> 贡献者： </td>
-       <td>Wooyun.org, Pany, Tea</td>
-      </tr>
-      <tr>
-       <td> 系统使用协议： </td>
-       <td><a href="http://www.douco.com/license.html" target="_blank">http://www.douco.com/license.html</a><em>（您可以免费使用DouPHP（不限商用），但必须保留相关版权信息。）</em></td>
-      </tr>
+      
      </table>
     </ul>
    </div>

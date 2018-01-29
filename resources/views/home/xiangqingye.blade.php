@@ -577,11 +577,13 @@ $(function(){
     	<div class="threespa">
             <ul>
                 <li class="oncolors" mt-floors="1" mt-cts="1" id="spencals1">商品介绍</li>
-                <li mt-floors="2" mt-cts="1" id="spencals2">商品评价<s>(1297)</s></li>
+                <li mt-floors="2" mt-cts="1" id="spencals1">商品评价<s>(1297)</s></li>
                 <li mt-floors="3" mt-cts="1" id="spencals3">售后保障</li>
                 
             </ul>
         </div>
+
+
         <script>
 		$(function(){
 			/*控制商品详情、商品评价、售后保障的出现或消失*/
@@ -593,7 +595,12 @@ $(function(){
 						$(this).addClass("nocolors").siblings().removeClass("nocolors")
 						})	
 			})
+
+          
     	</script>
+            
+        
+
         <!--大容器里面放若干内容-->
         <div class="drqlmfrgnr">
        	<!--商品自诩-->
@@ -607,79 +614,13 @@ $(function(){
                 <img src="/img/56af03e5N1eecb9d5.jpg"/>
                 <img src="/img/56808a80N3df0450b.jpg"/>
             </div>
+
         <!--售后保障-->
-            <div class="bigcakes c-3-1">
-            	<div class="maijiacnqs">
-                	<span>卖家承诺</span>
-                    <p>帝云平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！
-注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！</p>
-                </div>
-                <div class="maijiacnqs">
-                	<span>帝云承诺</span>
-                    <p>帝云商城向您保证所售商品均为正品行货，帝云自营商品开具机打发票或电子发票。</p>
-                </div>
-                <div class="maijiacnqs">
-                	<span>全国联保</span>
-                    <p>凭质保证书及帝云商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由帝云联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。帝云商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！ 
-
-注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！</p>
-                </div>
-                <div class="maijiacnqs">
-                	<span>无忧退换货</span>
-                    <p>客户购买帝云自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）</p>
-                </div>
-                <div class="maijiacnqs">
-                	<span>权利声明</span>
-                    <p>帝云商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东重要的经营资源，未经许可，禁止非法转载使用。<br>
-
-注：本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</p>
-                </div>
-                <div class="maijiacnqs">
-                	<span>价格说明</span>
-                    <p><strong>京东价：</strong>京东价为商品的销售价，是您最终决定是否购买商品的依据。<br>
-
-<strong>划线价：</strong>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在京东平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
-折扣：如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。<br>
-
-<strong>异常问题：</strong>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。</p>
-                </div>
-            </div>
+            
         <!--商品评价-->
-            <div class="bigcakes c-2-1">
+            <div class="bigcakes c-1-1">
             	<!--对该商品的综合评分-->
-                <div class="duigaispdzhpfs">
-                	<!--left-->
-                    <div class="goodhpd">
-                    	<span><i>99</i>%</span>
-                        <p>好评度</p>
-                    </div>
-                    <!--right-->
-                    <div class="haopingjdts">
-                    	<!--好评-->
-                        <div class="gdpjbf">
-                        	<em>好评<i>99%</i></em>
-                            <span>
-                            	<p style=" width:50%"></p>
-                            </span>
-                        </div>
-                        <!--中评-->
-                        <div class="gdpjbf">
-                        	<em>好评<i>99%</i></em>
-                            <span>
-                            	<p style=" width:50%"></p>
-                            </span>
-                        </div>
-                        <!--差评-->
-                        <div class="gdpjbf">
-                        	<em>好评<i>99%</i></em>
-                            <span>
-                            	<p style=" width:50%"></p>
-                            </span>
-                        </div>
-                        <!--差评结束-->
-                    </div>
-                    <!--right结束-->	
-                </div>
+               
                 <!--评分结束-->
             	<div class="quanbupinglun">
                 	<a href="#" class="nocolors" mt-floord="1" mt-ctd="1">全部评论<em>(1010)</em></a>
@@ -691,126 +632,7 @@ $(function(){
                 <div class="qbpltyf123">
                 <!--全部评论-->
                 	<div class="smallcake d-1-1" style="display:block">
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->    
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat -17px 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat -34px 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat -51px 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
+
                     <!--一条评论开始-->
                     	<div class="thepcpls">
                         <!--左-->
@@ -840,379 +662,9 @@ $(function(){
                                 <em>9999元</em>
                             </div>
                         </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat -82px 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    
+              
                     </div>
-                <!--好评-->
-                	<div class="smallcake d-2-1">
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    </div>
-                <!--中评-->
-                	<div class="smallcake d-3-1">
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    </div>
-                <!--差评-->
-                	<div class="smallcake d-4-1">
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    <!--一条评论开始-->
-                    	<div class="thepcpls">
-                        <!--左-->
-                        	<div class="zuileftop">
-                            	<!--改变星级只需要改" no-repeat X 0"里面的X即可，一次是17像素-->
-                            	<div class="thstar" style=" background:url(/img/commentsListIcons1.png) no-repeat 0 0"></div>
-                                <div class="shdltpl">收货1天后评论</div>
-                                <div class="shdplsj">2016-6-6&nbsp;16:28</div>
-                            </div>
-                        <!--中-->
-                        	<div class="zuicenterop">
-                            	尺码标准，面料舒适，买给爸爸的，穿上很合身，非常感谢卖家诚信善良用心经营店铺，全5分支持!值得推荐购买！
-                            </div>
-                        <!--右-->
-                        	<div class="zuirightop">
-                            	<div class="touxadmz">
-                                	<b>
-                                    	<img src="/img/touxiang.png"/>
-                                    </b>
-                                    <em>小******明</em>
-                                </div>
-                                <div class="zgrsndra">山东</div>
-                            </div>
-                            <!--购买的商品信息-->
-                            <div class="gmdspxinxisz">
-                                <a href="#">商品的名字什么商品</a>
-                                <em>9999元</em>
-                            </div>
-                        </div>
-                    <!-- 一条评论结束-->
-                    </div>
-                <!--差评结束-->
+              
                 </div>
             </div>    
         </div>
@@ -1247,6 +699,9 @@ $(function(){
 					$(".d-"+frd+"-"+catd+"").show().siblings().hide();
 					})
 				})
+
+                // 获取对象
+           
         </script>
         <!--这里一切测试正常，现在我去掉容器里面各个div的颜色-->
     </div>

@@ -56,4 +56,8 @@ class GoodsController extends Controller
     	return view('home.xiangqingye',compact('data','picture'));
 
     }
+
+    // 商品搜索页
+    
+
 }
