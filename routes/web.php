@@ -16,11 +16,11 @@
 //前台订单
 
 //下订单
-Route::get('home/ordersub/{gid}/{aid}/{price}/{num}', 'Home\OrdersubController@index');	
-//Route::post('home/ordersub', 'Home\OrdersubController@end');	
+Route::get('home/ordersub/{gid}/{num}', 'Home\OrdersubController@index');	
+Route::get('home/ordersub', 'Home\OrdersubController@end');	
 	
 //生成订单
-Route::post('home/ordersub', 'Home\OrdersubController@create');			
+Route::get('home/ordersub/create', 'Home\OrdersubController@create');			
 //订单详情
 //Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
 //取消订单
@@ -38,17 +38,25 @@ Route::get('index/login','Index\LoginController@login');
 Route::get('index/yzm','Index\LoginController@yzm');
 Route::post('index/dologin','Index\LoginController@dologin');
 
-// 前台退出
-Route::get('/index/user/loginout','Index\LoginController@loginout');
 // 注册控制器
-Route::get('user/register','User\RegisterController@register');
-Route::get('user/yzm','User\RegisterController@yzm');
-Route::post('user/doregister','User\RegisterController@doregister');
+Route::get('index/user/register','Index\User\RegisterController@register');
+Route::get('index/user/register','Index\User\RegisterController@register');
+Route::get('index/user/yzm','Index\User\RegisterController@yzm');
+Route::post('index/user/doregister','Index\User\RegisterController@doregister');
 
+
+//前台商品列表
+Route::get('home/goods/cate/{cid}','Home\GoodsController@list');
+//详情
+Route::get('home/goods/{id}','Home\GoodsController@show');
 
 // 前台路由组中间件
 Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'],function(){
 
+
+
+	// 前台退出
+	Route::get('/user/loginout','LoginController@loginout');
 
 	// 邮箱激活
 	Route::get('user/active/{email}','User\RegisterController@active');
@@ -61,9 +69,35 @@ Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'
 	Route::post('user/donextresetpw','User\RegisterController@donextresetpw');
 
 
+
+	// 前台个人中心 
+	Route::get('/user/personage','User\PersonageController@index');
+	  
+	//账户信息(个人资料)
+	Route::get('/user/account','User\PersonageController@account');
+	Route::get('/user/redact','User\PersonageController@redact');
+	Route::post('/user/doredact','User\PersonageController@doredact');
+	 //地址
+	Route::get('/address/index','Address\AddressController@index');
+	Route::get('/address/insert','Address\AddressController@insert');
+	Route::get('/address/add','Address\AddressController@add');
+	Route::get('/address/edit/{id}','Address\AddressController@edit');
+	Route::post('/address/update','Address\AddressController@update');
+	Route::get('/address/delete/{id}','Address\AddressController@delete');
+
+
 });
 
 
+	//加入购物车
+	Route::post('/home/addcart','Home\ShopcarController@addCart');
+Route::group(['middleware'=>'index.login'],function(){
+
+	//购物车列表
+	Route::get('/home/shopcar','Home\ShopcarController@cart');
+	//删除商品
+	Route::post('//home/shopcar/delcart','Home\ShopcarController@delcart');
+});
 
 
 // 后台登录
@@ -71,85 +105,11 @@ Route::get('admin/login','Admin\LoginController@login');
 Route::get('admin/yzm','Admin\LoginController@yzm');
 Route::post('admin/dologin','Admin\LoginController@dologin');
 
-
-
-// 注册控制器
-Route::get('/index/user/register','Index\User\RegisterController@register');
-Route::get('/index/user/yzm','Index\User\RegisterController@yzm');
-Route::post('/index/user/doregister','Index\User\RegisterController@doregister');
-// 邮箱激活
-Route::get('index/user/active/{email}','Index\User\RegisterController@active');
-// Route::get('/index/user/pwactive','Index\LoginController@pwactive');
-
-//重置密码
-Route::get('/index/user/resetpw','Index\User\RegisterController@resetpw');
-Route::post('/index/user/doresetpw','Index\User\RegisterController@doresetpw');
-Route::get('/index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
-Route::post('/index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
-
-//前台商品列表
-Route::get('home/goods/cate/{cid}','Home\GoodsController@list');
-//详情
-Route::get('home/goods/{id}','Home\GoodsController@show');
-
-
-//加入购物车
-Route::post('/home/addcart','Home\ShopcarController@addCart');
-//购物车列表
-Route::get('/home/shopcar','Home\ShopcarController@cart');
-
-
-
-
-
-
-//后台
-//首页
-
-//用户管理
-Route::get('/admin/user/test','Admin\UsersController@test');
-Route::get('/admin/user/address','Admin\UsersController@address');
-
-Route::resource('/admin/users','Admin\UsersController');
-//    用户授权页面
-Route::get('/admin/user/auth/{id}','Admin\UsersController@auth');
-//    添加用户授权逻辑
-    Route::post('/admin/user/doauth','Admin\UsersController@doauth');
-
-
-//角色相关的路由
- Route::resource('/admin/role','Admin\RoleController');
-
-//权限相关的路由
-   Route::resource('/admin/permission','Admin\PermissionController');
-//  用户授权页面
-    Route::get('/admin/role/auth/{id}','Admin\RoleController@auth');
-//    添加用户授权逻辑
-    Route::post('/admin/role/doauth','Admin\RoleController@doauth');
-    Route::post('/admin/role/doauth','Admin\RoleController@doauth');
-
-
-
-
-
-//后台商品管理
-Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
-
-	Route::get('/goods/picture/{id}','GoodsController@picture');
-	Route::get('/goods/up/{id}','GoodsController@up');
-	Route::get('/goods/down/{id}','GoodsController@down');
-	Route::post('/goods/addpic','GoodsController@addpic');
-
-	Route::resource('/goods','GoodsController');
-
-});
 //后台路由组中间件
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'],function(){
 
-	//后台
-	//首页
-
-
+	//后台首页
+	Route::get('index','indexController@index');
 
 	// 后台退出
 	Route::get('loginout','LoginController@loginout');
@@ -174,97 +134,80 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::get('role/auth/{id}','RoleController@auth');
 	//    添加用户授权逻辑
 	Route::post('role/doauth','RoleController@doauth');
-	Route::post('role/doauth','RoleController@doauth');
+
+
+	//后台订单管理
+	Route::get('orders/up/{id}','OrdersController@up');
+	Route::get('orders/down/{id}','OrdersController@down');
+	Route::resource('orders','OrdersController');
+
+	//后台商品图片
+	Route::get('/goods/picture/{id}','GoodsController@picture');
+	Route::post('/goods/addpic','GoodsController@addpic');
+	//商品上下架
+	Route::get('/goods/up/{id}','GoodsController@up');
+	Route::get('/goods/down/{id}','GoodsController@down');
+	//后台商品
+	Route::resource('/goods','GoodsController');
+
+
+	//幻灯广告
+	Route::get('/show/index','ShowController@index');
+	// Route::get('/admin/show/add','Admin\ShowController@add');
+	Route::post('/show/insert','ShowController@insert');
+	Route::get('/show/edit/{id}','ShowController@edit');
+	Route::post('/show/update','ShowController@update');
+	Route::get('/show/delete/{id}','ShowController@delete');
+
+	//修改排序的路由
+	Route::post('/show/changeorder','ShowController@changeOrder');
+
+	//友情链接
+	Route::get('/frindlink/show/{id}','FriendlinkController@up');
+	Route::get('/frindlink/hide/{id}','FriendlinkController@down');
+	Route::resource('/friendlink','FriendlinkController');
+
+	//分类
+	Route::get('admin/cate/add','Admin\cateController@add');
+	Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
+	Route::delete('admin/cate/del/{id}','Admin\cateController@del');
+	Route::put('admin/cate/update/{id}','Admin\cateController@update');
+	Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
+	Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
+	Route::post('admin/cate','Admin\cateController@store');
+
+
+	Route::get('admin/cate/list','Admin\cateController@index');
+
+	//网站配置模块
+	Route::resource('admin/config','Admin\ConfigController');
+	Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
+
+
+	//推荐位
+	Route::get('recommend/index','RecommendController@index');
+	Route::post('/recommend/insert','RecommendController@insert');
+	Route::get('/recommend/edit/{id}','RecommendController@edit');
+	Route::post('/recommend/update','RecommendController@update');
+	Route::get('/recommend/delete/{id}','RecommendController@delete');
+
+	//修改排序的路由
+	Route::post('/recommend/changeorder','RecommendController@changeOrder');
+
+
+	//广告位
+	Route::get('/advertisement/index','AdvertisementController@index');
+	// Route::get('/admin/show/add','Admin\ShowController@add');
+	Route::post('/advertisement/insert','AdvertisementController@insert');
+	Route::get('/advertisement/edit/{id}','AdvertisementController@edit');
+	Route::post('/advertisement/update','AdvertisementController@update');
+	Route::get('/advertisement/delete/{id}','AdvertisementController@delete');
+
+	//修改排序的路由
+	Route::post('/advertisement/changeorder','AdvertisementController@changeOrder');
+
+	Route::get('cate/list','cateController@index');
 
 });
 
 
-//后台订单管理
-Route::get('admin/orders/up/{id}','Admin\OrdersController@up');
-Route::get('admin/orders/down/{id}','Admin\OrdersController@down');
-Route::resource('admin/orders','Admin\OrdersController');
-
-
-// 后台登录
-Route::get('admin/login','Admin\LoginController@login');
-Route::get('admin/yzm','Admin\LoginController@yzm');
-Route::post('admin/dologin','Admin\LoginController@dologin');
-
-
-//幻灯广告
-Route::get('/admin/show/index','Admin\ShowController@index');
-// Route::get('/admin/show/add','Admin\ShowController@add');
-Route::post('/admin/show/insert','Admin\ShowController@insert');
-Route::get('/admin/show/edit/{id}','Admin\ShowController@edit');
-Route::post('/admin/show/update','Admin\ShowController@update');
-Route::get('/admin/show/delete/{id}','Admin\ShowController@delete');
-
-//修改排序的路由
-Route::post('/admin/show/changeorder','Admin\ShowController@changeOrder');
-
-//友情链接
-Route::get('admin/frindlink/show/{id}','Admin\FriendlinkController@up');
-Route::get('admin/frindlink/hide/{id}','Admin\FriendlinkController@down');
-Route::resource('/admin/friendlink','Admin\FriendlinkController');
-
-//后台首页
-Route::get('admin/index','Admin\indexController@index');
-
-//分类
-Route::get('admin/cate/add','Admin\cateController@add');
-Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
-Route::delete('admin/cate/del/{id}','Admin\cateController@del');
-Route::put('admin/cate/update/{id}','Admin\cateController@update');
-Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
-Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
-Route::post('admin/cate','Admin\cateController@store');
-
-
-Route::get('admin/cate/list','Admin\cateController@index');
-
-//网站配置模块
-Route::resource('admin/config','Admin\ConfigController');
-Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
-
-
-//推荐位
-Route::get('/admin/recommend/index','Admin\RecommendController@index');
-Route::post('/admin/recommend/insert','Admin\RecommendController@insert');
-Route::get('/admin/recommend/edit/{id}','Admin\RecommendController@edit');
-Route::post('/admin/recommend/update','Admin\RecommendController@update');
-Route::get('/admin/recommend/delete/{id}','Admin\RecommendController@delete');
-
-//修改排序的路由
-Route::post('/admin/recommend/changeorder','Admin\RecommendController@changeOrder');
-
-
-//广告位
-Route::get('/admin/advertisement/index','Admin\AdvertisementController@index');
-// Route::get('/admin/show/add','Admin\ShowController@add');
-Route::post('/admin/advertisement/insert','Admin\AdvertisementController@insert');
-Route::get('/admin/advertisement/edit/{id}','Admin\AdvertisementController@edit');
-Route::post('/admin/advertisement/update','Admin\AdvertisementController@update');
-Route::get('/admin/advertisement/delete/{id}','Admin\AdvertisementController@delete');
-
-//修改排序的路由
-Route::post('/admin/advertisement/changeorder','Admin\AdvertisementController@changeOrder');
-
-Route::get('admin/cate/list','Admin\cateController@index');
-
-
-
-
-// 前台个人中心 
-Route::get('/index/user/personage','Index\User\PersonageController@index');
-  
-//账户信息(个人资料)
-Route::get('/index/user/account','Index\User\PersonageController@account');
-Route::get('/index/user/redact','Index\User\PersonageController@redact');
-Route::post('/index/user/doredact','Index\User\PersonageController@doredact');
- //地址
-Route::get('/index/address/index','Index\Address\AddressController@index');
-Route::get('/index/address/insert','Index\Address\AddressController@insert');
-Route::get('/index/address/add','Index\Address\AddressController@add');
-Route::get('/index/address/edit/{id}','Index\Address\AddressController@edit');
-Route::post('/index/address/update','Index\Address\AddressController@update');
-Route::get('/index/address/delete/{id}','Index\Address\AddressController@delete');

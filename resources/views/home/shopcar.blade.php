@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/car/css/main.css" />
+    <script src="/js/jquery-1.8.3.min.js"></script>
   </head>
   <body class="animsition">
     <div class="shop-cart" id="page">
@@ -122,14 +123,22 @@
                     </td>
                     <td class="product-weight" data-title="Weight">0.4 kg</td>
                     <td class="product-quantity" data-title="Quantity">
-                      <input class="qty" step="1" min="0" max="" name="product-name" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number">
+                      <input class="qty" step="1" min="0" max="" name="product-name" value="{{ $v->count}}" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number">
                     </td>
                     <td class="product-price" data-title="Price">{{$v['goods']['goods_price']}}</td>
-                    <td class="product-subtotal" data-title="Total">{{$v->count}}</td>
+                    <td id='zong' class="product-subtotal" data-title="Total">{{$v->count*$v['goods']['goods_price'] }}</td>
                     <td class="product-remove">
-                      <a class="remove"     aria-label="Remove this item" onclick="delcart({{$v->gid}}">×</a>
+                      <a class="remove"     aria-label="Remove this item" onclick="delcart({{$v->id}})">×</a>
                     </td>
                   </tr>
+                  <script type="text/javascript">
+                        $('.qty').on('change',function(){
+                           var count=$(this).val();
+                           var zong=count * {{$v['goods']['goods_price']}};
+                           $('#zong').text(zong);
+                        });
+
+                  </script>
                   
                 @endforeach
                 @endif
@@ -142,9 +151,16 @@
                           <input class="form-control pill" placeholder="Coupon Code">
                         </div>
                         <div class="form-group">
-                         <a class="btn btn-brand pill" href="#">进行结算</a>
+                         <a id="btn" class="btn btn-brand pill" href="javascript:;">进行结算</a>
                         </div>
+                        <script type="text/javascript">
+                          $('#btn').on('click',function(){ 
+                            var count=$('.qty').val();
 
+                            $('#btn').attr('href',"{{  url('home/ordersub/').'/'.$v['goods']['id'].'/' }}"+count);
+
+                          })
+                        </script>
 
                         <div class="form-group update-cart">
                           <a class="btn btn-brand-ghost pill" href="{{ url('/home/shopcar/syncCart')}}">更新购物车</a>
@@ -157,27 +173,13 @@
               </table>
             </form>
   <script>
-    // 异步添加购物车
-    // function cart(obj,aid){
-    //     var count = $(obj).val();
-    //     if(gid ==""){return false;}
-    //     $.ajax({
-    //         type:"POST",
-    //         url:'{{url('add_cart')}}',
-    //         dataType: 'json',
-    //         data:{gid:gid,count:count,_token:"{{csrf_token()}}"},
-    //         success:function(msg){
-    //             alert(msg);
-    //         }
-    //     });
-    // }
-    // 异步删除购物车商品
     function delcart(id){
         if(id != ''){
+          console.log(id);
             if(!confirm('您确认要删除吗?')){return false;}
             $.ajax({
                 type:"POST",
-                url : '{{url('/home/shopcar/delcart')}}',
+                url : "{{url('/home/shopcar/delcart')}}",
                 dataType: 'json',
                 data:{id:id,_token:"{{csrf_token()}}"},
                 success:function(msg){

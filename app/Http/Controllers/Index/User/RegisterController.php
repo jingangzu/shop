@@ -85,17 +85,18 @@ class RegisterController extends Controller
 	    $user = User::where('name',$input['name'])->first();
 	    $emails = User::where('email',$input['email'])->first();
 	     
-	    if ($emails) {
-            return back()->with('errors','邮箱已被激活');
-        } 
+	
 
 	    if ($user) {
             return back()->with('errors','用户已被注册');
         } 
 
+            if ($emails) {
+            return back()->with('errors','邮箱已被激活');
+        } 
+
         $res = \DB::table('user_home')->insert($input);
        
-
        if($res){
            	// 发送邮件
        		 \Mail::send('mails.mails',['input' => $input],function($message)use($input){
@@ -116,7 +117,6 @@ class RegisterController extends Controller
 		$input['status'] = 1;
 
 		$res = \DB::table('user_home')->where('email',$email)->update($input);
-
 		if($res)
 		{
 			return redirect('/index/login')->with(['info'=>'激活成功,请登录']);

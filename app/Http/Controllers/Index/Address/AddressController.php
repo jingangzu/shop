@@ -26,11 +26,16 @@ class AddressController extends Controller
     
     public function add(Request $request)
     {
-    	$inpot = $request->except('submit','token','harea','hproper','hcity');
+    	$inpot = $request->except('submit','_token','adressa','harea','hproper','hcity','back');
     	// dd($inpot);
     	$data = \DB::table('address')->insert($inpot);
     	// // $user = Address::find(1);
-    	 if($data)
+        $rr = $request->input('back');
+        if($rr='info')
+        {
+            return back();
+        }
+        if($data)
         {
             return redirect('/index/address/index')->with(['info'=>'添加成功']);
         }else{

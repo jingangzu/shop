@@ -17,8 +17,9 @@ class ShopcarController extends Controller
 	    $gid = $request ->input('gid','');
 	    $shop_count = $request ->input('count','');
 	    // 如果当前用户已经登录
-	    $user = $request ->session()->get('user','');
+	    $user = $request ->session()->get('inuser','');
 	    if($user !=''){
+
 	        $cart_items = Cart::where('uid',$user->id)->get();
 	        $exist = false; // 用于标注COOKIE中的数据是否存在于数据库
 	        foreach($cart_items as $cart_item){
@@ -59,7 +60,12 @@ class ShopcarController extends Controller
 	    if($count == 1){
 	        array_push($shop_cart_arr,$gid.":".$count);
 	    }
-	    $msg = $shop_count != '' ? '修改成功！' : '添加成功！';
+	    if(!$user){
+	    	$msg='请先登录';
+	    }else{
+	    	$msg = $shop_count != '' ? '添加成功！' : '添加失败！';
+
+	    }
 	    return response(json_encode($msg))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 	}
 

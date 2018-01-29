@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href='./Public/css/home/finish.css' type='text/css' rel='stylesheet'>
+    <link href='/css/finish.css' type='text/css' rel='stylesheet'>
 </head>
 <body id="mainframe">
 
@@ -126,18 +126,17 @@
                             再次购买
 							</a>
             </div>
-			<?php	foreach($_SESSION['cart'] as $k=>$v): ?>
+			
 
 
 		    	<ul class="list-order">
 			       <li class="li-st">
-					<div class="fore1">订单号：<a href=""><?=$this->oid?></a></div>
+					<div class="fore1">订单号：<a href=""></a></div>
 					<!-- 货到付款 -->
-			   <div class="fore2">货到付款：<strong class="ftx-01"><?=$v->price?></strong></div>
+			   <div class="fore2">货到付款：<strong class="ftx-01"></strong></div>
 			   <div class="fore3">  京东快递 &nbsp; 送货时间:&nbsp;</div>
 			</li>
 		</ul>
-						<?php endforeach; ?>
 		<!-- 在线支付按钮  -->
 			<div id="bookDiv"></div>
  			<div class="wx-banner">

@@ -27,5 +27,9 @@ class Goods extends Model
     {
         return $this->hasOne('App\Model\goodstags', 'cateid', 'cid');
     }
+    public function cart()
+    {
+         return  $this->hasOne('App\Model\Cart','gid','id');
+    }
 
 }

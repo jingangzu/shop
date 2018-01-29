@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
-use App\Model\User;
 use App\Model\Home\User;
 use Session;
 
@@ -74,7 +73,18 @@ class LoginController extends Controller
 
         $user = User::where('name',$input['name'])->first();
 
+        
+        //用户验证
+        // dd($user);
+        if (! $user) {
+            return back()->with('errors','无此用户');
+        } 
+        // dd($user->password);
 
+        //密码验证
+        if(Crypt::decrypt($user->password) != $input['password']){
+            return back()->with('errors','密码错误');
+        }
 
         $status = $user->status;
 
@@ -82,18 +92,7 @@ class LoginController extends Controller
             return back()->with('errors','账号没激活');
         }
 
-        //用户验证
-        // dd($user);
 
-        if (! $user) {
-            return back()->with('errors','无此用户');
-        } 
-        // dd($user->password);
-
-		//密码验证
-        if(Crypt::decrypt($user->password) != $input['password']){
-            return back()->with('errors','密码错误');
-        }
 
 
 		//将用户的登录状态保存到session

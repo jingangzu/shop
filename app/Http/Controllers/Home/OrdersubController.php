@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\orders;
+use App\Model\Cart;
 use App\Model\ordersinfo;
 use App\Model\Address;
 use App\Model\Goods;
@@ -16,47 +17,38 @@ class OrdersubController extends Controller
     // 
    public function end()
    {
-      return view('home/order/end');
-   }
 
-     public function index($id,$gid,$price,$num)
-   
-    {   
         //获取用户id
-     //$uid = session('uid');
-       $uid = 24;
-     
-        //dd($uid);
-        //获取商品id
-        $gid = $gid;
-
-        //获取总价格
-        $price = $price;
-
-        //获取商家id
-        $gid = $gid;
-
-        //获取商品数量
-        $num = 12;
-        
-        //获取选择的单价
-        //$goods_price = $goods_price;
-
-        //订单生成时间
-        $ord_time = time();
-
-        //生成订单号
-        $o_code = $uid.rand(100000,999999);
+     $uid = session('inuser')->id;
+     //购物车数据
+     $shopcart=Cart::with('goods')->where('uid',$uid)->get();
 
         //获取该用户的所有地址信息
         $addr = address::where('uid',$uid)->get();
     //dd($addr);
-        //获取商品的详细信息
-        $resgoods = goods::where('id',$gid)->get();
-       //dd($resgoods);
-        //进入页面
+        $price=0;
+        foreach($shopcart as $k=>$v){
+         $price+=($v->goods->goods_price)*($v->count);
+        }
+      return view('home/order/finish',compact('addr','shopcart','price'));
+   }
 
-        return view('home/order/info',compact('uid','o_code','addr','goods','price','num','goods_price','gid','resgoods'));
+     public function index($gid,$num)
+   
+    {   
+        //获取用户id
+     $uid = session('inuser')->id;
+     //购物车数据
+     $shopcart=Cart::with('goods')->where('uid',$uid)->get();
+
+        //获取该用户的所有地址信息
+        $addr = address::where('uid',$uid)->get();
+    //dd($addr);
+        $price=0;
+        foreach($shopcart as $k=>$v){
+         $price+=($v->goods->goods_price)*($v->count);
+        }
+        return view('home/order/info',compact('addr','shopcart','price'));
 
         
 
@@ -69,39 +61,44 @@ class OrdersubController extends Controller
      */
     public function create(Request $request)
     {
-        //获取传功来的数据
-        $res = $request->except('_token');
-        $addrs = $res['addr'];             //地址下标
-        $goods_num = $res['num'];     //数量
-        $gid = $res['gid'];                 //商品id
-        $gname = Goods::where('goods_name',$gname)->first();
-        $goods_price = $res['goods_price'];         //总价
-        $uid = session('uid');           //用户id
-        $addres = address::where('uid',$uid)->get();           //用户的所有地址
-        $o_addr = $addres[$addrs]->id;          //所选地址id
-        $ord_time = time();                    //订单生成时间
 
+        //获取用户id
+     $uid = session('inuser')->id;
+     //购物车数据
+     $shopcart=Cart::with('goods')->where('uid',$uid)->first();
+     $data['uid']=$uid;
+     $data['gid']=$shopcart->goods->id;
+    $num = $dara['num'] = $shopcart->count;
+    $data['price'] = $shopcart->goods->goods_price*$num;
+               //所选地址id
+    $aid=$request->input('aid');
+    $data['aid']=$aid;
+    $data['uname']=address::where('id',$aid)->first()->username;
         //生成订单号
+        $data['ostate']=0;
         $o_code = $uid.rand(10000,99999); 
+         $data['o_code']=$o_code;
         DB::beginTransaction();         //开启事务
 
         //在orders表中添加订单
-        $regres = orders::insert(['uid'=>$uid,'o_code'=>$o_code,'num'=>$num,'price'=>$total_price,'ostate'=>0]);
-        
+        $regres = orders::insert($data);
+        $Info['username']=$uid;
+        $Info['gname']=$shopcart->goods->goods_name;
+        $Info['o_addr']=$aid;
+        $Info['o_tell']=address::where('id',$aid)->first()->phone;
+        $Info['o_code']=$o_code;
         //在ordersinfo表中添加订单
-        $regress = ordersinfo::insert(['sid'=>$sid,'gname'=>$gname,'ostate'=>0,'o_extend'=>0,'o_code'=>$o_code,'o_addr'=>$o_addr,'ord_time'=>$ord_time]);
+        $regress = ordersinfo::insert($Info);
 
         //判断是否都添加成功
         if($regres && $regress){
             DB::commit();           //成功执行
-            echo $o_code; 
             //进入页面
-            //return view('homes/user/ordersub',compact('res'));
+             return view('home/order/finish');
             
         } else { 
             DB::rollback();         //失败回滚
-            echo 0;
-            //return back();
+            return back();
         }
 
     }

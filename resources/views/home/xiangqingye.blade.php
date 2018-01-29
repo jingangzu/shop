@@ -254,7 +254,7 @@ $(function(){
                                         type:"POST",
                                         url:"{{url('/home/addcart')}}",
                                         dataType: 'json',
-                                        data:{gid:gid,count:count,_token:"{{csrf_token()}}"},
+                                        data:{gid:gid,count:count,_token:"{{csrf_token()}}",'cart':'true'},
                                         success:function(msg){
                                            alert(msg);
                                         },
