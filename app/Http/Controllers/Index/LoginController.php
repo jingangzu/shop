@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
-use App\Model\User;
+
 use App\Model\Home\User;
 use Session;
 
@@ -35,11 +35,8 @@ class LoginController extends Controller
     public function dologin(Request $request)
     {
 
-		// 获取用户提交过来的登录数据
+       // 获取用户提交过来的登录数据
         $input = $request->except('_token');
-
-
-
 
 
 		//验证数据的有效性
@@ -96,7 +93,7 @@ class LoginController extends Controller
         }
 
 
-		//将用户的登录状态保存到session
+      //将用户的登录状态保存到session
         Session::put('inuser',$user);
 
 

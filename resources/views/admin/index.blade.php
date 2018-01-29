@@ -153,6 +153,10 @@
   </div>
  </div>
  <div class="clear"></div>
+ @if (SESSION('auth'))
+ <script type="text/javascript">
+         layer.msg("{{SESSION('auth')}}");       
  
-
+ </script>
+@endif
  @endsection

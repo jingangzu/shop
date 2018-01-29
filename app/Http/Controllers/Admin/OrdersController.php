@@ -58,7 +58,7 @@ class OrdersController extends Controller
         //
      
       $res= orders::find($id)->o_code;
-      $data = ordersinfo::with('orgoods','oraddress','shop','user','order')->where('o_code',$res)->first();
+      $data = ordersinfo::with('orgoods','oraddress','user','order')->where('o_code',$res)->first();
       
 
    // dd($data);

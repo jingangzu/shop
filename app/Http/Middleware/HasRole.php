@@ -19,7 +19,9 @@ class HasRole
 //        $request->url();
         //App\Http\Controllers\Admin\LoginController@index
 //        1. 获取当前用户访问的路由对应的控制器和方法名
-          $route =  \Route::current()->getActionName();
+      $route = \Route::currentRouteAction();
+      // dd($action);
+       //   $route =  \Route::current()->getActionName();
 
 
 //        2. 获取当前用户拥有的权限  用户跟角色有关系   角色跟权限有关系
@@ -57,9 +59,10 @@ class HasRole
 //        3. 判断当前访问的路由对应的控制器和方法名是否在用户拥有的权限中，如果在，中间件跳过，执行路由对应的方法；如果不在，不能执行对应的控制器方法
 //        判断当前访问的路由是否在用户拥有的权限路由中
         if(in_array(trim($route),$own_pers)){
+
             return $next($request);
         }else{
-            return redirect('auth');
+            return redirect('admin/index')->with('auth','对不起您没有权限访问');
         }
 
 
