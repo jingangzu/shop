@@ -113,7 +113,6 @@ Route::group(['middleware'=>'index.login'],function(){
 	Route::post('//home/shopcar/delcart','Home\ShopcarController@delcart');
 });
 
-});
 	//加入购物车
 	Route::post('/home/addcart','Home\ShopcarController@addCart');
 
@@ -137,7 +136,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	//后台商品图片
 	Route::get('/goods/picture/{id}','GoodsController@picture');
 	Route::post('/goods/addpic','GoodsController@addpic');
-});
          
 	//后台个人中心
 	Route::get('personage/{id}','UsersController@personage');
@@ -199,20 +197,20 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::resource('/friendlink','FriendlinkController');
 
 	//分类
-	Route::get('admin/cate/add','Admin\cateController@add');
-	Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
-	Route::delete('admin/cate/del/{id}','Admin\cateController@del');
-	Route::put('admin/cate/update/{id}','Admin\cateController@update');
-	Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
-	Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
-	Route::post('admin/cate','Admin\cateController@store');
+	Route::get('cate/add','cateController@add');
+	Route::get('cate/edit/{id}','cateController@edit');
+	Route::delete('cate/del/{id}','cateController@del');
+	Route::put('cate/update/{id}','cateController@update');
+	Route::post('cate/changeOrder/{id}','cateController@changeOrder');
+	Route::post('config/changeOrder/{id}','ConfigController@changeOrder');
+	Route::post('cate','Admin\cateController@store');
 
 
-	Route::get('admin/cate/list','Admin\cateController@index');
+	Route::get('cate/list','cateController@index');
 
 	//网站配置模块
-	Route::resource('admin/config','Admin\ConfigController');
-	Route::post('admin/config/changeContent','Admin\ConfigController@changeContent');
+	Route::resource('config','ConfigController');
+	Route::post('config/changeContent','ConfigController@changeContent');
 
 
 	//推荐位
@@ -228,7 +226,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 
 	//广告位
 	Route::get('/advertisement/index','AdvertisementController@index');
-	// Route::get('/admin/show/add','Admin\ShowController@add');
 	Route::post('/advertisement/insert','AdvertisementController@insert');
 	Route::get('/advertisement/edit/{id}','AdvertisementController@edit');
 	Route::post('/advertisement/update','AdvertisementController@update');
