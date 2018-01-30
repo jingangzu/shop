@@ -244,8 +244,9 @@ $(function(){
 					</script>
                  <!--加入购物车与收藏商品-->
                  <div class="joinspadsp">
-                 	<a href="#" style=" margin-left:67px">立即购买</a>
-                 	<a id="addcart" href="javascript:;" onclick="cart()" style=" margin-left:6px">加入购物车</a>
+                 	<a href="{{ url('/home/ordersub').'/'.$data['id'].'/1' }}" style=" margin-left:67px">立即购买</a>
+                    <a id="addcart" href="javascript:;" onclick="cart()" style=" margin-left:6px">加入购物车</a>
+                 	<a id="addshou" href="javascript:;" onclick="shou()" style=" margin-left:6px">收藏此商品</a>
                   <script type="text/javascript">
                               function cart(){
                                     var count = $('#text_box').val();
@@ -260,9 +261,18 @@ $(function(){
                                         },
                                     });
                                 }
-                          // $('#addcart').on('click',function(){
-                          //   $(this).attr('href',"{{ url('/home/addcart').'?gid='.$data['id'].'&count='}}"+$('#text_box').val());
-                          // })
+
+                                   function shou(){
+                                    var gid = {{ $data['id'] }};
+                                    $.ajax({
+                                        type:"GET",
+                                        url:"{{url('/index/addshou')}}/"+gid,
+                                        dataType: 'json',
+                                        success:function(msg){
+                                           alert(msg);
+                                        },
+                                    });
+                                }
 
                   </script>
                     <a href="#" style=" margin-left:6px"></a>

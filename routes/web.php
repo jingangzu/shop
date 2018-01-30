@@ -86,19 +86,29 @@ Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'
 	Route::get('/address/edit/{id}','Address\AddressController@edit');
 	Route::post('/address/update','Address\AddressController@update');
 	Route::get('/address/delete/{id}','Address\AddressController@delete');
-
-	Route::get('/user/addshou/{id}','Shou\ShouController@add');
-
+	//收藏
+	Route::get('/addshou/{id}','ShouController@add');
+	Route::get('/shoulist','ShouController@list');
+	Route::get('/shou/delete/{gid}','ShouController@delete');
 	
 });
 
-
-	//加入购物车
-	Route::post('/home/addcart','Home\ShopcarController@addCart');
+Route::group(['middleware'=>'index.login'],function(){
 	//购物车列表
 	Route::get('/home/shopcar','Home\ShopcarController@cart');
 	//删除商品
 	Route::post('/home/shopcar/delcart','Home\ShopcarController@delcart');
+
+});
+	//收藏
+	
+	
+
+
+
+	//加入购物车
+	Route::post('/home/addcart','Home\ShopcarController@addCart');
+
 
 
 // 后台登录

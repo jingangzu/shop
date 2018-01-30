@@ -269,7 +269,7 @@ $(function(){
     	<li>
            <a href="{{ url('/home/goods/').'/'.$v->id }}" class="wocici">
                <b>
-               <img src="/img/chose.png"/>
+               <img src="{{ url('/uploads/').'/'.$v->picture }}"/>
                </b>
                <h2>{{ $v->goods_name }}</h2>
                <p>{{ $v->goods_description }}</p>

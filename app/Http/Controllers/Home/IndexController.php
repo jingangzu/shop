@@ -19,6 +19,7 @@ class IndexController extends Controller
     public function index()
     {
 
+      
     	$cate = new Cate();
 $cates = $cate->getCate();
     	

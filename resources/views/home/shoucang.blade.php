@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>我的收藏</title>
-<link rel="stylesheet" type="text/css" href="css/vipcenter.css">
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/public.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/vipcenter.css">
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/public.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 	<!--头部-->
 	<div class="thetoubu1">
     	<b>
-        	<img src="img/touxiang.png"/>
+        	<img src="/img/touxiang.png"/>
         </b>
         <em>czz1994612</em>
         <em>欢迎来到会员中心</em>
@@ -90,46 +90,16 @@
             <!--收藏的商品列表-->
             <div class="feizhoum">
             	<ul>
+                @foreach($data as $k=>$v)
                 	<li>
-                    	<img src="img/1_04418211646104580_240.jpg"/>
+                    	<img src="{{ url('/uploads/').'/'.$v->goods->picture }}"/>
                         <span>
-                        	<a href="#">2016春季打底毛衫拼色毛衣&nbsp;长袖套头针织衫&nbsp;樱兰色</a>
-                            <em>199元</em>
-                            <a href="#" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
+                        	<a href="{{ url('home/goods').'/'.$v->goods->id }}">{{ $v->goods->goods_name }}</a>
+                            <em>{{ $v->goods->goods_price }}元</em>
+                            <a href="{{ url('index/shou/delete/').'/'.$v->goods->id }}" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
                         </span>
                     </li>
-                    <li>
-                    	<img src="img/1_04418211646104580_240.jpg"/>
-                        <span>
-                        	<a href="#">2016春季打底毛衫拼色毛衣&nbsp;长袖套头针织衫&nbsp;樱兰色</a>
-                            <em>199元</em>
-                            <a href="#" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
-                        </span>
-                    </li>
-                    <li>
-                    	<img src="img/1_04418211646104580_240.jpg"/>
-                        <span>
-                        	<a href="#">2016春季打底毛衫拼色毛衣&nbsp;长袖套头针织衫&nbsp;樱兰色</a>
-                            <em>199元</em>
-                            <a href="#" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
-                        </span>
-                    </li>
-                    <li>
-                    	<img src="img/1_04418211646104580_240.jpg"/>
-                        <span>
-                        	<a href="#">2016春季打底毛衫拼色毛衣&nbsp;长袖套头针织衫&nbsp;樱兰色</a>
-                            <em>199元</em>
-                            <a href="#" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
-                        </span>
-                    </li>
-                    <li>
-                    	<img src="img/1_04418211646104580_240.jpg"/>
-                        <span>
-                        	<a href="#">2016春季打底毛衫拼色毛衣&nbsp;长袖套头针织衫&nbsp;樱兰色</a>
-                            <em>199元</em>
-                            <a href="#" style="display:block; width:40px; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; background:#09f; margin-top:12px">删除</a>
-                        </span>
-                    </li>
+                  @endforeach
                 </ul>
             </div>
             <!--收藏商品列表结束-->
@@ -138,6 +108,14 @@
     </div>
     <!--详细列表结束-->
 </div>
+@if(session('shou'))
+    <script type="text/javascript">
+
+    alert("{{ session('shou') }}");
+    </script>
+@endif
+
+
 <!--个人中心结束-->
 </body>
 </html>    	

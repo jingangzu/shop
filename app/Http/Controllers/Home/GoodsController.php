@@ -14,7 +14,7 @@ class GoodsController extends Controller
     //商品列表
     public function list($cid)
     {
-    	$data = Cate::find($cid)->goods;
+        $data = Cate::find($cid)->goods;
     	// dd($data);
     	return view('home.liebiaoye',compact('data'));
     }
