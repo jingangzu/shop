@@ -29,7 +29,7 @@
                         <th>标题</th>
                         <th>名称</th>
                         <th>内容</th>
-
+                     
                         <th>操作</th>
                     </tr>
 
@@ -45,11 +45,15 @@
                         </td>
 <!-- {{--                        <td>{{ mb_substr($v->user_pass,0,30,'utf-8').'...' }}</td>--}} -->
                         <td >{{ $v->conf_name }}</td>
-
+                    
                         <td >
                             <input type="hidden" name="conf_id[]" value="{{ $v->conf_id }}">
                             {!! $v->conf_contents !!}
-                        </td>
+                        </td>  
+                        
+                     
+                          
+                       
 
                         <td>
                             <a href="{{ url('admin/config/'.$v->conf_id.'/edit') }}">修改</a>

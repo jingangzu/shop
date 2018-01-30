@@ -8,10 +8,10 @@
  @if(session('msg'))
             <h3>{{ session('msg') }}</h3>
             @endif
- <form action="{{ url('admin/config/') }}" method="post">
+ <form action="{{ url('admin/config/'.$conf->conf_id) }}" method="post">
   
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-      
+      {{method_field('put')}}
         {{ csrf_field() }}
      <tr>
                  
@@ -36,21 +36,19 @@
                         <span><i class="fa fa-exclamation-circle yellow"></i>配置项内容必须填写</span>
                     </td>
                 </tr>
-                <tr >
+                <tr>
                     <th>类型：</th>
                     <td>
-                        <input type="radio" name="field_type" value="input" checked onclick="showTr()">input　
-                        <input type="radio" name="field_type" value="textarea" onclick="showTr()">textarea　
-                       <!--  <input type="radio" name="field_type" value="radio" onclick="showTr()">radio -->
+                        <input type="radio" name="field_type" value="radio" checked onclick="showTr()">{{ $conf->field_type }}
                     </td>
                 </tr>
-                <!-- <tr class="field_value">
+                <tr class="field_value">
                     <th>类型值：</th>
                     <td>
                         <input type="text" class="lg" name="field_value">
-                        <p><i class="fa fa-exclamation-circle yellow"></i>类型值只有在radio的情况下才需要配置，格式 1|开启,0|关闭</p>
+                        <p><i class="fa fa-exclamation-circle yellow"></i>{{ $conf->field_value }}</p>
                     </td>
-                </tr> -->
+                </tr>
                 <tr>
                     <th>排序：</th>
                     <td>

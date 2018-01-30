@@ -178,9 +178,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	Route::get('cate/list','cateController@index');
 
 	//网站配置模块
-	Route::resource('admin/config','ConfigController');
+	Route::resource('config','ConfigController');
 	Route::post('config/changeContent','ConfigController@changeContent');
-
+	Route::get('config/putcontent','ConfigController@putContent');
 
 	//推荐位
 	Route::get('recommend/index','RecommendController@index');

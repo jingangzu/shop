@@ -46,7 +46,6 @@ class GoodsController extends Controller
         //得到商品分类
         $cate = new Cate();
         $cates = $cate->getCate();
-
         //商品添加页
         return view('admin.goods.addproduct',compact('cates'));
     }
@@ -61,7 +60,6 @@ class GoodsController extends Controller
     {
         //执行商品添加
         $data = $request->except('_token','submit','picture');
-
         $this->validate($request,[
                 'goods_name'=>'required',
                 'cid'=>'required',

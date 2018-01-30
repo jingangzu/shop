@@ -46,7 +46,7 @@ class ShopcarController extends Controller
 	    // 用户没有登录的情况下
 	    $shop_cart = $request->cookie('shop_cart');
 	    $shop_cart_arr = ($shop_cart != null ? explode(',',$shop_cart) : array());
-	    $count = 1; // 商品默认数据
+	    $count = $shop_count; // 商品默认数据
 	    foreach($shop_cart_arr as &$value){ // 一定要传引用
 	        $index = strrpos($value,':'); // 商品个数
 	        if(substr($value,0,$index) == $gid){
@@ -58,7 +58,7 @@ class ShopcarController extends Controller
 	        }
 	    }
 	    // $conut是否 = 1  如果是就把商品加入到数组中
-	    if($count == 1){
+	    if($count == $shop_count){
 	        array_push($shop_cart_arr,$gid.":".$count);
 	    }
 	    $msg = $shop_count != '' ? '添加成功！' : '添加成功！';
