@@ -10,13 +10,9 @@
     <div class="filter">
     <form action="{{ url('/admin/goods') }}" method="get">
      <select name="cid">
-                        <option value='0'></option>
+                        <option value='0'>顶级分类</option>
                 @foreach($cates as $k=>$v)
-                        <option value="{{$v->cate_id}}" 
-                @if(old('cid')==$v->id)
-                            selected 
-                @endif
-                           >{{ $v->catenames }}</option>
+                        <option value="{{$v->cate_id}}"  @if($where['cid']==$v->cate_id)  selected  @endif >{{ $v->catenames }}</option>
                  @endforeach
          </select>
      <input name="keyword" type="text" class="inpMain" value="{{ $where['keyword'] }}" size="20" />

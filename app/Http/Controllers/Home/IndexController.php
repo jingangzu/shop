@@ -25,10 +25,8 @@ class IndexController extends Controller
             return view('home/weihu');
         }
 
-      
     	$cate = new Cate();
-        $cates = $cate->getCate();
-
+        $cates = $cate->getCate();       
         $goods = \DB::table('goods')->get();
     	
         //轮播图4张 value  pluck

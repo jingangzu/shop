@@ -27,6 +27,7 @@ class LoginController extends Controller
 
     public function yzm()
     {
+        ob_clean();
     	$code = new Code();
         return $code->make();
     }

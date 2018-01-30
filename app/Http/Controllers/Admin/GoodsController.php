@@ -22,9 +22,9 @@ class GoodsController extends Controller
         $cid = $request->input('cid','');
         $where = $request->only('keyword','cid');
         if($cid){
-            $data = Goods::where('cid',$cid)->where('goods_name','like','%'.$keyword.'%')->paginate(2);
+            $data = Goods::where('cid',$cid)->where('goods_name','like','%'.$keyword.'%')->paginate(5);
         }else{
-            $data = Goods::where('goods_name','like','%'.$keyword.'%')->paginate(2);
+            $data = Goods::where('goods_name','like','%'.$keyword.'%')->paginate(5);
         }
 
         

@@ -21,7 +21,6 @@ Route::get('index/yzm','Index\LoginController@yzm');
 Route::post('index/dologin','Index\LoginController@dologin');
 
 // 注册控制器
-
 Route::get('/index/user/register','Index\User\RegisterController@register');
 Route::get('/index/user/yzm','Index\User\RegisterController@yzm');
 Route::post('/index/user/doregister','Index\User\RegisterController@doregister');
