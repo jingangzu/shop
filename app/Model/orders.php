@@ -24,7 +24,7 @@ class orders extends Model
     }
 
     public function orgoods(){
-        return $this->hasOne('App\Model\Goods', 'gid', 'id');
+        return $this->belongsTo('App\Model\Goods', 'gid', 'id');
     }
 
     public function ordersinfo(){

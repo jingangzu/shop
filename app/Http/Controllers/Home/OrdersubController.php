@@ -12,27 +12,20 @@ use App\Model\Address;
 use App\Model\Goods;
 use App\Model\User;
 use DB;
+
 class OrdersubController extends Controller
 {
     // 
-   public function end()
-   {
-
-        //获取用户id
-     $uid = session('inuser')->id;
-     //购物车数据
-     $shopcart=Cart::with('goods')->where('uid',$uid)->get();
-
-        //获取该用户的所有地址信息
-        $addr = address::where('uid',$uid)->get();
-    //dd($addr);
-        $price=0;
-        foreach($shopcart as $k=>$v){
-         $price+=($v->goods->goods_price)*($v->count);
-        }
-      return view('home/order/finish',compact('addr','shopcart','price'));
-   }
-
+     public function geren(Request $request)
+     { 
+      $uid = session('inuser')->id;
+      $goods = orders::with('orgoods')->where('uid',$uid)->get();
+      // $res= orders::find($id)->o_code;
+        //dd($req);
+        return view ('home/order/geren',compact('uid','goods'));
+     }
+     
+     
      public function index($gid,$num)
    
     {   
@@ -49,8 +42,6 @@ class OrdersubController extends Controller
          $price+=($v->goods->goods_price)*($v->count);
         }
         return view('home/order/info',compact('addr','shopcart','price'));
-        
-
     }
 
     /**
@@ -88,7 +79,7 @@ class OrdersubController extends Controller
         $Info['o_code']=$o_code;
         //在ordersinfo表中添加订单
         $regress = ordersinfo::insert($Info);
-
+         
         //判断是否都添加成功
         if($regres && $regress){
             DB::commit();           //成功执行

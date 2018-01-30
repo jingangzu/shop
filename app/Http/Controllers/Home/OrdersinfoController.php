@@ -16,6 +16,6 @@ class OrdersinfoController extends Controller
         	//获取用户id
     	 $uid = session('inuser')->id;
     	 //获取定单
-    	$order = order::where('uid',);
+    	$order = order::where('uid');
     }
 }

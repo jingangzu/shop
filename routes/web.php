@@ -11,18 +11,6 @@
 |
 */
 
-
-
-		
-
-//订单详情
-//Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
-//取消订单
-//Route::get('home/orderre', 'Home\UserorderController@create'); 		
-//确认收货
-//Route::get('home/ordersu', 'Home\UserorderController@store'); 		
-
-
 //前台
 //首页
 
@@ -51,6 +39,8 @@ Route::post('index/user/doresetpw','\Index\User\RegisterController@doresetpw');
 Route::get('index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
 Route::post('index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
 
+//加入购物车
+Route::post('/home/addcart','Home\ShopcarController@addCart');
 
 	// 邮箱激活
 Route::get('/index/user/active/{email}','Index\User\RegisterController@active');
@@ -105,18 +95,16 @@ Route::group(['middleware'=>'index.login'],function(){
 	//删除商品
 	Route::post('/home/shopcar/delcart','Home\ShopcarController@delcart');
 	//前台订单  
-
 	//下订单
 	Route::get('home/ordersub/{gid}/{num}', 'Home\OrdersubController@index');	
 	Route::get('home/ordersub', 'Home\OrdersubController@end');	
-		
 	//生成订单
-	Route::get('home/ordersub/create', 'Home\OrdersubController@create');	
+	Route::get('home/ordersub/create', 'Home\OrdersubController@create');
+	//个人订单
+	Route::get('home/ordersub/geren', 'Home\OrdersubController@geren');	
 });
 
-	//加入购物车
-	Route::post('/home/addcart','Home\ShopcarController@addCart');
-
+	
 
 
 // 后台登录
@@ -132,8 +120,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 
 	// 后台退出
 	Route::get('loginout','LoginController@loginout');
-
-
 	//后台商品图片
 	Route::get('/goods/picture/{id}','GoodsController@picture');
 	Route::post('/goods/addpic','GoodsController@addpic');
@@ -147,15 +133,11 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	//用户管理
 	Route::get('user/test','UsersController@test');
 	Route::get('user/address','UsersController@address');
-
 	Route::resource('users','UsersController');
 	//    用户授权页面
 	Route::get('user/auth/{id}','UsersController@auth');
 	//    添加用户授权逻辑
 	Route::post('user/doauth','UsersController@doauth');
-
-
-
 
 	//角色相关的路由
 	Route::resource('role','RoleController');

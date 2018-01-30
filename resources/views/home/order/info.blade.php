@@ -20,7 +20,7 @@
             <em>收货人信息</em>
 
             
- @if (false)       
+ @if ($addr->first()) 
  <div class="shouhurxl2">
   <input calss="adress" type="radio" name="adressa" value="{{ $addr[0]->id }}" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
   
@@ -196,8 +196,7 @@
                   <em>商品金额：</em>
               </li>
                 <li>
-                    <em><s>{{ $price }}</s>元</em>
-
+                  <em><s>{{ $price }}</s>元</em>
                   <em>本店合计：</em>
               </li>
             </ul>

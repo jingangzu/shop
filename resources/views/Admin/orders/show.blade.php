@@ -19,7 +19,7 @@
             <th>支付时间</th>
             <th>发货时间</th>
             <th>完成时间</th>
-            <th>支付单号</th>
+           
             <th>订单状态</th>
             <!-- <th>操作</th> -->
         </tr>
@@ -30,15 +30,15 @@
             
             <td>{{$data->id}}</td>
             <td>{{$data->o_code}}</td>
-            <td>{{$data->order->uname}}</td>
-            <td>{{$data->user->phone}}</td>
+            <td>{{$data->username}}</td>
+            <td>{{$data->o_tell}}</td>
             <td>{{ $v->goods_name}}</td>
             <td>{{$data->oraddress->address}}</td>
             <td>{{$data->ord_time = date('Y-m-d H:i:s')}}</td>
             <td>{{$data->pay_time = date('Y-m-d H:i:s')}}</td>
             <td>{{$data->mat_time = date('Y-m-d H:i:s')}}</td>
             <td>{{$data->complete = date('Y-m-d H:i:s')}}</td>
-            <td>{{$data->pay_id}}</td>
+           
             <td>{{$data->ostate}}</td>
           <td align="center">
         <!-- <a href="{{ url('/admin/orders/'.$data->id.'/edit')}}">修改</a> -->
