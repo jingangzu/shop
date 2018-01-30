@@ -13,14 +13,7 @@
 
 
 
-//前台订单  
-
-//下订单
-Route::get('home/ordersub/{gid}/{num}', 'Home\OrdersubController@index');	
-Route::get('home/ordersub', 'Home\OrdersubController@end');	
-	
-//生成订单
-Route::get('home/ordersub/create', 'Home\OrdersubController@create');			
+		
 
 //订单详情
 //Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
@@ -110,7 +103,15 @@ Route::group(['middleware'=>'index.login'],function(){
 	//购物车列表
 	Route::get('/home/shopcar','Home\ShopcarController@cart');
 	//删除商品
-	Route::post('//home/shopcar/delcart','Home\ShopcarController@delcart');
+	Route::post('/home/shopcar/delcart','Home\ShopcarController@delcart');
+	//前台订单  
+
+	//下订单
+	Route::get('home/ordersub/{gid}/{num}', 'Home\OrdersubController@index');	
+	Route::get('home/ordersub', 'Home\OrdersubController@end');	
+		
+	//生成订单
+	Route::get('home/ordersub/create', 'Home\OrdersubController@create');	
 });
 
 	//加入购物车
@@ -211,7 +212,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'admin.login'
 	//网站配置模块
 	Route::resource('config','ConfigController');
 	Route::post('config/changeContent','ConfigController@changeContent');
-
+	Route::get('config/putcontent','ConfigController@putContent');
 
 	//推荐位
 	Route::get('recommend/index','RecommendController@index');

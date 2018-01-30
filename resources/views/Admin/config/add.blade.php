@@ -38,20 +38,20 @@
                     <td>
                         <input type="radio" name="field_type" value="input" checked onclick="showTr()">input　
                         <input type="radio" name="field_type" value="textarea" onclick="showTr()">textarea　
-                       <!--  <input type="radio" name="field_type" value="radio" onclick="showTr()">radio -->
+                        <input type="radio" name="field_type" value="radio" onclick="showTr()">radio
                     </td>
                 </tr>
-               <!--  <tr class="field_value">
+                <tr class="field_value">
                     <th>类型值：</th>
                     <td>
                         <input type="text" class="lg" name="field_value">
                         <p><i class="fa fa-exclamation-circle yellow"></i>类型值只有在radio的情况下才需要配置，格式 1|开启,0|关闭</p>
                     </td>
-                </tr> -->
+                </tr>
                 <tr>
                     <th>排序：</th>
                     <td>
-                        <input type="text" class="sm" name="conf_order" value="">
+                        <input type="text" class="sm" name="conf_order" value="0">
                     </td>
                 </tr>
                 <tr>
@@ -73,6 +73,7 @@
     </form>
        </div>
  </div>
+
  <script>
         showTr();
         function showTr(){

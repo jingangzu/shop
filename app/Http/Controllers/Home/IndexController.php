@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Home;
 
 use App\Model\Cate;
+use App\Model\Config;
 
-
+use App\Model\Goods;
 use App\Model\Show;
 use App\Model\Advertisement;
 use App\Model\Recommend;
@@ -18,10 +19,17 @@ class IndexController extends Controller
 //     //首页
     public function index()
     {
+        $config = \DB::table('config')->where('conf_id','44')->first();
+        $config = $config->field_value;
+        if($config == 0 ){
+            return view('home/weihu');
+        }
 
       
     	$cate = new Cate();
-$cates = $cate->getCate();
+        $cates = $cate->getCate();
+
+        $goods = \DB::table('goods')->get();
     	
         //轮播图4张 value  pluck
         $show = \DB::table('rotation')->pluck('img');
@@ -31,7 +39,7 @@ $cates = $cate->getCate();
         //轮播图4张 value  pluck
         $adv = \DB::table('advertisement')->get();
         //显示主页
-        return view('home/index',['show' => $show,'rec' => $rec,'adv' => $adv,'cates' => $cates]);
+        return view('home/index',['show' => $show,'rec' => $rec,'adv' => $adv,'cates' => $cates,'goods' => $goods]);
 
     }
 

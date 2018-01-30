@@ -9,6 +9,31 @@ use DB;
 
 class ConfigController extends Controller
 {
+        public function putContent()
+    {
+        config(['app.timezone' => 'AAAAA']);
+
+//        \Illuminate\Support\Facades\Config::put('app.timezone','UTC');
+
+//
+////        1. 取出网站配置表中其中两列的值（conf_name、conf_content）
+//
+//        $conf = Config::lists('conf_content','conf_name')->all();
+//
+//
+//        $v = "<?php return ".var_export($conf,true).';';
+//
+////        dd($conf);
+//
+////        2. 在config文件夹下创建webconfig.php的文件 将数据库中获取的网站配置项的值写入刚创建的配置文件中。
+//
+//
+//        file_put_contents(config_path().'/webconfig.php',$v);
+
+
+    }
+
+
       //修改分类排序
     public function changeOrder(Request $request,$id)
     {
@@ -92,10 +117,10 @@ class ConfigController extends Controller
                   foreach ($arr as $n){
                       $a =   explode('|',$n);
                       //1|开启、0|关闭 中哪一个 跟$v这条记录的conf_content的内容一致，一致的加checked
-                      if($a[0] == $v->conf_content){
-                          $str.= '<input type="radio" name="conf_content[]" value="'.$a[0].'" checked>'.$a[1];
+                      if($a[0] == 1){
+                          $str.= '<input type="radio" name="conf_content[]" value="'.$a[0].'" checked>开启';
                       }else{
-                          $str.= '<input type="radio" name="conf_content[]" value="'.$a[0].'" >'.$a[1];
+                          $str.= '<input type="radio" name="conf_content[]" value="'.$a[0].'" checked>关闭';
                       }
 
                   }
@@ -175,6 +200,7 @@ class ConfigController extends Controller
      */
     public function store(Request $request)
     {
+
          //接收传过来的参数
         $input = $request->except('_token');
 
@@ -224,7 +250,8 @@ class ConfigController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $input = $request->only('conf_name');
+        // $input = $request->only('field_value');
+        $input = $request->except('_token');
 //        dd($input);
 
 //        使用模型修改表记录的两种方法,方法一

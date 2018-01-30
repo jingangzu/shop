@@ -69,6 +69,8 @@
  </ul>
   <ul>
   <li><a href="{{url('/admin/users')}}"><i class="article"></i><em>用户管理</em></a></li>
+  <li><a href="{{url('/admin/config')}}"><i class="article"></i><em>网站配置</em></a></li>
+  <li><a href="{{url('/admin/config/create')}}"><i class="article"></i><em>添加网站配置</em></a></li>
 
  </ul>
    <ul class="bot">

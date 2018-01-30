@@ -45,10 +45,10 @@ $(function(){
         
                         <a><img width="60" src="/uploads/{{$v->cate_pic}}"></a>
   
-    <a  href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">{{ $n['cate_name'] }}</a>
+    <a  href="{{ url('/home/goods/cate/').'/'.$n->cate_id }}">{{ $n['cate_name'] }}</a>
 
 
-                        <span><a  href="{{ url('/home/goods/cate/').'/'.$v->cate_id }}">选购</a></span></li>
+                        <span><a  href="{{ url('/home/goods/cate/').'/'.$n->cate_id }}">选购</a></span></li>
           
                 </ul>
          @endif
