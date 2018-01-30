@@ -21,12 +21,10 @@ Route::get('home/ordersub', 'Home\OrdersubController@end');
 //生成订单
 Route::get('home/ordersub/create', 'Home\OrdersubController@create');			
 
-//订单详情
-//Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
-//取消订单
-//Route::get('home/orderre', 'Home\UserorderController@create'); 		
-//确认收货
-//Route::get('home/ordersu', 'Home\UserorderController@store'); 	
+//个人订单
+Route::get('home/ordersub/geren', 'Home\OrdersubController@geren');
+//删除订单
+Route::get('home/ordersub/destroy', 'Home\OrdersubController@destroy');			
 
 
 //前台
@@ -116,23 +114,22 @@ Route::group(['middleware'=>'hasRole'],function(){
 	// 后台退出
 	Route::get('loginout','LoginController@loginout');
 
-
-
-	//后台商品图片
-	Route::get('/goods/picture/{id}','GoodsController@picture');
-	Route::post('/goods/addpic','GoodsController@addpic');
-});
-         
-	//用户管理
-	Route::get('user/test','UsersController@test');
-	Route::get('user/address','UsersController@address');
-
-	Route::resource('users','UsersController');
+             Route::resource('users','UsersController');
 	//    用户授权页面
 	Route::get('user/auth/{id}','UsersController@auth');
 	// 添加用户授权逻辑
 	Route::post('user/doauth','UsersController@doauth');
             
+	
+});
+         //后台商品图片
+	Route::get('/goods/picture/{id}','GoodsController@picture');
+	Route::post('/goods/addpic','GoodsController@addpic');
+	//用户管理
+	Route::get('user/test','UsersController@test');
+	Route::get('user/address','UsersController@address');
+
+	
 	//角色相关的路由
 	Route::resource('role','RoleController');
 

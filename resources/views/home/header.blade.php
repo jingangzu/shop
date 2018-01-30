@@ -21,6 +21,7 @@
             <li><a href="#" id="diyunapp">商城APP<br/>商城APP</a></li>
         </ul>
         <a href="{{ url('/home/shopcar') }}" class="dy5">购物车</a>
+         <a href="{{ url('/home/ordersub/geren')}}" class="dy5">个人订单</a>
         <ul class="dy4">
         @if(empty(session('inuser')))
             <li>

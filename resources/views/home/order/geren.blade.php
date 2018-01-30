@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>我的购物车</title>
+    <title>我的订单</title>
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/car/css/main.css" />
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/layer/layer.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/car/js/library/bootstrap.min.js"></script>
     <script src="/car/js/function-check-viewport.js"></script>
@@ -40,17 +42,17 @@
           <div class="row">
             <div class="header-1-inner">
               <a class="brand-logo animsition-link" href="index.html">
-                <img class="img-responsive" src="/car/images/logo.png" alt="" />
+                <img class="img-responsive" src="/car/images/151695166217776.jpg" alt="" />
               </a>
               <nav>
 
                 <ul class="menu hidden-xs" style="float:right">
                   <li><a href="{{ url('/') }}">主页</a></li>
-				  <li><a href="shop.html">个人信息</a></li>
-				  <li><a href="shop-detail.html">店铺信息</a><li>
-				  <li><a href="wish-list.html">收藏</a></li>
-				  <!-- <li><a href="shop-cart.html">Shop Cart</a></li> -->
-				  <li><a href="check-out.html">Checkout</a></li>
+                  <li><a href="shop.html">个人信息</a></li>
+                  <li><a href="shop-detail.html">店铺信息</a><li>
+                  <li><a href="{{url('/index/shoulist')}}">收藏</a></li>
+                  <!-- <li><a href="shop-cart.html">Shop Cart</a></li> -->
+                  <li><a href="check-out.html">Checkout</a></li>
 
           @if(empty(session('inuser')))
             <li>
@@ -81,9 +83,9 @@
         </div>
       </header>
       <section class="sub-header shop-detail-1">
-        <img class="rellax bg-overlay" src="/car/images/sub-header/013.jpg" alt="">
+        <img class="rellax bg-overlay" src="/car/images/151695166217776.jpg" alt="">
         <div class="overlay-call-to-action"></div>
-        <h3 class="heading-style-3">购物车</h3>
+        <h3 class="heading-style-3">我的订单</h3>
       </section>
       <section class="boxed-sm">
         <div class="container">
@@ -92,40 +94,43 @@
               <table class="woocommerce-cart-table">
                 <thead>
                   <tr>
-                    <th class="product-thumbnail">产品图片</th>
-                    <th class="product-name">名称</th>
-                    <th class="product-weight"></th>
-                    <th class="product-quantity">数量</th>
-                    <th class="product-price">价格</th>
-                    <th class="product-subtotal">总计</th>
-                    <th class="product-remove"></th>
+                    <th class="product-thumbnail">编号</th>
+                    <th class="product-name">订单号</th>
+                   
+                    <th class="product-quantity">商品图片</th>
+                    <th class="product-price">金额</th>
+                    <th class="product-subtotal">数量</th>
+                    <th class="product-remove">物流状态</th>
+                   
                   </tr>
                 </thead>
                 <tbody>
-                        @if($cart_items == '')
-                            <tr>
-                                <td>没有商品！</td>
-                            </tr>
-                        @else
-                        @foreach($cart_items as $v)
-
-                  <tr>
+                 @foreach($goods as $k =>$v)
                     <td class="product-thumbnail">
-                     <!--  <img src="/car/images/product/thumb-cart-01.jpg" alt="product-thumbnail"> -->
-                     <img  width="80" src="/uploads/{{ $v['goods']['picture'] }}">
+                     {{$v->id}}
+                    </td>
+                    <td class="product-thumbnail">
+                    {{$v->o_code}}
+                    </td>
+                    <td class="product-thumbnail">
+                     <img style="width:70px" src="/uploads/{{$v->orgoods->picture}}">
                     </td>
                     <td class="product-name" data-title="Product">
-                      <a class="product-name" href="#">{{$v['goods']['goods_name']}}</a>
+                      {{$v->price}}
                     </td>
-                    <td class="product-weight" data-title="Weight"></td>
+                    
                     <td class="product-quantity" data-title="Quantity">
-                     {{$v->count}}
+                     {{$v->num}}
                     </td>
-                    <td class="product-price" data-title="Price">{{$v['goods']['goods_price']}}</td>
-                    <td class="product-subtotal" data-title="Total">{{ ($v->count)*($v['goods']['goods_price']) }}</td>
-                    <td class="product-remove">
-                      <a class="remove"  href="javascript:void(0);"   aria-label="Remove this item" onclick="delcart({{$v->gid}})">×</a>
-                    </td>
+                    <td class="product-price" data-title="Price">
+                    @if($v->ostate==0)
+                           待发货
+                    @elseif($v->ostate==1)
+                          已发货
+                    @endif</td>
+                   
+                
+                 </td>
                   </tr>
                   <script type="text/javascript">
                         $('.qty').on('change',function(){
@@ -137,17 +142,46 @@
                   </script>
                   
                 @endforeach
-                @endif
+             
                 </tbody>
+ <script>
+        function delUser(id){
+            //询问框
+            layer.confirm('您确定要删除吗？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                //向服务器发送ajax请求，删除当前id对应的用户数据
+                $.post('{{ url('home/ordersub/geren') }}/'+id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
+                    if(data.status == 0){
+                        layer.msg(data.message, {icon: 6});
+                        setTimeout(function(){
+                            window.location.href = location.href;
+                        },1000);
+
+
+                    }else{
+                        layer.msg(data.message, {icon: 5});
+
+                        window.location.href = location.href;
+                    }
+
+                })
+
+//
+            }, function(){
+
+            });
+        }
+    </script>
                 <tfoot>
                   <tr>
                     <td colspan="7">
                       <div class="form-coupon organic-form">
                         <div class="form-group">
-                          <input class="form-control pill" placeholder="Coupon Code">
+                          
                         </div>
                         <div class="form-group">
-                         <a id="btn" class="btn btn-brand pill" href="javascript:;">进行结算</a>
+                         
                         </div>
                         <script type="text/javascript">
                           $('#btn').on('click',function(){ 
@@ -159,7 +193,7 @@
                         </script>
 
                         <div class="form-group update-cart">
-                          <a class="btn btn-brand-ghost pill" href="{{ url('/home/shopcar/syncCart')}}">更新购物车</a>
+                          <a class="btn btn-brand-ghost pill" href="{{ url('/home/shopcar/syncCart')}}">更新我的订单</a>
                         </div>
                       </div>
 
