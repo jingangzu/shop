@@ -137,8 +137,8 @@ class UsersController extends Controller
        // dd($all);
         //检测表单验证规则
            $this->validate($request, [
-        'name' =>'required|min:6|max:18',
-        'password' => 'required|min:6|max:18',
+        'name' =>'required|min:5|max:18',
+        'password' => 'required|min:5|max:18',
         're-password'=>'required|same:password',
         'phone'=>'required|size:11',
         'email'=>'required|email',
@@ -146,11 +146,11 @@ class UsersController extends Controller
         'auth'=>'required|numeric',
     ],[
       // 'name.required' => '用户名不能为空',
-      'name.min' => '用户名不能小于6位',
+      'name.min' => '用户名不能小于5位',
       'name.max'=>'用户名不能大于18位',
       'name.required' => '用户名不能为空',
       'password.required' => '密码不能为空',
-      'password.min'=>'密码不能小于6位',
+      'password.min'=>'密码不能小于5位',
       'password.max'=>'密码不能大于18位',
       're-password.required' => '确认密码不能为空',
       're-password.same'=>'确认密码是否一致',
@@ -250,13 +250,13 @@ class UsersController extends Controller
     {
         //更新
         $this->validate($request, [
-        'name' =>'required|min:6|max:18',
+        'name' =>'required|min:5|max:18',
         'phone'=>'required|size:11',
         'email'=>'required|email',
         'avatar' => 'image',
     ],[
       // 'name.required' => '用户名不能为空',
-      'name.min' => '用户名不能小于6位',
+      'name.min' => '用户名不能小于5位',
       'name.max'=>'用户名不能大于18位',
       'name.required' => '用户名不能为空',
       'phone.required'=>'手机号不能为空',
@@ -336,4 +336,63 @@ class UsersController extends Controller
 
         return $data;
     }
+
+    public function personage(Request $request,$id)
+    {
+        $data = \DB::table('user_admins')->where('id',$id)->first();
+
+        \Session::put('inuser',$data);
+
+         return view ('admin.personage',['data'=>$data])->with('msg','修改成功');;
+    }
+
+
+    public function resetpw()
+    {
+        return view('admin.resetpw');
+    }
+
+    public function doresetpw(Request $request,$id)
+    {
+       
+      $input  = $request->except('_token');
+
+      // dd($input['password']);
+
+
+      $data = \DB::table('user_admins')->where('id',$id)->first();
+
+
+        $password= decrypt($data->password);
+
+
+          if($password !== $input['password']){
+               return back()->with('msg','与原密码不匹配');
+          }
+
+
+          if($input['newpassword'] !== $input['repassword'])
+          {
+               return back()->with('msg','两次密码输入不一致');
+          }
+
+
+           $password= Crypt::encrypt($input['newpassword']);
+
+
+
+
+          $res= \DB::table('user_admins')->where('id',$id)->update(['password' =>$password]);
+
+
+          if($res)
+          {
+              $request->session()->flush();
+              return redirect('/admin/login')->with('msg','修改成功');
+
+          }else{
+              return back()->with('msg','修改失败');
+          }
+    }
+
 }

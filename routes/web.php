@@ -21,6 +21,7 @@ Route::get('home/ordersub', 'Home\OrdersubController@end');
 //生成订单
 Route::get('home/ordersub/create', 'Home\OrdersubController@create');			
 
+
 //订单详情
 //Route::get('home/ordersinfo/{code}', 'Home\OrdersinfoController@index');			
 //取消订单
@@ -39,36 +40,48 @@ Route::get('index/yzm','Index\LoginController@yzm');
 Route::post('index/dologin','Index\LoginController@dologin');
 
 // 注册控制器
-Route::get('index/user/register','Index\User\RegisterController@register');
-Route::get('index/user/register','Index\User\RegisterController@register');
-Route::get('index/user/yzm','Index\User\RegisterController@yzm');
-Route::post('index/user/doregister','Index\User\RegisterController@doregister');
+
+Route::get('/index/user/register','Index\User\RegisterController@register');
+Route::get('/index/user/yzm','Index\User\RegisterController@yzm');
+Route::post('/index/user/doregister','Index\User\RegisterController@doregister');
 
 
 //前台商品列表
-Route::get('home/goods/cate/{cid}','Home\GoodsController@list');
+Route::get('/home/goods/cate/{cid}','Home\GoodsController@list');
 //详情
-Route::get('home/goods/{id}','Home\GoodsController@show');
+Route::get('/home/goods/{id}','Home\GoodsController@show');
+Route::post('/home/goods/{id}','Home\GoodsController@seek');
+
+	//重置密码
+Route::get('index/user/resetpw','Index\User\RegisterController@resetpw');
+Route::post('index/user/doresetpw','\Index\User\RegisterController@doresetpw');
+Route::get('index/user/nextresetpw/{email}','Index\User\RegisterController@nextresetpw');
+Route::post('index/user/donextresetpw','Index\User\RegisterController@donextresetpw');
+
+
+	// 邮箱激活
+Route::get('/index/user/active/{email}','Index\User\RegisterController@active');
 
 // 前台路由组中间件
 Route::group(['prefix'=>'index','namespace'=>'Index','middleware'=>'index.login'],function(){
 
 	// 前台退出
-	Route::get('/index/user/loginout','Index\LoginController@loginout');
-
-
-	// 前台退出
 	Route::get('/user/loginout','LoginController@loginout');
 
-	// 邮箱激活
-	Route::get('user/active/{email}','User\RegisterController@active');
-	// Route::get('/index/user/pwactive','Index\LoginController@pwactive');
-
-	//重置密码
-	Route::get('user/resetpw','User\RegisterController@resetpw');
-	Route::post('user/doresetpw','User\RegisterController@doresetpw');
-	Route::get('user/nextresetpw/{email}','User\RegisterController@nextresetpw');
-	Route::post('user/donextresetpw','User\RegisterController@donextresetpw');
+	// 前台个人中心 
+	Route::get('/user/personage','User\PersonageController@index');
+	  
+	//账户信息(个人资料)
+	Route::get('/user/account','User\PersonageController@account');
+	Route::get('/user/redact','User\PersonageController@redact');
+	Route::post('/user/doredact','User\PersonageController@doredact');
+	 //地址
+	Route::get('/address/index','Address\AddressController@index');
+	Route::get('/address/insert','Address\AddressController@insert');
+	Route::get('/address/add','Address\AddressController@add');
+	Route::get('/address/edit/{id}','Address\AddressController@edit');
+	Route::post('/address/update','Address\AddressController@update');
+	Route::get('/address/delete/{id}','Address\AddressController@delete');
 
 
 
@@ -100,12 +113,6 @@ Route::group(['middleware'=>'index.login'],function(){
 	Route::post('/home/shopcar/delcart','Home\ShopcarController@delcart');
 
 });
-	//收藏
-	
-	
-
-
-
 	//加入购物车
 	Route::post('/home/addcart','Home\ShopcarController@addCart');
 
@@ -133,6 +140,13 @@ Route::group(['middleware'=>'hasRole'],function(){
 	Route::post('/goods/addpic','GoodsController@addpic');
 });
          
+	//后台个人中心
+	Route::get('personage/{id}','UsersController@personage');
+
+	// 后台修改密码
+	Route::get('resetpw/{id}','UsersController@resetpw');
+	Route::post('doresetpw/{id}','UsersController@doresetpw');
+
 	//用户管理
 	Route::get('user/test','UsersController@test');
 	Route::get('user/address','UsersController@address');
@@ -153,14 +167,13 @@ Route::group(['middleware'=>'hasRole'],function(){
 	//    添加用户授权逻辑
 	Route::post('role/doauth','RoleController@doauth');
 
+
 	//后台订单管理
 	Route::get('orders/up/{id}','OrdersController@up');
 	Route::get('orders/down/{id}','OrdersController@down');
 	Route::resource('orders','OrdersController');
 
-	//后台商品图片
-	Route::get('/goods/picture/{id}','GoodsController@picture');
-	Route::post('/goods/addpic','GoodsController@addpic');
+	
 	//商品上下架
 	Route::get('/goods/up/{id}','GoodsController@up');
 	Route::get('/goods/down/{id}','GoodsController@down');
@@ -185,16 +198,16 @@ Route::group(['middleware'=>'hasRole'],function(){
 	Route::resource('/friendlink','FriendlinkController');
 
 	//分类
-	Route::get('cate/add','cateController@add');
-	Route::get('cate/edit/{id}','cateController@edit');
-	Route::delete('cate/del/{id}','cateController@del');
-	Route::put('cate/update/{id}','cateController@update');
-	Route::post('cate/changeOrder/{id}','cateController@changeOrder');
-	Route::post('config/changeOrder/{id}','ConfigController@changeOrder');
-	Route::post('cate','cateController@store');
+	Route::get('admin/cate/add','Admin\cateController@add');
+	Route::get('admin/cate/edit/{id}','Admin\cateController@edit');
+	Route::delete('admin/cate/del/{id}','Admin\cateController@del');
+	Route::put('admin/cate/update/{id}','Admin\cateController@update');
+	Route::post('admin/cate/changeOrder/{id}','Admin\cateController@changeOrder');
+	Route::post('admin/config/changeOrder/{id}','Admin\ConfigController@changeOrder');
+	Route::post('admin/cate','Admin\cateController@store');
 
 
-	Route::get('cate/list','cateController@index');
+	Route::get('admin/cate/list','Admin\cateController@index');
 
 	//网站配置模块
 	Route::resource('/config','ConfigController');

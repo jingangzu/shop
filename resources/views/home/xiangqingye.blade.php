@@ -247,6 +247,7 @@ $(function(){
                  	<a href="{{ url('/home/ordersub').'/'.$data['id'].'/1' }}" style=" margin-left:67px">立即购买</a>
                     <a id="addcart" href="javascript:;" onclick="cart()" style=" margin-left:6px">加入购物车</a>
                  	<a id="addshou" href="javascript:;" onclick="shou()" style=" margin-left:6px">收藏此商品</a>
+
                   <script type="text/javascript">
                               function cart(){
                                     var count = $('#text_box').val();
@@ -274,8 +275,9 @@ $(function(){
                                     });
                                 }
 
+
                   </script>
-                    <a href="#" style=" margin-left:6px"></a>
+
                  </div>
                  <!--商品编号-->
                  <div class="shopbh">
@@ -603,6 +605,8 @@ $(function(){
 						$(this).addClass("nocolors").siblings().removeClass("nocolors")
 						})	
 			})
+
+          
     	</script>
         <!--大容器里面放若干内容-->
         <div class="drqlmfrgnr">

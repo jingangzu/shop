@@ -26,8 +26,6 @@
     <script src="/car/js/global.js"></script>
     <script src="/car/js/config-mm-menu.js"></script>
      
-
-    
   </head>
   <body class="animsition">
     <div class="shop-cart" id="page">
@@ -448,7 +446,6 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>
 

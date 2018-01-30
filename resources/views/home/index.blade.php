@@ -739,14 +739,14 @@
                                     <img src="/img/chose.png"/>
 
                                 </b>
-                                <h2>男士短袖</h2>
+                                 <h2>男士短袖</h2>
                                 <p>极致透气，让您冰凉一夏</p>
                                 <span>1999元</span>
                             </a>
                             <a href="#" style=" width:100%; height:20px; line-height:20px; font-size:12px; color:#666; text-align:left; text-indent:10px" class="dianpud">乐乐旗舰店</a>
                         </li>
                         <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li> 
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>

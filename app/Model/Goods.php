@@ -29,7 +29,7 @@ class Goods extends Model
     }
     public function cart()
     {
-         return  $this->hasOne('App\Model\Cart','gid','id');
+         return  $this->belongsTo('App\Model\Cart','gid','id');
     }
 
 }

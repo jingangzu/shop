@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers\Home;
 use App\Model\Cart;
 use App\Model\Goods;
@@ -11,8 +10,6 @@ use App\Http\Controllers\Controller;
 
 class ShopcarController extends Controller
 {
-
-
     //product = goods   member=user
     //添加购物车
     public function addCart(Request $request)
@@ -81,6 +78,7 @@ class ShopcarController extends Controller
 		        // 同步完成购物车 清空COOKIE
 		        $cart_items = $this -> syncCart($user->id,$shop_cart_arr);
 		        return response()->view('home.shopcar',['cart_items' => $cart_items])->withCookie('shop_cart',null);
+
 		    }
 		    foreach($shop_cart_arr as $key =>$value){
 		        $index = strrpos($value,':');
@@ -89,20 +87,13 @@ class ShopcarController extends Controller
 		        $cart_item -> gid = substr($value,0,$index);// 商品id
 		        $cart_item ->count = ((int)substr($value,$index+1));// 商品数量
 		        $cart_item -> goods = Goods::find($cart_item -> gid);
-		       
 		        if($cart_item != null){
 		            array_push($cart_items,$cart_item);
 		        }
 		    }
 
-
-
-
 		    return view('home.shopcar')->with('cart_items',$cart_items);
 	}
-
-
-
 
 	//删除购物车的商品
 		public function delcart(Request $request)
@@ -137,7 +128,6 @@ class ShopcarController extends Controller
 		    return response(json_encode(['status'=>1,'msg'=>'删除成功！']))->withCookie('shop_cart',implode(',',$shop_cart_arr));
 		}
 
-
 		//实现购物车数据同步(登录后将session中的商品写入数据库)
 		private function syncCart($uid,$shop_cart_arr)
 		{
@@ -151,7 +141,7 @@ class ShopcarController extends Controller
 		        $exist = false;// 用于标注COOKIE中数据是否存在数据库中
 		        // 循环查询出来的购物车商品数据
 		        foreach($cart_items as $temp){
-		            // 判断末登录时购物车中goods_id 是否存在 数据库中
+		            // 判断末登录时购物车中gid 是否存在 数据库中
 		            if($temp -> gid == $gid){
 		                // 判断购物数量 如果小于COOKIE中的数量 就修改数据库中的数据
 		                if($temp->count < $count){

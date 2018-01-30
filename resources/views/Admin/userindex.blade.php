@@ -10,7 +10,14 @@
      <input name="name" type="text" class="inpMain" value="{{ $where['name'] }}" size="20" />
      <input name="submit" class="btnGray" type="submit" value="用户名筛选" />
     </form>
-    
+    {{--激活成功的提示--}}
+            @if (!empty(session('msg')))
+              <div class="alert alert-danger">
+                <ul>
+                  <li style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ session('msg') }}</li>
+                </ul>
+              </div>
+            @endif
     </div>
         <div id="list" class="pagination" >
     <form name="action" method="post" action="article.php?rec=action">

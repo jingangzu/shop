@@ -122,11 +122,11 @@
     <div class="btn-area mb10">
         <a class="btn-ordershow" href="{{ url('') }}">查看订单</a>
                     <a class="btn-buyagain ml10" href="{{ url('/') }}" clstag="pageclick|keycount|trade_201602181|32">
+
                 <i></i>
                             再次购买
 							</a>
             </div>
-			
 
 
 		    	<ul class="list-order">

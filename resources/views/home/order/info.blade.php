@@ -176,6 +176,7 @@
             </div>
         </div>
          @endforeach
+                               
         <!--买家留言-->
         <div class="maijiayouhuayue">
             <em style=" width:90px; text-align:right">买家留言：</em>
@@ -194,6 +195,7 @@
               </li>
                 <li>
                     <em><s>{{ $price }}</s>元</em>
+
                   <em>本店合计：</em>
               </li>
             </ul>

@@ -49,7 +49,6 @@ class OrdersubController extends Controller
          $price+=($v->goods->goods_price)*($v->count);
         }
         return view('home/order/info',compact('addr','shopcart','price'));
-
         
 
     }

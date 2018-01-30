@@ -27,9 +27,7 @@ class AddressController extends Controller
     public function add(Request $request)
     {
     	$inpot = $request->except('submit','_token','adressa','harea','hproper','hcity','back');
-    	// dd($inpot);
     	$data = \DB::table('address')->insert($inpot);
-    	// // $user = Address::find(1);
         $rr = $request->input('back');
         if($rr='info')
         {
