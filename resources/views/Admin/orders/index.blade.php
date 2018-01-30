@@ -16,7 +16,7 @@
     <form name="action" method="post" action="article.php?rec=action">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="table">
      <tr>
-   
+    
       <th width="80" align="center">编号</th>
       <th width="180" align="left">订单编号</th>
       <th width="180" align="center">总价格</th>

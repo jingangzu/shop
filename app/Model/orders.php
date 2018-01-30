@@ -13,7 +13,7 @@ class orders extends Model
     public $timestamps = false;
 
 
-    
+     
 
     public function oruser(){
         return $this->belongsTo('App\Model\User', 'uid', 'id');

@@ -19,15 +19,17 @@
         <div class="shouhurxl1">
             <em>收货人信息</em>
 
-            <a href="#" class="chgeb">修改</a>
-        <div class="shouhurxl2">
+            
+ @if (false)       
+ <div class="shouhurxl2">
   <input calss="adress" type="radio" name="adressa" value="{{ $addr[0]->id }}" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+  
             <span>{{$addr[0]->username}}</span>
             <span>{{$addr[0]->address}}</span>
             <span><em>电话：</em><em>{{$addr[0]->phone}}</em></span>
-        
+@endif  
         </div>
-            <a href="#" class="chgeb">添加</a>
+           &nbsp;  &nbsp;  &nbsp;  &nbsp; 
         </div>
 
 
@@ -50,7 +52,7 @@
             
         </div>
         <!--添加新地址-->
-        <form action="/address/add" method="get">
+        <form action="{{ url('/index/address/add') }}" method="get">
 
             <input type="radio" name="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
         @foreach($addr as $k1=>$v1)
@@ -63,7 +65,7 @@
         <!--添加新地址-->
             <div class="dandudizhi">
                 <input type="radio" name="adressa" class="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                <span>添加</span>
+                <span style="size:40">添加</span>
             </div>   
             <input type="hidden" name="uid" value="{{ session('inuser')->id }}">
             <input type = 'hidden' name='back' value="info">
@@ -193,19 +195,21 @@
                   <em>商品金额：</em>
               </li>
                 <li>
-                    <em><s>{{ $price }}</s>元</em>
+                  <em><s>{{ $price }}</s>元</em>
                   <em>本店合计：</em>
               </li>
             </ul>
             <!--订单总金额-->
         <div class="ddzjes">
                 <em>订单总金额：</em>
+
                 <em style=" padding-left:0"><s>
                 {{ $price }}
                 </s>元</em>
+                <em> <button><a  id="ding" href="javascript:;">提交订单</a></button></em>
             </div>
             <!--使用预存款-->
-        <div class="syycklo">
+        <div class="syycklo"
                 <em>用预存款：</em>
                     <input type="checkbox" class="dianyidian" value="1" name="pd_pay" style=" margin-top:8px; float:left; margin-left:6px"><span>使用预存款（可用金额：<i>40</i>元）</span>
             </div>
@@ -227,7 +231,7 @@
         <!--一条商品信息结束-->
     </div>
     <!--商品清单结束-->
-    <button><a  id="ding" href="javascript:;">提交订单</a></button>
+    
     <script type="text/javascript">
         $('#ding').on('click',function(){
             // var t =$('.adress:checked').val();

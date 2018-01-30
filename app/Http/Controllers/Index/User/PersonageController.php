@@ -11,18 +11,24 @@ use App\Model\Detail;
 class PersonageController extends Controller
 {
     //  个人信息首页
-    public function index()
+    public function index()   
     {
+        
     	return view('index.user.layout');
     }
 
     public function account()
     {
 
-    	$data = User::find(1)->detail; 
+    	
 
-    	// // var_dump($data);die;
-        $user = User::find(1);
+     $user = User::find(1);
+    	// var_dump($data);
+        // die;
+   
+        $data = User::find(1)->detail;
+        // dd($data); 
+
 
     	return view('index.user.account',['data' =>$data,'user'=>$user]);
     }
@@ -38,7 +44,9 @@ class PersonageController extends Controller
     public function doredact(Request $request)
     {
         $inputa = $request->except('_token','submit','nickname','phone','sex','avatars');
+        // dd($inputa);
         $inputb = $request->except('_token','submit','name','email');
+          // dd($inputb);
         // $inputc = $request->except('_token','submit','nickname','phone','sex','avatars','name','email')
         // dd($inputb);
         $data = User::find(1)->detail;
