@@ -5,14 +5,14 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 class ordersinfo extends Model
-{
+{  
     //
      public $table = "ordersinfo";
     public $timestamps = false;
     public function orgoods(){
         return $this->hasMany('App\Model\Goods', 'goods_name', 'gname');
     }
-    public function user(){
+    public function user(){ 
         return $this->hasOne('App\Model\User', 'name', 'username');
     }
     public function oraddress(){

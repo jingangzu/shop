@@ -20,7 +20,7 @@ class OrdersController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        // 
        $o_code = $request->input('o_code', '');
         $req = orders::where('o_code','like','%'.$o_code.'%')->paginate(5);
         return view ('admin.orders.index',['req'=>$req,'where'=>['o_code'=>$o_code]]);

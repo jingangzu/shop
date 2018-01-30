@@ -53,8 +53,14 @@
  <ul class="top">
   <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
  </ul>
+ <ul class="top">
+  <li><a href="{{url('admin/config')}}"><i class="home"></i><em>网站配置</em></a></li>
+ </ul>
  <ul>
-  <li><a href="show.html"><i class="show"></i><em>首页幻灯广告</em></a></li>
+  <li><a href="{{url('/admin/show/index')}}"><i class="show"></i><em>首页幻灯广告</em></a></li>
+ </ul>
+ <ul>
+  <li><a href="{{url('/admin/advertisement/index')}}"><i class="show"></i><em>广告位</em></a></li>
  </ul>
    <ul>
   <li><a href="{{ url('/admin/cate/list') }}"><i class="productCat"></i><em>商品分类</em></a></li>
@@ -72,7 +78,8 @@
   <li><a href="{{url('/admin/role')}}"><i class="manager"></i><em>角色列表</em></a></li>
   <li><a href="{{url('/admin/permission/create')}}"><i class="manager"></i><em>添加权限</em></a></li>
   <li><a href="{{url('/admin/permission')}}"><i class="manager"></i><em>权限列表</em></a></li>
-  <li><a href="{{ url('/admin/friendlink') }}"><i class="backup"></i><em>友情链接</em></a></li>
+  <li><a href="{{url('/admin/recommend/index')}}"><i class="manager"></i><em>推荐位管理</em></a></li>
+  <li><a href="{{ url('/admin/frindlink/show') }}"><i class="backup"></i><em>友情链接</em></a></li>
   
  </ul>
 </div></div>

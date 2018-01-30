@@ -151,7 +151,7 @@
                           $('#btn').on('click',function(){ 
                             var count=$('.qty').val();
 
-                            $('#btn').attr('href',"{{  url('home/ordersub/').'/'.$v['goods']['id'].'/' }}"+count);
+                            $('#btn').attr('href',"{{  url('home/ordersub').'/'.$v['goods']['id'].'/' }}"+count);
 
                           })
                         </script>

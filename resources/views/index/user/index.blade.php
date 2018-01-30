@@ -1,6 +1,6 @@
 @extends('index.user.layout')
 
-@section('content')
+@section('content') 
 <script src="/index/js/city.js/cityJson.js"></script>
 <script src="/index/js/city.js/citySet.js"></script>
 <script src="/index/js/city.js/Popt.js"></script>
